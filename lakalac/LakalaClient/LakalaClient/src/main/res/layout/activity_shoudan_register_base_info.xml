@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:apps="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+    <!-- 基本资料 -->
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/combination_text_edit_margin_left">
+
+
+        <TableRow
+            android:minHeight="@dimen/order_item_height">
+
+            <TextView
+                android:id="@+id/name_tag"
+                style="@style/combination_left_textview_style"
+                android:layout_height="match_parent"
+                android:tag="10003"
+                android:text="真实姓名"/>
+
+            <EditText
+                android:id="@+id/name"
+                style="@style/combination_right_edittext_style"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:hint="请输入真实姓名"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"/>
+        </TableRow>
+
+        <View
+            style="@style/seperator"/>
+
+        <TableRow
+            android:minHeight="@dimen/order_item_height">
+
+            <TextView
+                android:id="@+id/email_tag"
+                style="@style/combination_left_textview_style"
+                android:layout_height="match_parent"
+                android:tag="10006"
+                android:text="电子邮箱"/>
+
+            <EditText
+                android:id="@+id/email"
+                style="@style/combination_right_edittext_style"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:hint="请输入常用电子邮箱地址"
+                android:inputType="textEmailAddress"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"
+                android:singleLine="true"/>
+        </TableRow>
+
+        <View style="@style/seperator"/>
+
+        <TableRow
+            android:minHeight="@dimen/order_item_height">
+
+            <TextView
+                android:id="@+id/id_tag"
+                style="@style/combination_left_textview_style"
+                android:layout_height="match_parent"
+                android:tag="10004"
+                android:text="身份证号码"/>
+
+            <EditText
+                android:id="@+id/id"
+                style="@style/combination_right_edittext_style"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="请输入身份证号码"
+                android:inputType="textEmailAddress"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"
+                android:singleLine="true"/>
+        </TableRow>
+
+        <View
+            style="@style/seperator"/>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/order_item_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/combination_left_textview_style"
+                android:layout_height="match_parent"
+                android:text="身份证照片"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/combination_text_edit_margin_left">
+
+                <ImageView
+                    android:id="@+id/shoudan_id_photo_front"
+                    android:layout_width="54dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@drawable/btn_upload_idcard_face_selector"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="12dp"
+                    android:textColor="@color/main_nav_blue"
+                    android:text="+"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/shoudan_id_photo_back"
+                    android:layout_width="54dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_toRightOf="@+id/photo1"
+                    android:background="@drawable/btn_upload_idcard_back_selector"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/btn_next_baseinfo"
+            style="@style/btn_top_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="下一步"
+            />
+    </LinearLayout>
+
+</LinearLayout>

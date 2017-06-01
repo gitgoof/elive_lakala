@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/app_background_white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/id_business_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:textAppearance="@style/text_style_normal"
+        android:text="银行列表" />
+    <View
+       style="@style/common_seperator_view"
+        android:layout_marginTop="@dimen/dimen_10" />
+
+    <FrameLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/bank_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#ffffff"
+            android:listSelector="@android:color/transparent"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp" >
+        </ListView>
+        <TextView
+            android:id="@+id/emptyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/font_size_large"
+            android:text="没有获取到银行列表"
+            android:visibility="invisible"/>
+    </FrameLayout>
+</LinearLayout>

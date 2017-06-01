@@ -1,0 +1,30 @@
+{
+    "name": "webapp",
+    "version": "1",
+    "checkURL": "upgrade/webAppConfig",
+    "updateMsg": "业务已经更新成功。",
+    "config": {
+        "resource": {
+            "verifySign": true,
+            "bundleDirectory": "assets/www",
+            "version": "1",
+            "checkURL": "upgrade/webAppConfig",
+            "fileName": "resource-1.0.zip",
+				     "MD5": "5938132ee6316bb3b00c1788613da71d",
+            "forceUpdate": false,
+            "targetDirectory": "webapp",
+            "expandDirectory": "www/images"
+        },
+        "webapp": {
+            "verifySign": true,
+            "bundleDirectory": "assets/www",
+            "version": "1",
+            "checkURL": "upgrade/webAppConfig",
+            "fileName": "webapp-1.0.zip",
+				     "MD5": "6a72680f03699335f94694b55b285eb8",
+            "forceUpdate": false,
+            "targetDirectory": "webapp",
+            "expandDirectory": "www"
+        }
+    }
+}

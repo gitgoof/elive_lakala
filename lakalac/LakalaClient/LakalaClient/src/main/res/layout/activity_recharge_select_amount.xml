@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/app_background_white"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+    <ScrollView
+        android:id="@+id/id_input_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/id_sjcz1_phone_line_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_margin_actionbar"
+            android:orientation="vertical">
+
+            <!--<include layout="@layout/shoudan_combination_text_edit" />-->
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/combination_left_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充值手机号码"
+                android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                android:layout_marginBottom="@dimen/eightdip"/>
+
+            <ImageView
+                style="@style/seperator"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <!-- 输入手机 -->
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:paddingTop="10dp"
+                    android:paddingRight="@dimen/combination_text_edit_margin_left"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edit_phone"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="请输入手机号码"
+                        android:background="@color/white"
+                        android:layout_toLeftOf="@+id/img_btn_u"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:maxLength="13"
+                        android:textSize="@dimen/super_text_size"
+                        android:paddingLeft="11dp"
+                        android:gravity="left"/>
+
+                    <ImageButton
+                        android:id="@+id/img_btn_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/icon_contact"/>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_phone_attribution"
+                    style="@style/combination_right_edittext_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充值手机号码"
+                    android:layout_below="@+id/edit_phone"
+                    android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                    android:layout_marginBottom="@dimen/common_distance_level_1"
+                    android:visibility="invisible"/>
+
+                <ImageView
+                    android:id="@+id/iv_seperator"
+                    style="@style/combination_seperator_style"/>
+                <!-- 再次输入手机 -->
+                <RelativeLayout
+                    android:id="@+id/layout_again"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/white"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="@dimen/combination_text_edit_margin_left"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_phoneagain"
+                        style="@style/combination_left_textview_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="充值手机号码"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:id="@+id/edit_phoneagain"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="请再次输入手机号码"
+                        android:background="@color/white"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:maxLength="13"
+                        android:textSize="@dimen/super_text_size"
+                        android:gravity="left"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                style="@style/seperator"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/shoudan_text_medium_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                android:layout_marginTop="@dimen/common_distance_level_2"
+                android:layout_marginBottom="@dimen/eightdip"
+                android:text="@string/recharge_amount"
+                android:textAppearance="@style/shoudan_text_big_white" />
+
+            <ImageView
+                style="@style/seperator"/>
+
+            <LinearLayout
+                android:id="@+id/id_sjcz1_amount_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/common_distance_level_1"
+                android:paddingBottom="@dimen/common_distance_level_1"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:gravity="center">
+            </LinearLayout>
+
+            <ImageView
+                style="@style/seperator"/>
+
+            <LinearLayout
+                android:id="@+id/id_sjcz1_amount_radio_group1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:gravity="center">
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@color/box" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/include2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/shoudan_btnwithtopline_comment" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+        <include layout="@layout/layout_keyboard" />
+    </RelativeLayout>
+
+</RelativeLayout>

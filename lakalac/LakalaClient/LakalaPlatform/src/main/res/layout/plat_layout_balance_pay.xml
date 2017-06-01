@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ui_white_bg_gray_border"
+                android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="余额支付："
+        android:id="@+id/balance_pay_label"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/font_size_normal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/balance_pay_amount"
+        android:layout_toRightOf="@id/balance_pay_label"
+        android:layout_centerVertical="true"
+        android:textColor="@color/red_ff0000"
+        android:textSize="@dimen/font_size_normal"
+        android:text="100.00元"/>
+</RelativeLayout>

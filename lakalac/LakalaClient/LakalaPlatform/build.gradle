@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 22
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+
+        minSdkVersion 14
+        targetSdkVersion 22
+    }
+    // This is important, it will run lint checks but won't abort build
+    lintOptions {
+        abortOnError false
+        disable 'InvalidPackage'
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFile 'proguard-rules.txt'
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
+
+}
+
+dependencies {
+    compile project(':LakalaUI')
+    compile project(':LakalaLibCore')
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile files('libs/xUtils-2.6.2.jar')
+    compile files('libs/android-async-http-1.4.6.jar')
+    compile files('libs/avoscloud-push-v3.0.1.jar')
+    compile files('libs/lkl_dfp_androidsdk_161014.jar')
+    compile 'com.github.frankiesardo:icepick:2.3.6'
+    compile 'commons-io:commons-io:2.4'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile files('libs/fraudmetrix-2.0.9a.jar')
+    compile files('libs/gson-2.1.jar')
+    compile files('libs/open_sdk_r5781_lite.jar')
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray">
+    <TextView
+        style="@style/text_style_large_bold"
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_40"
+        android:text="@string/not_have_history_account"
+        android:textColor="#c9c9c9"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/ll_list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/combination_little_title_style"
+            android:layout_marginTop="@dimen/content_margin_actionbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="选择常用收款人"/>
+        <View
+            style="@style/common_seperator_view" />
+        <ListView
+            android:id="@+id/lv_cardList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:dividerHeight="0.5dp"
+            android:divider="@color/hint_or_divider_color"
+            android:cacheColorHint="#000000"
+            android:fadingEdge="none"
+            android:listSelector="#00000000"
+            android:scrollingCache="false"
+            android:scrollbars="none" >
+        </ListView>
+        <View
+            style="@style/common_seperator_view" />
+    </LinearLayout>
+</LinearLayout>

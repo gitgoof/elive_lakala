@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/shape_id">
+        <!-- 正三角 -->
+        <rotate
+            android:fromDegrees="45"
+            android:toDegrees="0"
+            android:pivotX="-76%"
+            android:pivotY="102%">
+            <shape android:shape="rectangle">
+                <solid android:color="#ffffff"/>
+                <size android:width="10dp"
+                    android:height="10dp"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/business_description_text_style"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="首次使用“大额收款”功能，需要完善商户信息并接受《拉卡拉大额收款服务协议》，即可开通大额收款业务。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TableLayout
+                android:background="@color/white"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="商户名称"/>
+
+                    <EditText
+                        android:id="@+id/merchant_name"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        tools:text="呵呵" />
+
+                </TableRow>
+
+                <View
+                    style="@style/seperator" />
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="商户所属行业" />
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left">
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/right_arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/right_arrow"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+
+
+                        <TextView
+                            android:id="@+id/industry"
+                            style="@style/combination_right_edittext_style"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/right_arrow"
+                            android:hint="请选择商户所属行业"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+                    </RelativeLayout>
+
+
+                </TableRow>
+
+
+                <View
+                    style="@style/seperator" />
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="真实姓名" />
+
+                    <EditText
+                        android:id="@+id/real_name"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        tools:text="呵呵" />
+
+                </TableRow>
+
+                <View
+                    style="@style/seperator" />
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="身份证号码" />
+
+                    <EditText
+                        android:singleLine="true"
+                        android:inputType="textEmailAddress"
+                        android:id="@+id/id_card_num"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        tools:text="呵呵" />
+
+                </TableRow>
+
+                <View
+                    style="@style/seperator" />
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            style="@style/combination_left_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="身份证照片" />
+
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/committed"
+                            android:text="已提交"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            style="@style/combination_right_edittext_style"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:paddingRight="@dimen/combination_text_edit_margin_left"/>
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                            android:id="@+id/id_photo_back"
+                            style="@style/upload_pic_style"
+                            android:background="@drawable/btn_upload_idcard_back_selector" />
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/plus"
+                            android:layout_toLeftOf="@id/id_photo_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="10dp"
+                            android:text="+"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/plus"
+                            android:id="@+id/id_photo_front"
+                            style="@style/upload_pic_style"
+                            android:background="@drawable/btn_upload_idcard_face_selector" />
+
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <View
+                    style="@style/seperator" />
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/merchant_cer_photo_name"
+                            style="@style/combination_left_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="纸质开户单照片" />
+
+                        <ImageView
+                            android:layout_marginLeft="5dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/merchant_cer_sample"
+                            android:layout_toRightOf="@+id/merchant_cer_photo_name"
+                            android:src="@drawable/icon_question"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                            android:id="@+id/merchant_cer_photo"
+                            style="@style/upload_pic_style"
+                            android:background="@drawable/merchant_cer_capture_normal" />
+
+                    </RelativeLayout>
+
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <CheckBox
+                    android:checked="true"
+                    android:id="@+id/agreement"
+                    style="@style/mycheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我已阅读并同意"
+                    android:textColor="@color/combination_title_text_color"
+                    android:textSize="@dimen/small_text_size"
+                    android:drawablePadding="1dp"
+                    android:paddingRight="1dp" />
+
+                <TextView
+                    android:textColor="@color/common_blue_color"
+                    android:text="@string/lkl_protocol_large_amount_collection_protocol_underline"
+                    android:id="@+id/large_amount_collection_protocol"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Button
+                style="@style/btn_top_line"
+                android:text="确认申请"
+                android:id="@+id/btn_apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

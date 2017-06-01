@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="poisearch_route">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LakalaUI/libs/poisearch_route.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

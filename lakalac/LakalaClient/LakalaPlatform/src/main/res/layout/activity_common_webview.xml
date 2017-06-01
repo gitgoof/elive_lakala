@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/id_root_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/webView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/id_webview_handle_layout"/>
+
+        <LinearLayout
+            android:id="@+id/id_webview_handle_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/id_web_back"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="3dp"
+                android:src="@drawable/web_left_selector">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/id_web_goahead"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="3dp"
+                android:src="@drawable/web_right_selector">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/id_web_refresh"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="3dp"
+                android:src="@drawable/web_renovate_selector">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/id_web_hide"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="3dp"
+                android:src="@drawable/web_more_selector"
+                android:visibility="invisible">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/id_web_more"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="3dp"
+                android:src="@drawable/web_more_selector">
+            </ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/error_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/dimen_60"
+        android:text="该页面无法访问\n请检查您的网路,轻击重试"/>
+</LinearLayout>

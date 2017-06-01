@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/gray_eff3f6"
+    android:layout_height="match_parent">
+    <view
+        android:id="@+id/navigation_bar"
+        class="com.lakala.ui.component.NavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_100"
+        android:layout_gravity="center_horizontal"
+        app:textColor="@color/white"
+        app:navBg="@color/main_nav_blue"
+        app:titleMaxLength="12"
+        app:btnTextSize="14sp"
+        app:bottomBg="@color/gray_d7d7d7"
+        app:titleTextSize="17sp"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/common_distance_level_1"
+        android:orientation="vertical"
+        android:background="@color/bg_main_gray_color_3.1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View style="@style/seperator"/>
+        <com.lakala.shoudan.component.IconTextView
+            android:id="@+id/sk_sk"
+            app:left_icon="@drawable/icon_sksk1"
+            app:name="刷卡收款"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+        <View style="@style/seperator_marginlef_15"/>
+        <com.lakala.shoudan.component.IconTextView
+            android:id="@+id/sm_sk"
+            app:left_icon="@drawable/icon_smsk1"
+            app:name="扫码收款"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+        <View style="@style/seperator_marginlef_15"/>
+        <com.lakala.shoudan.component.IconTextView
+            android:id="@+id/de_sk"
+            app:left_icon="@drawable/icon_desk"
+            app:name="大额收款"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+        <View style="@style/seperator_marginlef_15"/>
+
+        <com.lakala.shoudan.component.IconTextView
+            android:id="@+id/cx_jy"
+            app:left_icon="@drawable/icon_cxjy"
+            app:name="撤销交易"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+
+        <View style="@style/seperator"/>
+        <View android:layout_marginTop="@dimen/common_distance_level_1"
+            style="@style/seperator"/>
+        <com.lakala.shoudan.component.IconTextView
+            android:id="@+id/d0_tk"
+            app:left_icon="@drawable/icon_d0tk"
+            app:name="D0提款"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+        <View style="@style/seperator"/>
+        <View android:layout_marginTop="@dimen/common_distance_level_1"
+            style="@style/seperator"/>
+        <com.lakala.shoudan.component.IconTextView
+            android:id="@+id/sy_zj"
+            app:left_icon="@drawable/icon_syzj"
+            app:name="生意专家"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+        <View style="@style/seperator"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+/*
+ * Copyright (C) 2012 ZXing authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.lakala.core.scanner.zxing.camera.open;
+
+import android.hardware.Camera;
+import android.util.Log;
+
+import com.lakala.library.util.LogUtil;
+
+public final class OpenCameraInterface {
+
+  private static final String TAG = OpenCameraInterface.class.getName();
+  
+  
+  private static  int cameraId;
+  
+
+  private OpenCameraInterface() {
+  }
+
+  /**
+   * Opens a rear-facing camera with {@link Camera#open(int)}, if one exists, or opens camera 0.
+   */
+  public static Camera open() {
+    
+    int numCameras = Camera.getNumberOfCameras();
+    if (numCameras == 0) {
+      LogUtil.w(TAG, "No cameras!");
+      return null;
+    }
+
+    int index = 0;
+    while (index < numCameras) {
+      Camera.CameraInfo cameraInfo = new Camera.CameraInfo();
+      Camera.getCameraInfo(index, cameraInfo);
+      if (cameraInfo.facing == Camera.CameraInfo.CAMERA_FACING_BACK) {
+        break;
+      }
+      index++;
+    }
+    
+    Camera camera;
+    if (index < numCameras) {
+      LogUtil.i(TAG, "Opening camera #" + index);
+      camera = Camera.open(index);
+      cameraId = index;
+    } else {
+      LogUtil.i(TAG, "No camera facing back; returning camera #0");
+      camera = Camera.open(0);
+      cameraId = 0;
+    }
+    return camera;
+  }
+  
+  /**
+   * 
+   */
+  public static int getCameraId(){
+	  return cameraId;
+  }
+  
+
+}

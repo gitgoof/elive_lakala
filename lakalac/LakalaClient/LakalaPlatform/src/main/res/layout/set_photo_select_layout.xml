@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b0000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:id="@+id/id_select_layout"
+        android:layout_margin="@dimen/dimen_20">
+
+        <TextView
+            android:id="@+id/id_select_photo_image"
+            android:textSize="@dimen/dimen_32"
+            android:background="@drawable/ui_common_item_selector"
+            android:textColor="@color/color_blue_50bdef"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:text=" 相册"
+            android:layout_height="@dimen/dimen_88" />
+
+        <TextView
+            android:id="@+id/id_take_photo_image"
+            android:background="@drawable/ui_common_item_selector"
+            android:textSize="@dimen/dimen_32"
+            android:layout_marginTop="@dimen/dimen_6"
+            android:textColor="@color/color_blue_50bdef"
+            android:gravity="center"
+            android:text="@string/plat_take_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_88" />
+
+        <TextView
+            android:id="@+id/id_cancel"
+            android:background="@drawable/ui_common_item_selector"
+            android:gravity="center"
+            android:textSize="@dimen/dimen_32"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:textColor="@color/color_blue_50bdef"
+            android:layout_width="fill_parent"
+            android:text="@string/button_cancel"
+            android:layout_height="@dimen/dimen_88" />
+
+    </LinearLayout>
+</RelativeLayout>

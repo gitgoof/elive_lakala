@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我要提款非服务时段 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:apps="http://schemas.android.com/apk/res-auto"
+                style="@style/app_background_white"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_sorry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_style_normal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="很抱歉，非业务开放时间段不能申请提款"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_reminder_box"
+        android:layout_width="228dp"
+        android:layout_height="148dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/pic_reminder_box"
+        android:layout_below="@id/ll_sorry"
+        android:scaleType="fitCenter"/>
+    <View
+        android:id="@+id/box_top"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_alignTop="@id/iv_reminder_box"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/box_top"
+        android:layout_alignLeft="@id/iv_reminder_box"
+        android:layout_alignRight="@id/iv_reminder_box"
+        android:layout_marginTop="50dp">
+        <View
+            android:id="@+id/center_horizontal"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/center_horizontal"
+            android:layout_marginRight="15dp"
+            android:text="服务时段:"
+            style="@style/trade_draw_money_close_style"/>
+
+        <TextView
+            android:id="@+id/tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/center_horizontal"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/tip1"
+            android:text="OPEN"
+            style="@style/trade_draw_money_close_style"/>
+
+        <TextView
+            android:id="@+id/tv_open_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/center_horizontal"
+            android:layout_alignBottom="@id/tip2"
+            android:text="08:00"
+            style="@style/trade_draw_money_close_style"/>
+
+        <TextView
+            android:id="@+id/tip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLOSE"
+            android:layout_toLeftOf="@id/center_horizontal"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/tip2"
+            style="@style/trade_draw_money_close_style"/>
+
+        <TextView
+            android:id="@+id/tv_close_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_alignBottom="@id/tip3"
+            android:text="23:00"
+            style="@style/trade_draw_money_close_style"/>
+    </RelativeLayout>
+
+</RelativeLayout>

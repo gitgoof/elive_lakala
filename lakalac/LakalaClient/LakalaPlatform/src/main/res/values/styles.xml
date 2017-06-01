@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="mycheckbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_selector</item>
+        <item name="android:textColor">@color/gray_999999</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+    <style name="more_popup_anim_style">
+        <item name="@android:windowEnterAnimation">@anim/bottom_in</item>
+        <item name="@android:windowExitAnimation">@anim/bottom_out</item>
+    </style>
+
+</resources>

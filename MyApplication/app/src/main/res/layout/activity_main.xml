@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:test="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.test.gf.myandroidtest.MainActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_test_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="测试输入框"
+            android:textColor="@android:color/black"
+            android:background="@null"
+            android:drawableBottom="@drawable/edit_shape_bg" />
+
+        <TextView
+            android:textSize="25sp"
+            android:textColor="@android:color/background_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="这是我的AndroidTest程序"/>
+
+        <TextView
+            android:id="@+id/tv_native_result_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+            android:text="结果："/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clickNative"
+            android:text="调用Native方法"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clickReturnJava"
+            android:text="调用c++并调用java"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="计算"
+            android:onClick="toMath"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="替换"
+            android:onClick="toReplace"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ListView测试"
+            android:onClick="toListAct"/>
+
+     </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,1 @@
+SignBundle.exe b %cd% %cd%/LakalaClient/src/main/assets

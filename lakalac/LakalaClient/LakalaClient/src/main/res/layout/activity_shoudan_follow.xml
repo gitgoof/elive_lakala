@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_fuwuzhongxin"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/order_item_height"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_setting_gray_white_selector"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/img_fuwuzhongxin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/icon_wechat"/>
+        <TextView
+            android:id="@+id/tv_fuwuzhongxin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/img_fuwuzhongxin"
+            android:text="关注拉卡拉微信"
+            android:textSize="@dimen/medium_text_size"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/btn_arrow_go"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/view_line"
+        style="@style/combination_seperator_style"
+        android:layout_below="@+id/layout_fuwuzhongxin"
+        android:background="@color/white"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_weibo"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/order_item_height"
+        android:layout_below="@+id/view_line"
+        android:background="@drawable/bg_setting_gray_white_selector"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/img_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/icon_weibo"/>
+        <TextView
+            android:id="@+id/tv_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/img_weibo"
+            android:text="@string/more_contact_weibo"
+            android:textSize="@dimen/medium_text_size"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/btn_arrow_go"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

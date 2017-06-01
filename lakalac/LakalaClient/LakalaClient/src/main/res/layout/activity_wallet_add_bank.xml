@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_distance_level_1"/>
+    <View
+        style="@style/seperator"/>
+    <LinearLayout
+        style="@style/combination_item_style"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+        android:paddingRight="@dimen/combination_text_edit_margin_left">
+
+        <TextView
+            style="@style/combination_left_textview_style"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="输入转出金额" />
+
+        <EditText
+            android:id="@+id/wallet_transfer_amount"
+            style="@style/combination_right_edittext_style"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@color/white"
+            android:inputType="numberDecimal"
+            android:duplicateParentState="true"
+            android:hint="请输入转出金额">
+        </EditText>
+    </LinearLayout>
+    <View
+        style="@style/seperator"/>
+
+    <TextView
+        android:id="@+id/transfer_balance_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common_distance_level_1"
+        android:paddingTop="5dp"
+        tools:text="零钱可转出余额：XX元，信用卡充值金额只可用于消费，不可提现，不可转出；"
+        android:textColor="@color/gray_main1"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/common_distance_level_2"
+        android:orientation="vertical">
+
+        <View style="@style/seperator"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:paddingLeft="@dimen/combination_text_edit_margin_left"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/combination_left_textview_style"
+                android:text="储蓄卡"/>
+            <TextView
+                android:id="@+id/wallet_bind_bank_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/combination_right_edittext_style"
+                android:drawableRight="@drawable/btn_arrow_go"
+                android:hint="请绑定银行卡"
+                android:textColorHint="@color/gray_main1"
+                android:textColor="@color/gray_main1"
+                android:drawablePadding="@dimen/combination_text_edit_margin_left"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"/>
+        </LinearLayout>
+
+        <View style="@style/seperator"
+            android:layout_marginLeft="@dimen/common_distance_level_1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/combination_text_edit_margin_left"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/combination_left_textview_style"
+                android:text="到账时间"/>
+            <TextView
+                android:id="@+id/wallet_arrival_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/combination_right_edittext_style"
+                android:drawableRight="@drawable/btn_arrow_go"
+                android:hint="请选择到账时间"
+                android:textColorHint="@color/gray_main1"
+                android:drawablePadding="@dimen/combination_text_edit_margin_left"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"/>
+        </LinearLayout>
+
+        <View style="@style/seperator"
+            android:layout_marginLeft="@dimen/common_distance_level_1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/combination_left_textview_style"
+                android:text="到账通知手机号码"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"/>
+            <EditText
+                android:id="@+id/wallet_arrival_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/combination_right_edittext_style"
+                android:inputType="phone"
+                android:drawablePadding="@dimen/combination_text_edit_margin_left"
+                android:paddingRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/wallet_phone_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_contact"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/seperator"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/common_distance_level_1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textColor="@color/gray_main1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" 2个小时到账：运行时间为8:00-22:00.其余时间仅开放下个工作日到账方式；"
+            android:textColor="@color/gray_main1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/common_distance_level_1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2."
+            android:textColor="@color/gray_main1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下个工作日到账：当日23点前的交易于下个工作日到账，23点后的交易将推迟一个工作日到账。"
+            android:textColor="@color/gray_main1"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/confirm_transfer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_distance_level_3"
+        style="@style/btn_top_line"
+        android:text="确认转出" /> />
+</LinearLayout>

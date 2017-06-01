@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_group"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <requestFocus/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <!-- 储蓄卡信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            style="@style/finance_twelve_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/x12"
+            android:paddingBottom="@dimen/x10"
+            android:text="储蓄卡信息"
+            android:paddingLeft="@dimen/combination_text_edit_margin_left"
+            android:textSize="@dimen/x12" />
+        <View
+            style="@style/seperator"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                style="@style/combination_item_style"
+                android:paddingLeft="@dimen/common_distance_level_1"
+                android:paddingRight="@dimen/common_distance_level_1"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/combination_left_textview_style"
+                    android:text="户名"
+                    android:gravity="center"
+                    android:textSize="@dimen/medium_text_size"/>
+                <EditText
+                    android:id="@+id/let_card_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:focusableInTouchMode="false"
+                    style="@style/combination_right_edittext_style"
+                    android:hint="@string/user_name_error4"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <View
+                android:paddingLeft="@dimen/common_distance_level_1"
+                style="@style/seperator"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <com.lakala.ui.component.LabelEditText
+                        style="@style/labeledittext_sytle_no_rightpadding"
+                        android:id="@+id/let_bank_card_num"
+                        app:labelText="银行卡号"
+                        android:textSize="@dimen/medium_text_size"
+                        android:focusableInTouchMode="false"
+                        app:rightArrowVisibility="INVISIBLE"
+                        app:hint="@string/bank_cridit_phone1">
+
+                    </com.lakala.ui.component.LabelEditText>
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/let_card_type"
+                style="@style/combination_right_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/order_item_height"
+                android:paddingBottom="@dimen/x7"
+                android:paddingTop="@dimen/x7"
+                android:layout_weight="1"
+                android:textSize="@dimen/x12"
+                android:textColor="@color/font_gray_three2"
+                android:layout_marginRight="@dimen/common_distance_level_1"
+                android:gravity="right|center_vertical"
+                android:duplicateParentState="true"
+                android:background="@color/white" />
+        </LinearLayout>
+
+        <View style="@style/seperator"
+            />
+    </LinearLayout>
+
+    <!-- 信用卡信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            style="@style/finance_twelve_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/x12"
+            android:paddingBottom="@dimen/x10"
+            android:text="信用卡信息"
+            android:paddingLeft="@dimen/combination_text_edit_margin_left"
+            android:textSize="@dimen/x12" />
+        <View
+            style="@style/seperator"
+            />
+
+        <View style="@style/seperator"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                style="@style/combination_item_style"
+                android:paddingLeft="@dimen/common_distance_level_1"
+                android:paddingRight="@dimen/common_distance_level_1"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/combination_left_textview_style"
+                    android:text="户名"
+                    android:gravity="center"
+                    android:textSize="@dimen/medium_text_size"/>
+
+                <EditText
+                    android:id="@+id/credit_card_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:focusableInTouchMode="false"
+                    style="@style/combination_right_edittext_style"
+                    android:hint="@string/user_name_error4"/>
+            </LinearLayout>
+            <View
+                android:paddingLeft="@dimen/common_distance_level_1"
+                style="@style/seperator"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <com.lakala.ui.component.LabelEditText
+                        style="@style/labeledittext_sytle_no_rightpadding"
+                        android:id="@+id/credit_bank_card_num"
+                        app:labelText="银行卡号"
+                        android:textSize="@dimen/medium_text_size"
+                        app:rightArrowVisibility="INVISIBLE"
+                        app:hint="@string/bank_cridit_phone2"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/credit_card_type"
+                style="@style/combination_right_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="@dimen/order_item_height"
+                android:paddingBottom="@dimen/x7"
+                android:paddingTop="@dimen/x7"
+                android:textSize="@dimen/x12"
+                android:textColor="@color/font_gray_three2"
+                android:layout_marginRight="@dimen/common_distance_level_1"
+                android:gravity="right|center_vertical"
+                android:duplicateParentState="true"
+                android:background="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/next"
+                style="@style/btn_top_line"
+                android:clickable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/next" />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/layout_keyboard" />
+    </RelativeLayout>
+</RelativeLayout>

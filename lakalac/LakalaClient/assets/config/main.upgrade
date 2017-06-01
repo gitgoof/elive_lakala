@@ -1,0 +1,63 @@
+{
+    "name": "main",
+    "version": "38",
+    "subVersion": "1",
+    "checkURL": "upgrade/webAppConfig",
+    "config": {
+        "business_launcher": {
+            "bundleDirectory": "assets/config",
+            "version": "1",
+            "checkURL": "upgrade/webAppConfig",
+            "fileName": "business_launcher.config",
+				     "MD5": "b18bca660bb2d846e5e25f75341c8a39",
+            "forceUpdate": false,
+            "verifySign": true,
+            "targetDirectory": "config",
+            "expandDirectory": ""
+        },
+        "webapp": {
+            "bundleDirectory": "assets/config",
+            "version": "1",
+            "checkURL": "upgrade/webAppConfig",
+            "fileName": "webapp.upgrade",
+				     "MD5": "7dce0a7b888d7ada06fa3348424c3112",
+            "forceUpdate": false,
+            "verifySign": true,
+            "targetDirectory": "config",
+            "expandDirectory": ""
+        },
+        "statistic": {
+            "bundleDirectory": "assets/config",
+            "version": "1",
+            "checkURL": "upgrade/webAppConfig",
+            "fileName": "statistic.config",
+				     "MD5": "1c53e077226897ddd1b04e89568d1d60",
+            "forceUpdate": false,
+            "verifySign": true,
+            "targetDirectory": "config",
+            "expandDirectory": ""
+        },
+        "pluginfilter": {
+            "bundleDirectory": "assets/config",
+            "version": "1",
+            "checkURL": "upgrade/webAppConfig",
+            "fileName": "pluginfilter.config",
+				     "MD5": "8355a02a8ed60508b1f8e0da3a72750d",
+            "forceUpdate": false,
+            "verifySign": true,
+            "targetDirectory": "config",
+            "expandDirectory": ""
+        },
+        "cacherule": {
+            "bundleDirectory": "assets/config",
+            "version": "1",
+            "checkURL": "upgrade/webAppConfig",
+            "fileName": "cacherule.config",
+				     "MD5": "0ae3cfa24295e2cfd0e9415c651c00fb",
+            "forceUpdate": false,
+            "verifySign": true,
+            "targetDirectory": "config",
+            "expandDirectory": ""
+        }
+    }
+}

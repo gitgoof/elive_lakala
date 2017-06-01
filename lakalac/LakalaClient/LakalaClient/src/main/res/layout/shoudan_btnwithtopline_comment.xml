@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 通用确认按钮，下一步，确定，确定付款等 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/id_common_guide_button_layout"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              >
+      <Button
+        android:id="@+id/id_common_guide_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_top_line"
+        android:text="下一步" />
+</LinearLayout>

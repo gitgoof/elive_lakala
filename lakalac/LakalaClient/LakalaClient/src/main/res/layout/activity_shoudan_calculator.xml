@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/RelativeLayout1"
+                android:background="@color/gray"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="收款金额"
+            android:textColor="@color/shoudan_gray"
+            android:textSize="@dimen/font_size_small"/>
+
+        <TextView
+            android:id="@+id/shoudan_calculator_rslt"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:ellipsize="start"
+            android:gravity="right|bottom"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/trueblack"
+            android:textSize="55sp" />
+
+        <View style="@style/sepeartor_calculate" />
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/mcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="商品"
+                android:textColor="@color/has_input_edittext_color"/>
+            />
+            <ImageView
+                android:src="@drawable/btn_arrow_go_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View style="@style/sepeartor_calculate" />
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/key_del"
+                style="@style/calculator_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/dimen_20"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_20"
+                android:tag="del"
+                android:scaleType="fitCenter"
+                android:onClick="calculatorOperator"
+                android:src="@drawable/btn_backspace_black_selector"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/key_confirm"
+                style="@style/calculator_item"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="eql"
+                android:text="确认"
+                android:textSize="18sp"
+                android:textColor="@color/btn_blue_bluedeeper_selector" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="horizontal" >-->
+
+                <!--<Button-->
+                <!--android:visibility="gone"-->
+                <!--android:id="@+id/key_ac"-->
+                <!--style="@style/calculator_item"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:background="@drawable/lakala_btn_caculate_gray_blue_selector"-->
+                <!--android:onClick="calculatorItemOnClick"-->
+                <!--android:text="C"-->
+                <!--android:tag="ac"-->
+                <!--android:textColor="@color/lakala_text_white_blue_selector"-->
+                <!--android:textSize="25sp" />-->
+
+                <!--<View-->
+                <!--android:layout_width="0.5dp"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@color/lakala_white" />-->
+                <!--</RelativeLayout>-->
+
+                <!--<View style="@style/lakala_seperator_calculate" />-->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_1"
+                            android:id="@+id/key_1"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:tag="1"
+                            android:text="1"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+                        <View style="@style/sepeartor_calculate" />
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_4"
+                            android:id="@+id/key_4"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:tag="4"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="4"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+                        <View style="@style/sepeartor_calculate" />
+
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_7"
+                            android:id="@+id/key_7"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:tag="7"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="7"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+
+                        <View style="@style/sepeartor_calculate" />
+
+
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_decimal_point"
+
+                            android:id="@+id/key_dot"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_gray_blue_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="·"
+                            android:tag="."
+                            android:textColor="@color/text_black_white_selector"
+                            android:gravity="center"
+                            android:textSize="40sp"
+                            />
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/cal_seperator" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <!--<View style="@style/lakala_seperator" />-->
+
+                <!--<RelativeLayout-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1" >-->
+
+                <!---->
+
+                <!--<View-->
+                <!--android:layout_width="0.5dp"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@color/lakala_white" />-->
+                <!--</RelativeLayout>-->
+
+                <!--<View style="@style/lakala_seperator_calculate" />-->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_2"
+                            android:id="@+id/key_2"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="2"
+                            android:tag="2"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+                        <View style="@style/sepeartor_calculate" />
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_5"
+                            android:id="@+id/key_5"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="5"
+                            android:tag="5"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+                        <View style="@style/sepeartor_calculate" />
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_8"
+                            android:id="@+id/key_8"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="8"
+                            android:tag="8"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp"
+                            android:typeface="sans" />
+
+                        <View style="@style/sepeartor_calculate" />
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_0"
+                            android:id="@+id/key_0"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="0"
+                            android:tag="0"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/cal_seperator" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <!--<View style="@style/lakala_seperator" />-->
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1" >-->
+
+                <!---->
+                <!--</RelativeLayout>-->
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_3"
+                            android:id="@+id/key_3"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="3"
+                            android:tag="3"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+                        <View style="@style/sepeartor_calculate" />
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_6"
+                            android:id="@+id/key_6"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="6"
+                            android:tag="6"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+                        <View style="@style/sepeartor_calculate" />
+
+
+                        <ImageButton
+                            android:src="@drawable/lakala_icon_9"
+                            android:id="@+id/key_9"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="9"
+                            android:tag="9"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+
+
+                        <View style="@style/sepeartor_calculate" />
+
+
+                        <ImageButton
+
+                            android:src="@drawable/lakala_icon_equal_sign"
+                            android:id="@+id/key_equals"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_gray_blue_selector"
+                            android:onClick="calculatorOperator"
+                            android:text="="
+                            android:tag="="
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+
+                        <ImageButton
+                            android:visibility="gone"
+                            android:id="@+id/key_00"
+                            style="@style/calculator_item"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/lakala_btn_caculate_blue_gray_selector"
+                            android:onClick="calculatorItemOnClick"
+                            android:text="00"
+                            android:tag="00"
+                            android:textColor="@color/text_black_white_selector"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/white" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+
+                <ImageButton
+                    android:src="@drawable/lakala_icon_division"
+                    android:id="@+id/key_div"
+                    style="@style/calculator_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/lakala_btn_caculate_gray_blue_selector"
+                    android:onClick="calculatorOperator"
+                    android:text="÷"
+                    android:tag="÷"
+                    android:textColor="@color/text_white_blue_selector"
+                    android:textSize="30sp" />
+
+                <View style="@style/seperator_calculate_white" />
+
+                <ImageButton
+
+                    android:id="@+id/key_mul"
+                    style="@style/calculator_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/lakala_icon_multiply"
+                    android:background="@drawable/lakala_btn_caculate_gray_blue_selector"
+                    android:onClick="calculatorOperator"
+                    android:text="x"
+                    android:tag="x"
+                    android:textColor="@color/text_white_blue_selector"
+                    android:textSize="30sp" />
+
+                <View style="@style/seperator_calculate_white" />
+
+                <ImageButton
+                    android:src="@drawable/lakala_icon_minus"
+                    android:id="@+id/key_min"
+                    style="@style/calculator_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/lakala_btn_caculate_gray_blue_selector"
+                    android:onClick="calculatorOperator"
+                    android:text="-"
+                    android:tag="-"
+                    android:textColor="@color/text_white_blue_selector"
+                    android:textSize="30sp" />
+
+                <View style="@style/seperator_calculate_white" />
+
+                <ImageButton
+                    android:src="@drawable/lakala_icon_plus"
+                    android:id="@+id/key_plus"
+                    style="@style/calculator_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/lakala_btn_caculate_gray_blue_selector"
+                    android:onClick="calculatorOperator"
+                    android:text="+"
+                    android:tag="+"
+                    android:textColor="@color/text_white_blue_selector"
+                    android:textSize="30sp" />
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

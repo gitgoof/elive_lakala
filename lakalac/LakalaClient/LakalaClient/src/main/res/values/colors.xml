@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blue_1178CC">#1178CC</color>
+    <color name="blue_195EA2">#195EA2</color>
+    <color name="blue_9ec9ff">#9ec9ff</color>
+
+
+    <color name="msg_bg">#EBF0F4</color>
+
+    <!--<#195795>-->
+    <color name="blue_195795">#195795</color>
+    <color name="blue_004589">#004589</color>
+    <color name="blue_003366">#003366</color>
+
+
+    <!--收款-->
+    <color name="shoudan_gray">#ff7b7c80</color>
+    <color name="trueblack">#000000</color> <!-- 黑色 -->
+    <color name="cal_drak">#ffa6a7ac</color><!-- 定义按钮的颜色 -->
+    <color name="cal_blue1">#ff2ae4df</color><!-- 定义按钮的颜色 -->
+    <color name="cal_seperator">#ffa6a7ac</color><!-- 计算器数字间的分割线 -->
+
+    <!--撤销交易-->
+    <color name="red">#ff0000</color> <!-- 红色 -->
+    <color name="blue">#0000ff</color> <!-- 蓝色 -->
+    <color name="box">#cccccc</color> <!-- 边框 ,list或之间的分割线 -->
+    <color name="blue4">#009EDA</color>
+    <color name="blue2">#03aafa</color> <!-- 蓝色 -->
+
+    <!--shoudan-->
+    <color name="orange2">#FF8A00</color>
+
+    <color name="orange0">#ff8308</color>
+    <!--项目名称(组合项左侧TextView字体颜色)-->
+    <color name="combination_textview_color">#666666</color>
+    <!-- 关于我们  ，注册，忘记密码等深色字体 -->
+    <color name="about_us_blue">@color/main_text_color</color>
+    <color name="main_text_color">@color/common_blue_color</color>
+    <!-- 大标题问题、icon、按钮、协议 -->
+    <color name="common_blue_color">#268de5</color>
+    <color name="title_bar_divider">@color/hint_or_divider_color</color>
+    <!-- 未填提示字体、分割线颜色 -->
+    <color name="hint_or_divider_color">#D7D7D7</color>
+    <!--已填内容(组合项右侧EditText字体颜色)-->
+    <color name="has_input_edittext_color">#333333</color>
+    <!-- 组合项小标题字体颜色 -->
+    <color name="combination_title_text_color">#999999</color>
+    <!-- 3.1 UI风格色值(以下为产品提供的规范，具体情况以实际为准)-->
+    <!-- 输入框背景色 -->
+    <color name="edit_bg">#FFFFFF</color>
+    <!-- 按钮禁用时的背景色 -->
+    <color name="disable_btn_bg">#E4E4E4</color>
+    <!-- 按钮禁用时的文字颜色 -->
+    <color name="disable_btn_text_color">#C9C9C9</color>
+    <color name="signatureview_back">#f4faf8</color>
+    <!-- 按下按钮背景色 -->
+    <color name="btn_bg_pressed">#085DB0</color>
+    <!-- 金额颜色 -->
+    <color name="amount_color">#ff8308</color>
+    <color name="main_nav_blue">#03aaf3</color>
+    <color name="main_nav_blue_txtclick">#085db0</color>
+    <!-- 商户开通-输入完成时文字颜色(RegisterActivity) -->
+    <color name="complete_input_text">#76aef1</color>
+    <color name="stock_red_color">#e60012</color>
+    <color name="take_out_amount">#13ae67</color>
+
+    <color name="custom_diagram_yellow">#F18824</color>
+    <color name="custom_diagram_yellow1">#FDD7AE</color>
+    <color name="custom_diagram_text">#979797</color>
+    <color name="shape_loan_apply">#ff9933</color>
+
+    <color name="msg_unread">#ff333333</color>
+    <color name="transpant_gray">#BEC0C1</color>
+    <!-- 3.0 之后主色调 -->
+    <!-- 首页立即提款 -->
+    <color name="bg_main_gray_deeper_color">#e4eaed</color>
+    <!-- 首页字体颜色 -->
+    <color name="home_text_color">#8B9eB6</color>
+    <color name="home_text_money_color">#768595</color>
+    <color name="btn_common_color">@color/main_nav_blue</color>
+    <color name="btn_common_pressed_color">@color/btn_bg_pressed</color>
+    <!--主背景色-->
+    <color name="bg_main_gray_color_3.1">#eff3f6</color>
+    <!-- 3.0 之后主色调 -->
+    <color name="bg_main_gray_color">@color/bg_main_gray_color_3.1</color>
+    <color name="bg_main_gray_color1">#f5f9f9</color>
+    <color name="bg_main_gray_color2">#f4f8f9</color>
+    <color name="bg_main_gray_color3">#eff3f6</color>
+    <color name="bg_main_gray_color4">#f6f6f6</color>
+    <!-- 二维码扫描用到的值 -->
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="transparence">#00000000</color>
+    <color name="danlanse">#0099ff</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="scan_text_color">#d7d7d7</color>
+    <color name="alpha_z">#f0ffffff</color>
+
+    <color name="message_center_blue">#03AAF3</color>
+    <color name="blue_main_color">#2792ED</color>
+    <color name="blue_button_nor">#18A4DD</color>
+    <color name="yellow3">#FFCC00</color> <!-- 便利特惠发票黄色 -->
+
+    <color name="green_blue">#18A4DD</color>
+
+    <color name="amount_green">#13ae67</color>
+    <color name="amount_red1">#ff0000</color>
+    <color name="amount_red">#ff8308</color>
+    <color name="gray_main1">#A4A4A4</color>
+    <color name="light">#999999</color>
+
+    <color name="orange">#fd5f00</color> <!-- 桔色 -->
+    <color name="color_31b8f3">#31b8f3</color> <!-- 桔色 -->
+    <color name="color_80aa16">#80aa16</color> <!-- 桔色 -->
+
+
+    <color name="red_package_amount">#fa3137</color>
+    <color name="gray_main2">#EFEFEF</color>
+    <color name="blue_text">#148ab0</color>
+
+    <!--首页-->
+    <color name="text_black_one">#333333</color>
+    <color name="text_black_two">#c6c6c6</color>
+
+    <!--通用字体颜色是三个级别-->
+    <color name="font_gray_one">#4F4F4F</color>
+    <color name="font_gray_two">#6E777D</color>
+    <color name="font_gray_three">#9b9b9b</color>
+
+    <color name="font_gray_one2">#4F4F4F</color>
+    <color name="font_gray_two2">#333333</color>
+    <color name="font_gray_three2">#666666</color>
+    <color name="province_line_border">#D0D0D0</color>
+    <color name="font_gray_three3">#999999</color>
+    <color name="font_gray_three4">#d7d7d7</color>
+
+    <color name="back">#eff3f6</color>
+    <color name="text_blue">#0066ff</color>
+    <color name="text_blue2">#0033ff</color>
+    <color name="back2">#eff3f6</color>
+    <color name="yelo">#ff8308</color>
+</resources>

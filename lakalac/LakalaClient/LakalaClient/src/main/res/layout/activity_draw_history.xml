@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/radioTabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/tab1"
+            style="@style/draw_history_tab_style"
+            android:background="@drawable/draw_tab_bg_selector"/>
+        <ImageView
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/shoudan_gray"/>
+        <RadioButton
+            android:id="@+id/tab2"
+            style="@style/draw_history_tab_style"
+            android:background="@drawable/draw_tab_bg_selector"/>
+        <ImageView
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/shoudan_gray"/>
+        <RadioButton
+            android:id="@+id/tab3"
+            style="@style/draw_history_tab_style"
+            android:background="@drawable/draw_tab_bg_selector"/>
+    </RadioGroup>
+    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+        android:id="@+id/history_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:groupIndicator="@null"
+        android:padding="5dp"
+        />
+    <include 
+        android:id="@+id/layout_empty"
+		layout="@layout/empry_view_layout"
+        />
+    
+</LinearLayout>

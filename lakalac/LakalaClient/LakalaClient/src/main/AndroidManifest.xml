@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lakala.shoudan"
+    android:versionCode="31"
+    android:versionName="1.1.0(Beta)">
+
+    <uses-sdk
+
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <!-- permission -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 客服权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+    <!--<uses-feature-->
+    <!--android:name="android.hardware.camera"-->
+    <!--android:required="false" />-->
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <!-- replace above two with next line after Android 4.2 -->
+    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+    <!--<uses-feature-->
+    <!--android:name="android.hardware.camera.autofocus"-->
+    <!--android:required="false" />-->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <!-- This excludes Google TV, which is unfortunately included by virtue of not requiring a camera -->
+    <uses-feature android:name="android.hardware.touchscreen" />
+
+    <!-- 定位sdk权限 start -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 定位sdk权限 end -->
+    <application
+        android:name=".common.ClientApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+
+        android:theme="@style/AppClientTheme"
+        tools:replace="icon,label,theme,name,allowBackup">
+        <!-- 功夫贷 -->
+        <meta-data
+            android:name="GFD_APPID"
+            android:value="lakala" />
+        <meta-data
+            android:name="GFD_APPKEY"
+            android:value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDICPVYbp2xLK8uQcrSs0ZERILIc2CQ1U2c5YsP8eVDrQg3B/ynjoSXzR5H5ywqOfqBjgfgnWBVoZUA9s5qIDaOnB4uHec34ua+FyYeppiEYXlZwPCLlsZuMrhEmwxJ61dzwruU4YKEjbeg3F5woYdRwVUugnAjljqXuqowD0tLUQIDAQAB" />
+
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="官网_原" />
+        <!-- avos cloud渠道统计 -->
+        <meta-data
+            android:name="Channel ID"
+            android:value="${CHANNEL_VALUE}" />
+        <meta-data
+            android:name="CRASH"
+            android:value="CRASH_VERSION" />
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="2d037e7939dbd15a3f892bc9dc0e50ec7e69391d" />
+        <!-- 百度地图定位 -->
+        <!-- hs0yXO9WKecytObby0DNkGj2 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+
+            android:enabled="true"
+            android:value="EykUKI0y2lzDUSpbFZK3KXieMEwbUK07" />
+
+        <service
+            android:name="com.baidu.location.f"
+
+            android:enabled="false"
+
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <category android:name="android.intent.category.BROWSABLE"/> -->
+            <!-- <action android:name="android.intent.action.VIEW"/> -->
+            <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+            <!-- <data android:host="client" android:scheme="koala"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".activity.shoudan.loan.LoanTrailActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".activity.shoudan.AdShareActivity" />
+        <!-- 微信，必须建在包名下 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <!-- qq分享-->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent222222" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        <!-- 必须注册在微博授权，分享微博时候用到 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.lakala.platform.activity.WeiBoFilterRespActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.shoudan.promotionarea.PromotionAreaActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shoudan.webmall.privilege.PrivilegePurchaseWebMallActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.GuideActivity" />
+        <activity android:name=".activity.login.LoginSuccessNeedBindDeviceActivity" />
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.main.MainActivity_5_0"
+            android:launchMode="singleTask" />
+        <!-- password keyboard -->
+        <activity
+            android:name="cn.cloudcore.iprotect.plugin.CKbdActivity"
+            android:configChanges="orientation"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent"></activity>
+        <activity
+            android:name=".activity.login.GestrueActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBar">
+            <intent-filter>
+                <action android:name="com.lakala.shoudan.action.gestrue" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 密码 -->
+        <activity android:name=".activity.accountmanagement.changepwd.InputNewPasswordActivity" />
+        <activity android:name=".activity.accountmanagement.changepwd.UpdateLoginPasswordActivity" />
+        <activity android:name=".activity.accountmanagement.ForgotPasswordActivity" />
+        <activity android:name=".activity.accountmanagement.RegisterSetPasswordActivity" />
+        <activity android:name=".activity.accountmanagement.UserRegisterActivity" />
+        <activity android:name=".activity.quickArrive.GetBanckNoActivity" />
+        <activity android:name=".activity.quickArrive.GetBankNo2Activity" />
+        <activity android:name=".activity.quickArrive.InCardNoActivity" />
+        <activity android:name=".activity.quickArrive.CardListActivity" />
+        <activity android:name=".activity.quickArrive.UserInforActivity" />
+        <activity android:name=".activity.quickArrive.QuickArriveActivity" />
+        <activity android:name=".activity.quickArrive.QuickArriveActivity2" />
+        <activity android:name=".activity.shoudan.records.SecondOpenActivity" />
+        <activity android:name=".activity.quickArrive.AddBankCardActivity" />
+        <activity android:name=".activity.quickArrive.ArriveDetileActivity" />
+        <activity android:name=".activity.quickArrive.QuickPaymentActivity" />
+        <activity android:name=".activity.quickArrive.TradeResultActivity" />
+        <activity android:name="com.zhangdan.app.loansdklib.U51WebViewActivity" />
+        <activity android:name="com.lakala.shoudan.activity.shoudan.loan.loanlist.AdWebActivity" />
+        <activity
+            android:name="com.lakala.platform.FileUpgrade.HandleResultActivity"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <!-- Http请求异常统一处理对话框activity -->
+        <activity
+            android:name="com.lakala.platform.activity.ErrorDialogActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name=".loginservice.TokenRefreshService" />
+
+        <!-- <activity -->
+        <!-- android:name=".activity.login.BindMerchantSuccessActivity" -->
+        <!-- android:launchMode="singleTask" > -->
+        <!-- </activity> -->
+        <!-- <activity android:name=".activity.login.MerchantCheckActivity" > -->
+        <!-- </activity> -->
+
+
+        <!-- 设置 -->
+
+
+        <!-- 设备管理 -->
+        <activity android:name=".activity.payment.DeviceManagementActivity" />
+        <!-- 设置-常见问题 -->
+
+
+        <!-- 设置-关于我们-服务协议 -->
+        <!-- <activity android:name="com.lakala.shoudan.activity.setting.BussinessServiceProtocalActivity" android:launchMode="singleTask"/> -->
+
+
+        <!-- 收款 -->
+        <activity android:name=".activity.collection.CollectionEntranceActivity" />
+        <!-- 便民服务 -->
+        <activity android:name=".activity.communityservice.CommunityServiceActivity" />
+
+        <!-- 信用卡还款 -->
+        <activity
+            android:name=".activity.communityservice.creditpayment.CreditFormInputActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".activity.communityservice.creditpayment.PaymentHistoryRecordCardActivity" />
+        <!-- 转账汇款 -->
+        <activity
+            android:name=".activity.communityservice.transferremittance.TransferRemittanceActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".activity.communityservice.transferremittance.RemittanceHistoryRecordCardActivity" />
+        <activity android:name=".activity.communityservice.transferremittance.CommonBankListActivity" />
+        <activity android:name=".activity.communityservice.phonerecharge.RechargeHistoryRecordDataActivity" />
+        <!-- 手机充值 -->
+        <activity
+            android:name=".activity.communityservice.phonerecharge.RechargeSelectAmountActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!-- 余额查询 -->
+        <activity android:name=".activity.communityservice.balanceinquery.BalanceInqueryActivity" />
+
+        <!-- 交易管理 -->
+        <activity android:name=".activity.shoudan.records.TradeManageActivity" />
+        <activity android:name=".activity.shoudan.records.RecordsQuerySelectionActivity" />
+        <activity android:name=".activity.shoudan.records.TradeQueryActivity" />
+        <activity android:name=".activity.shoudan.records.DrawMoneyActivity" />
+        <activity android:name=".activity.shoudan.records.LoanMoneyActivity" />
+        <activity android:name=".activity.shoudan.records.DrawMoneyHistoryActivity" />
+        <activity android:name=".activity.shoudan.records.DrawMoneyServiceCloseActivity" />
+        <activity android:name=".activity.shoudan.records.DrawMoneySubmitActivity" />
+        <activity android:name=".activity.shoudan.records.RecordDetailActivity" />
+
+        <!--考来信用-->
+        <activity android:name=".activity.kaola.KaoLaCreditActivity" />
+
+
+        <activity android:name=".activity.quickArrive.OneDayLoanApplyActivity" />
+        <activity android:name=".activity.quickArrive.OneDayLoanApply2Activity" />
+
+        <!-- 基础通用支付页面 -->
+        <activity android:name=".activity.payment.BillSignatureActivity" />
+        <activity android:name=".activity.payment.ConfirmResultActivity" />
+        <activity android:name=".activity.payment.SignatrueActivity" />
+        <activity
+            android:name=".activity.collection.CollectionMainActivity"
+            android:label="@string/title_activity_collection_main" />
+        <activity
+            android:name=".activity.collection.CollectionsAmountInputActivity"
+            android:label="@string/receivables" />
+        <activity
+            android:name=".activity.collection.CollectionPaymentActivity"
+            android:label="@string/receivables" />
+        <activity android:name=".activity.bscanc.BScanCActivity" />
+        <activity
+            android:name=".activity.revocation.RevocationPwdVerifyActivity"
+            android:label="@string/revocation_transaction" />
+        <activity
+            android:name=".activity.revocation.RevocationPaymentActivity"
+            android:label="@string/revocation_transaction" />
+        <activity
+            android:name=".activity.revocation.RevocationRecordSelectionActivity"
+            android:label="@string/revocation_transaction"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name=".activity.webbusiness.WebMallContainerActivity" />
+
+        <!-- 声明美洽SDK所需的activity、service -->
+        <activity
+            android:name="com.mechat.mechatlibrary.ui.ConversationActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Light" />
+        <activity android:name="com.mechat.mechatlibrary.ui.ZoomImageActivity" />
+
+        <service
+            android:name="com.mechat.mechatlibrary.MechatService"
+            android:label="MechatService" />
+
+        <activity android:name=".activity.communityservice.creditpayment.CreditCardPaymentActivity" />
+        <activity android:name=".activity.protocal.ProtocalActivity" />
+        <activity
+            android:name=".activity.communityservice.transferremittance.RemittanceConfirmActivity"
+            android:label="@string/title_activity_remittance" />
+        <activity android:name=".activity.communityservice.transferremittance.TransferRemittancePayActivity" />
+        <activity android:name=".activity.communityservice.phonerecharge.RechargePaymentActivity" />
+        <activity android:name=".activity.wallet.WalletHomeActivity" />
+        <activity android:name=".activity.wallet.WalletPaymentActivity" />
+        <activity android:name=".activity.wallet.WalletRechargeConfirmActivity" />
+        <activity android:name=".activity.wallet.WithdrawCardListActivity" />
+        <activity android:name=".activity.wallet.WalletTransferActivity" />
+        <activity android:name=".activity.wallet.WalletRechargeActivity" />
+        <activity android:name=".activity.wallet.WalletMBConnectActivity" />
+        <activity android:name=".activity.wallet.WalletTransDetailActivity" />
+        <activity android:name=".activity.wallet.WalletTransDetailItemActivity" />
+        <activity android:name=".activity.wallet.WalletBindBankCardActivity" />
+        <activity android:name=".activity.wallet.WalletNameAuthActivity" />
+        <activity android:name=".activity.wallet.SMSVerifiActivity" />
+        <activity android:name=".activity.wallet.WalletProcessAuthActivity" />
+        <activity android:name=".activity.wallet.RedPackageActivity" />
+        <activity android:name=".activity.shoudan.finance.BankChooseActivity" />
+        <activity android:name=".activity.loan.CameraActivity" />
+
+        <service android:name=".activity.payment.signature.SignatruePollingService" />
+
+        <!-- avos cloud -->
+
+        <receiver
+            android:name="com.avos.avoscloud.AVBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.avos.avoscloud.PushService"
+
+            android:exported="false" />
+
+        <!-- 推送接收 -->
+
+        <receiver
+            android:name=".common.PushMessageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.avos.UPDATE_STATUS" />
+                <action android:name="com.lakala.shoudan.action.push" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".common.NotificationClickedReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.lakala.shoudan.action.Notification_Clicked" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat" />
+        <activity android:name=".activity.more.MoreActivity" />
+        <activity android:name=".activity.myaccount.FollowActivity" />
+        <activity android:name=".activity.myaccount.AccountAboutLakalaActivity" />
+        <activity android:name=".activity.safetymanagement.SafetyManagementActivity" />
+        <activity android:name=".activity.merchantmanagement.MerchantManagementAcivity" />
+        <activity android:name=".activity.merchantmanagement.BankCardAttestationActivity" />
+        <activity android:name=".activity.merchantmanagement.BindBankCardActivity" />
+        <activity android:name=".activity.merchantmanagement.UpdateAccountActivity" />
+        <activity android:name=".activity.merchantmanagement.UpdateMechatInfoActivity" />
+        <activity android:name=".activity.shoudan.barcodecollection.BarcodeAmountInputActivity" />
+        <activity android:name=".activity.shoudan.barcodecollection.apply.BarcodeInstructionActivity" />
+        <activity android:name=".activity.shoudan.barcodecollection.apply.BarcodeApplyActivity" />
+        <activity
+            android:name=".activity.shoudan.barcodecollection.CaptureActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".activity.shoudan.barcodecollection.BarcodeResultActivity" />
+        <activity android:name=".activity.shoudan.barcodecollection.revocation.ScancodeCancelActivity" />
+        <activity android:name=".activity.collection.CollectionCancelChooseActivity" />
+        <activity android:name=".activity.shoudan.largeamountcollection.LargeAmountInputActivity" />
+        <activity android:name=".activity.shoudan.chargebusiness.ContributePaymentAmountInputActivity" />
+        <activity
+            android:name=".activity.shoudan.loan.bankinfo.CreditBankInfoActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".activity.shoudan.loan.loanlist.CreditListActivity" />
+        <activity android:name=".activity.shoudan.loan.loanrecord.CreditRecordsActivity" />
+        <activity
+            android:name=".activity.shoudan.loan.personinfo.CreditPersonInfoActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name=".activity.shoudan.loan.productdetail.CreditProductDetailActivity" />
+        <activity android:name=".activity.shoudan.finance.open.SetPayPwdActivity" />
+        <activity android:name=".activity.shoudan.finance.open.ConfirmPayPwdActivity" />
+        <activity android:name=".activity.shoudan.finance.question.AddUserQuestionActivity" />
+        <activity android:name=".activity.shoudan.finance.question.QuestionListQryActivity" />
+        <activity android:name=".activity.loan.CameraGetActivity" />
+
+        <!-- 用户注册 -->
+        <activity android:name=".activity.password.SetPaymentPasswordActivity" />
+        <activity android:name=".activity.password.SetSecurityQuestionActivity" />
+        <activity android:name=".activity.password.SelectSecurityQuestionActivity" />
+        <activity android:name=".activity.merchant.register.UpdateMerchantInfoActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanMainActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanMenuMainActivity" />
+        <activity android:name=".activity.shoudan.records.BusinessOpenActivity" />
+        <activity android:name=".activity.login.AccountChangePwdActivity" />
+        <activity android:name=".activity.password.ModifyPayPwdActivity" />
+
+        <!-- 商户开通 -->
+        <activity android:name=".activity.merchant.register.MerchantRegisterActivity" />
+        <activity android:name=".activity.merchant.upgrade.UpgradeInfoActivity" />
+        <activity android:name=".activity.merchant.upgrade.DescriptionActivity" />
+        <activity android:name=".activity.merchant.upgrade.UpgradeResultActivity" />
+        <activity android:name=".activity.merchant.register.RegisterSuccessActivity" />
+
+        <!-- 大额收款 -->
+        <activity android:name=".activity.shoudan.largeamountcollection.apply.LargeAmountCollectionApplyActivity" />
+        <activity android:name=".activity.shoudan.largeamountcollection.apply.LargeAmountInstructionActivity" />
+        <activity android:name=".activity.shoudan.largeamountcollection.InformationCollectActivity" />
+        <activity android:name=".activity.shoudan.largeamountcollection.LargeAmountCollectionPaymentActivity" />
+        <activity android:name=".activity.myaccount.FollowLakalaActivity" />
+        <activity
+            android:name=".activity.shoudan.FloatingLayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent" />
+        <activity android:name=".activity.accountmanagement.ResetPasswordActivity" />
+        <activity android:name=".activity.shoudan.chargebusiness.ChargeBusinessSelection" />
+        <activity android:name=".activity.shoudan.merchantpayment.MerchantPayQueryInstBillActivity" />
+        <activity android:name=".activity.shoudan.merchantpayment.MerchantPaymentConfirmActivity" />
+        <activity android:name=".activity.shoudan.merchantpayment.MerchantPaySwiperActivity" />
+        <activity android:name=".activity.shoudan.chargebusiness.RentCollectionAmountActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanHistoryActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanIndividualInfoActivity" />
+        <activity android:name=".activity.shoudan.rentcollection.RentCollectionPaymentActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanWorkInfoActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanConfirmApplyActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanNotificationActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanDetailActivity" />
+        <activity android:name=".activity.messagecenter.MessageCenterActivity" />
+        <activity android:name=".activity.messagecenter.MessageCenter2Activity" />
+        <activity android:name=".activity.messagecenter.MessageDetailActivity" />
+        <activity android:name=".activity.messagecenter.MessageDetail2Activity" />
+
+        <!-- 理财 -->
+        <activity
+            android:name=".activity.shoudan.finance.FrontPageActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.shoudan.finance.trade.FinanceSwipeBuyActivity" />
+        <activity android:name=".activity.shoudan.finance.trade.FinanceTransDetailActivity" />
+        <activity android:name=".activity.shoudan.finance.trade.FundTranserInActivity" />
+        <activity android:name=".activity.shoudan.finance.trade.ProductDetailsActivity" />
+        <activity android:name=".activity.shoudan.finance.trade.ProductListActivity" />
+        <activity android:name=".activity.shoudan.finance.trade.WithdrawalActivity" />
+        <activity android:name=".activity.shoudan.finance.BaseFinanceActivity" />
+        <activity android:name=".activity.shoudan.finance.BindingCardActivity" />
+        <activity android:name=".activity.shoudan.finance.FinancialAssetsActivity" />
+        <activity
+            android:name=".activity.shoudan.finance.InputPayPwdDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent" />
+        <activity android:name=".activity.shoudan.finance.SupportBankListActivity" />
+        <activity android:name=".activity.shoudan.finance.question.VerifyQuestionActivity" />
+        <activity android:name=".activity.shoudan.finance.question.ForgetAnswerActivity" />
+        <activity android:name=".activity.shoudan.finance.question.CaptchaPayActivity" />
+        <activity android:name=".activity.shoudan.finance.open.FinanceOpenActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanRepayPaymentActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanRecordActivity" />
+        <activity android:name=".activity.shoudan.loan.SignedCardManagerActivity" />
+        <activity android:name=".activity.myaccount.AccountInfoActivity" />
+        <activity android:name=".activity.password.VerifyUserQuestionActivity" />
+        <activity
+            android:name=".activity.password.PayPwdDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent" />
+        <activity android:name=".activity.shoudan.merchantpayment.MerchantPayOpenActivity" />
+        <activity android:name=".activity.shoudan.bankitcard.activity.BankCardEntranceActivity" />
+        <activity android:name=".activity.shoudan.bankitcard.activity.BankCardAdditionActivity" />
+        <activity android:name=".activity.shoudan.bankitcard.activity.BankCardInfoActivity" />
+        <activity android:name=".activity.shoudan.bankitcard.activity.SMSVerificationActivity" />
+        <activity android:name=".activity.shoudan.bankitcard.activity.SMSBankVerificationActivity" />
+        <activity android:name=".activity.password.CaptchaPayPwdActivity" />
+        <activity android:name=".activity.wallet.WalletSupportedBankListActivity" />
+        <activity android:name=".activity.treasure.TreasureBuyActivity" />
+        <activity android:name=".activity.treasure.TreasureBuyActivity2" />
+        <activity android:name=".activity.shoudan.webmall.privilege.PrivilegePurchasePaymentActivity" />
+        <activity android:name=".activity.shoudan.webmall.privilege.PrivilegePurchasePay2mentActivity" />
+        <activity android:name=".activity.shoudan.loan.LoanDetailNotLastActivity" />
+        <activity android:name=".activity.treasure.TreasureSwipePaymentActivity" />
+        <activity android:name=".activity.treasure.TreasureSMSCheckActivity" />
+        <activity android:name=".activity.shoudan.records.TransferMoneyDetailsActivity" />
+        <activity android:name=".activity.merchant.upgrade.BranchInfoActivity" />
+        <activity android:name=".activity.merchant.upgrade.MerchantUpdateActivity" />
+        <activity android:name=".activity.happybean.HappyBeanDetailsActivity" />
+        <activity android:name=".activity.happybean.HappyBeanRechargeActivity" />
+
+        <!-- 积分购 -->
+        <activity android:name=".activity.integral.activity.IntegralMainActivity" />
+        <activity android:name=".activity.integral.activity.IntegralQueryActivity" />
+        <activity android:name=".activity.integral.activity.IntegralSmsVertifyActivity" />
+        <activity android:name=".activity.integral.activity.IntegralBillActivity" />
+        <activity android:name=".activity.coupon.activity.CouponHomeActivity" />
+        <activity android:name=".activity.coupon.activity.CouponCollectionsActivity" />
+        <activity android:name=".activity.coupon.activity.CouponInputActivity" />
+        <activity android:name=".activity.QpbocSwitchActivity" />
+        <activity android:name=".activity.CustomerCameraActivity" />
+
+
+        <activity
+            android:name="com.sensetime.sample.core.LivenessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+
+    </application>
+
+</manifest>

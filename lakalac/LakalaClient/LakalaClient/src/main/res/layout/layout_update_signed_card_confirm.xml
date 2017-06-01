@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/gray"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title"
+        android:text="提交成功"
+        android:textSize="18sp"
+        android:paddingTop="5dp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/tv_msg"
+        android:layout_below="@+id/tv_title"
+        android:text="更换签约结果将在30分钟后告知处理结果，如签约失败，则需次日重新办理。单笔借款仅允许成功更换一次签约还款账户"
+        android:textColor="@color/gray_main1"
+        />
+    <LinearLayout
+        android:layout_below="@+id/tv_msg"
+        android:id="@+id/linearLayout_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/btn_sure"
+            style="@style/btn_top_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/ok" />
+    </LinearLayout>
+</RelativeLayout>

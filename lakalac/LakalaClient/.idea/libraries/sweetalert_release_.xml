@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="sweetalert-release-">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/sweetalert-release/res" />
+      <root url="jar://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/sweetalert-release/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/combination_little_title_style"
+        android:layout_marginTop="@dimen/content_margin_actionbar"
+        android:text="@string/merchant_pay_suer_info"
+        android:textSize="@dimen/medium_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <include
+            android:id="@+id/include_merchant_phone"
+            layout="@layout/combination_text_text"/>
+        <ImageView
+            style="@style/combination_seperator_style"/>
+        <include
+            android:id="@+id/include_merchant_name"
+            layout="@layout/combination_text_text"/>
+        <ImageView
+            style="@style/combination_seperator_style"/>
+        <include
+            android:id="@+id/include_merchant_address"
+            layout="@layout/combination_text_text"/>
+        <ImageView
+            style="@style/combination_seperator_style"/>
+        <include
+            android:id="@+id/include_merchant_person_charge"
+            layout="@layout/combination_text_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+         >
+
+        <CheckBox
+            android:id="@+id/checkbox_receiver"
+            style="@style/mycheckbox"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:checked="true"
+            android:text="@string/read_and_accept" />
+        <TextView
+            android:padding="2dp"
+            android:gravity="center_vertical"
+            android:id="@+id/tv_teyueshanghu_service_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/merchant_pay_reciver_server_pro"
+            android:textColor="@color/about_us_blue"
+            android:textSize="@dimen/small_text_size"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/btn_comment_with_stroke"
+            android:layout_marginTop="@dimen/order_next_btn_margin_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/btn_sure"
+            style="@style/btn_top_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ok" />
+    </LinearLayout>
+
+</LinearLayout>

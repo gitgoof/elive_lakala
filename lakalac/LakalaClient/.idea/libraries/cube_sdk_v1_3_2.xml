@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cube_sdk_v1.3.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../android_core/libs/cube_sdk_v1.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

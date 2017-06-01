@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Server">
+
+        <!--<CheckBoxPreference-->
+        <!--android:key="@string/debug_key_used_server_address"-->
+        <!--android:summary="勾选使用远端服务器,否则将使用公用服务器"-->
+        <!--android:title="远程服务器"/>-->
+
+        <EditTextPreference
+            android:dialogTitle="输入服务器地址"
+            android:key="@string/debug_key_server_address"
+            android:title="服务器地址"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="Sencha">
+
+        <CheckBoxPreference
+            android:key="@string/debug_key_used_remote_sencha"
+            android:summary="远端调试开关,需要手动配置下面的地址"
+            android:title="Bundle调试"/>
+
+        <EditTextPreference
+            android:dialogTitle="输入远程Sencha地址"
+            android:key="@string/debug_key_remote_sencha"
+            android:title="远程地址"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

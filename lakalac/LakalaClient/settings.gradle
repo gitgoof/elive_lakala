@@ -1,0 +1,6 @@
+include ':LakalaClient', ':LakalaLibCommon', ':LakalaLibCore', ':LakalaPlatform', ':LakalaUI', 'PullToRefreshList', ':common'
+
+//切换仓库
+project(':LakalaLibCore').projectDir = new File('../android_core');
+project(':LakalaLibCommon').projectDir = new File('../android_common');
+

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="networkLibrary-release-">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/networkLibrary-release/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/networkLibrary-release/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

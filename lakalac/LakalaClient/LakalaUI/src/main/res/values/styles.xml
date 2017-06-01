@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="dialog_normal" parent="android:Theme.Holo.Dialog.MinWidth">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="transparent_dialog" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="CalendarTitle">
+        <item name="android:textSize">@dimen/l_calendar_text_medium</item>
+        <item name="android:textColor">@color/l_white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/l_calendar_blue_00AEFF</item>
+    </style>
+
+    <style name="CalendarCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CalendarCell.DayHeader">
+        <item name="android:textColor">@color/l_calendar_text_active</item>
+        <item name="android:textSize">@dimen/l_calendar_text_small</item>
+    </style>
+
+    <style name="CalendarCell.CalendarDate">
+        <item name="android:textSize">@dimen/l_calendar_text_medium</item>
+        <item name="android:background">@drawable/l_calendar_bg_selector</item>
+        <item name="android:textColor">@color/l_calendar_text_selector</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomProgressBarStyleMiddle">
+    <!--<item name="android:indeterminateDrawable">@drawable/ui_loading_12</item>-->
+    <item name="android:indeterminateDrawable">@drawable/ui_progress_loading</item>
+    <item name="android:minWidth">30dip</item>
+    <item name="android:maxWidth">@dimen/ui_progress_dialog_progressbar_width</item>
+    <item name="android:minHeight">30dip</item>
+    <item name="android:maxHeight">@dimen/ui_progress_dialog_progressbar_height</item>
+    </style>
+
+    <!-- 非常小标题，黑色，粗体 -->
+    <style name="text_style_min_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/dimen_24</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 小标题，黑色，粗体 -->
+    <style name="text_style_small_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 普通字体,黑色 ,粗体-->
+    <style name="text_style_normal_black_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 普通字体,白色 ,粗体-->
+    <style name="text_style_normal_white_bold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 普通字体, 灰色 ,粗体-->
+    <style name="text_style_normal_gray_bold">
+        <item name="android:textColor">@color/font_gray</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 大字体，黑色，粗体 -->
+    <style name="text_style_large_black_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 大字体，白色，粗体 -->
+    <style name="text_style_large_white_bold">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 大字体，白色，粗体 -->
+    <style name="text_style_large_gray_bold">
+        <item name="android:textColor">@color/font_gray</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 普通小字体 ,黑色-->
+    <style name="text_style_default_black">
+        <item name="android:textColor">@color/gray_999999</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <!-- 普通字体，黑色-->
+    <style name="text_style_normal">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+
+    <!-- 普通字体，蓝色 -->
+    <style name="text_style_normal_blue">
+        <item name="android:textColor">@color/blue_0c79ff</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+
+    <!-- 普通字体,白色 -->
+    <style name="text_style_normal_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+
+    <!-- 普通字体,灰色 -->
+    <style name="text_style_normal_gray">
+        <item name="android:textColor">@color/font_gray</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+    <!-- 14字体,灰色 -->
+    <style name="text_style_fourteen_gray">
+        <item name="android:textColor">@color/gray_999999</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+
+
+    <!-- 普通字体,灰色 -->
+    <style name="text_style_normal_gray2">
+        <item name="android:textColor">@color/gray_5e5e5e</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+
+    <!-- 大字体，黑色 -->
+    <style name="text_style_large">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+    </style>
+
+    <!-- 大字体，白色 -->
+    <style name="text_style_large_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+    </style>
+
+    <!-- 稍大字体,白色 -->
+    <style name="text_style_slightly_larger_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18.0sp</item>
+    </style>
+
+    <!-- 小号字体，黑色 -->
+    <style name="text_style_small_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <!-- 小号字体，白色 -->
+    <style name="text_style_small_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <!-- 小号字体，蓝色 -->
+    <style name="text_style_small_blue">
+        <item name="android:textColor">@color/blue_0c79ff</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <!-- 小号字体，灰色-->
+    <style name="text_style_small_gray">
+        <item name="android:textColor">@color/font_gray</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <!-- EditText 样式 -->
+    <style name="edit_text_normal_style">
+        <item name="android:background">@color/white</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- EditText 样式 -->
+    <style name="edit_text_num_style">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColorHint">@color/gray_d7d7d7</item>
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/gray_333333</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:numeric">integer</item>
+    </style>
+
+    <!-- CheckBox 样式 -->
+    <style name="ui_checkbox_style" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/ui_check_selector</item>
+    </style>
+
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Widget.GifMoviewView" parent="@android:style/Widget"></style>
+
+    <!-- 常用分割线 -->
+    <style name="lakala_seperator">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">#d7d7d7</item>
+    </style>
+
+    <!--统一橙色字体-->
+    <style name="lakala_shoudan_text_medium_orange">
+        <item name="android:textColor">@color/orange_FF8A00</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+    <style name="lakala_shoudan_text_small_orange">
+        <item name="android:textColor">@color/orange_FF8A00</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <style name="lakala_shoudan_text_normal_orange">
+        <item name="android:textColor">@color/orange_FF8A00</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+
+    <!-- 普通文字黑色 -->
+    <style name="lakala_shoudan_text_medium_black">
+        <item name="android:textColor">@color/gray_666666</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+    <style name="common_payment_text_style" parent="lakala_shoudan_text_medium_black">
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+
+
+</resources>

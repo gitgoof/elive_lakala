@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/id_search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_40"
+        android:layout_marginTop="@dimen/dimen_40"
+        android:background="@drawable/ui_white_bg_gray_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.lakala.ui.component.ClearEditText
+            android:id="@+id/search_box"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_88"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="请输入城市拼音或首字母"
+            android:imeOptions="actionSearch"
+            android:paddingBottom="2dp"
+            android:paddingLeft="@dimen/dimen_24"
+            android:paddingRight="@dimen/dimen_24"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:textAppearance="?android:textAppearanceMedium"></com.lakala.ui.component.ClearEditText>
+
+        <ImageView
+            android:id="@+id/id_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/search_box"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/dimen_24"
+            android:src="@drawable/ui_search_icon" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/null_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_search_layout"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="没有搜到"
+        android:textSize="15sp"
+        android:visibility="gone"></TextView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/null_text"
+        android:background="@drawable/ui_white_bg_gray_border"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="9"
+            android:background="@color/white"
+            android:cacheColorHint="#00000000"
+            android:scrollbars="none" />
+
+        <com.lakala.ui.component.IndexLayout
+            android:id="@+id/index_layout"
+            android:layout_width="30dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/dimen_90"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/list_view"
+            android:background="@color/l_transparence"
+            app:indexTextSize="@dimen/dimen_26"
+            app:indexChooseTextColor="@color/color_blue_3b4a78"
+            app:indexTextColor="@color/color_blue_50bdef" />
+
+    </LinearLayout>
+</RelativeLayout>

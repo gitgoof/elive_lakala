@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/app_background_blue">
+
+    <ImageView
+        android:visibility="invisible"
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/back"
+        android:src="@drawable/plat_left_arrow"
+        android:padding="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp" />
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_alignBottom="@id/back"
+        android:layout_alignTop="@id/back"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/plat_register_success"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/main_title"
+        android:layout_marginTop="100dp"
+        style="@style/text_style_normal_white"
+        android:gravity="center_horizontal"
+        android:text="@string/plat_audio_login"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

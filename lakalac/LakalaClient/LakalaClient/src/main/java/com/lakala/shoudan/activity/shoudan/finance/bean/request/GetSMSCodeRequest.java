@@ -1,0 +1,29 @@
+package com.lakala.shoudan.activity.shoudan.finance.bean.request;
+
+import com.lakala.shoudan.common.net.volley.BaseRequest;
+
+/**
+ * Created by LMQ on 2015/10/21.
+ */
+public class GetSMSCodeRequest extends BaseRequest {
+    private int BusinessType = 0;
+    private int BusinessCode = 228202;
+
+    public int getBusinessType() {
+        return BusinessType;
+    }
+
+    public GetSMSCodeRequest setBusinessType(int businessType) {
+        BusinessType = businessType;
+        return this;
+    }
+
+    public int getBusinessCode() {
+        return BusinessCode;
+    }
+
+    public GetSMSCodeRequest setBusinessCode(int businessCode) {
+        BusinessCode = businessCode;
+        return this;
+    }
+}

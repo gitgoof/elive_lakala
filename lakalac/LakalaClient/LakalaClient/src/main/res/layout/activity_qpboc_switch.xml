@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.lakala.ui.component.LabelSwitch
+        style="@style/labeledittext_sytle_for_shoudan"
+        android:id="@+id/ls_qpboc_switch"
+        android:layout_marginTop="@dimen/content_margin_actionbar"
+        app:label="强制挥卡"/>
+    <TextView
+        android:layout_marginTop="@dimen/common_distance_level_1"
+        android:text="开通后，当您连接具有挥卡功能的设备时，只能进行挥卡操作。"
+        android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+        android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+        android:textSize="@dimen/small_text_size"
+        android:textColor="@color/gray_999999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

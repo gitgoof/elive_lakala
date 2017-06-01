@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_background_white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/id_scroll_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/app_background_white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/id_info_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/remit_confirm_prompt"
+                android:textColor="@color/orange"/>
+
+            <!--             <LinearLayout -->
+            <!--                 android:id="@+id/border" -->
+            <!--                 android:layout_width="fill_parent" -->
+            <!--                 android:layout_height="2dp" -->
+            <!--                 android:background="@drawable/bill_border" -->
+            <!--                 android:orientation="horizontal" > -->
+            <!--             </LinearLayout> -->
+
+            <!--             <include -->
+            <!--                 android:id="@+id/id_list_view_include" -->
+            <!--                 android:layout_height="wrap_content" -->
+            <!--                 layout="@layout/shoudan_custom_order_view" /> -->
+            <!-- 确认内容 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_box_nomarl_black"
+                >
+                <LinearLayout
+                    style="@style/detail_bg"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        style="@style/detail_left"
+                        android:text="收款银行"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="1"
+                        android:paddingLeft="0dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_bankname"
+                        style="@style/detail_right"
+                        android:text="邮政储蓄银行"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="2"
+                        android:paddingLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/detail_bg"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        style="@style/detail_left"
+                        android:text="收款人借记卡"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="1"
+                        android:paddingLeft="0dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_bankcardnu"
+                        style="@style/detail_right"
+                        android:text="6217********8254"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="2"
+                        android:paddingLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/detail_bg"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        style="@style/detail_left"
+                        android:text="收款人姓名"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="1"
+                        android:paddingLeft="0dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_collectionname"
+                        style="@style/detail_right"
+                        android:text="李三"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="2"
+                        android:paddingLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/detail_bg"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        style="@style/detail_left"
+                        android:text="到账时间"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="1"
+                        android:paddingLeft="0dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_collection_date"
+                        style="@style/detail_right"
+                        android:text="下个工作日"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="2"
+                        android:paddingLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_phone"
+                    android:visibility="gone"
+                    style="@style/detail_bg"
+                    >
+                    <TextView
+                        style="@style/detail_left"
+                        android:text="手机号码    "
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:paddingLeft="7dp"
+                        android:id="@+id/tv_collectin_phone"
+                        style="@style/detail_right"
+                        android:text="111111"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="2"
+                        />
+
+                </LinearLayout>
+
+                <!-- 分割线 -->
+                <View
+                    style="@style/seperator"
+                    />
+
+                <LinearLayout
+                    style="@style/detail_bg"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        style="@style/detail_left"
+                        android:text="转账金额"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="1"
+                        android:paddingLeft="0dp"
+                        />
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:id="@+id/tv_trans_money"
+                        style="@style/detail_right"
+                        android:layout_weight="2"
+                        android:text="0.00元"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/medium_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/detail_bg"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        style="@style/detail_left"
+                        android:text="转账手续费"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="1"
+                        android:paddingLeft="0dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_trans_fee"
+                        style="@style/detail_right"
+                        android:text="0.00元"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="2"
+                        android:textColor="@color/orange"
+                        android:paddingLeft="5dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/detail_bg"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        style="@style/detail_left"
+                        android:text="刷卡金额"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="1"
+                        android:paddingLeft="0dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_swiper_money"
+                        style="@style/detail_right"
+                        android:text="0.00元"
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_weight="2"
+                        android:textColor="@color/orange"
+                        android:paddingLeft="5dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/include2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/shoudan_btnwithtopline_comment" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

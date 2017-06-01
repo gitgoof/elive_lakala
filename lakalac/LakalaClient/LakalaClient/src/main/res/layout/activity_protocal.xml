@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/app_background_white"
+    android:orientation="vertical">
+
+    <WebView
+        android:layout_weight="1"
+        android:id="@+id/webview_protocal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/btn_top_15dp_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:visibility="gone"
+        android:text="@string/tel_phone"/>
+</LinearLayout>

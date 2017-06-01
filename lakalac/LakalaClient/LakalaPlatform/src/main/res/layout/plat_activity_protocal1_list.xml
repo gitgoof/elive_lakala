@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务协议 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:orientation="vertical"
+       android:background="#eceff6">
+
+    <WebView
+        android:id="@+id/id_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:id="@+id/id_text_context_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_20"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/id_text_context"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/id_bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_20"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/id_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_88"
+            android:layout_weight="1"
+            android:text="@string/com_cancel"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:background="@drawable/plat_btn_deep_blue_selector"/>
+
+        <Button
+            android:id="@+id/id_confim_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_88"
+            android:layout_weight="1"
+            android:text="同意"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:background="@drawable/plat_btn_deep_blue_selector"/>
+
+    </LinearLayout>
+
+</LinearLayout>

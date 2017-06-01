@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--应用中字体颜色 -->
+    <color name="plat_gray_font_color">#bbbbbb</color>
+    <color name="plat_black_font_color">#000000</color>
+
+</resources>

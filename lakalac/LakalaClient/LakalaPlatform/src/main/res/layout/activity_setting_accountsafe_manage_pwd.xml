@@ -1,0 +1,119 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/color_white_eceff6"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dimen_60">
+
+        <include layout="@layout/ui_divider_line"/>
+
+        <LinearLayout
+            android:id="@+id/container_set_pay_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.lakala.ui.component.SingleLineTextView
+                android:id="@+id/id_managepwd_set_pay_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_88"
+                android:background="@drawable/ui_common_item_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_30"
+                android:paddingRight="@dimen/dimen_20"
+                app:enableOnClickItemEvents="false"
+                app:leftIconVisibility="GONE"
+                app:leftText="@string/managepwd_set_paypwd"
+                app:leftTextColor="@color/color_gray_727485"
+                app:leftTextSize="@dimen/dimen_30"
+                app:rightArrowVisibility="VISIBLE"
+                app:rightTextMarginRight="@dimen/dimen_20"/>
+
+            <include layout="@layout/ui_divider_line"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_modify_pay_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.lakala.ui.component.SingleLineTextView
+                android:id="@+id/id_managepwd_change_pay_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_88"
+                android:background="@drawable/ui_common_item_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_30"
+                android:paddingRight="@dimen/dimen_20"
+                app:enableOnClickItemEvents="false"
+                app:leftIconVisibility="GONE"
+                app:leftText="@string/managepwd_change_paypwd"
+                app:leftTextColor="@color/color_gray_727485"
+                app:leftTextSize="@dimen/dimen_30"
+                app:rightArrowVisibility="VISIBLE"
+                app:rightTextMarginRight="@dimen/dimen_20"/>
+
+            <include layout="@layout/ui_divider_line"/>
+
+            <com.lakala.ui.component.SingleLineTextView
+                android:id="@+id/id_managepwd_find_pay_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_88"
+                android:background="@drawable/ui_common_item_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_30"
+                android:paddingRight="@dimen/dimen_20"
+                app:enableOnClickItemEvents="false"
+                app:leftIconVisibility="GONE"
+                app:leftText="@string/managepwd_find_paypwd"
+                app:leftTextColor="@color/color_gray_727485"
+                app:leftTextSize="@dimen/dimen_30"
+                app:rightArrowVisibility="VISIBLE"
+                app:rightTextMarginRight="@dimen/dimen_20"/>
+
+            <include layout="@layout/ui_divider_line"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dimen_60"/>
+
+        <LinearLayout
+            android:id="@+id/container_set_pay_pwd_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/ui_divider_line"/>
+
+            <com.lakala.ui.component.SingleLineTextView
+                android:id="@+id/id_managepwd_set_pay_pwd_problem"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dimen_88"
+                android:background="@drawable/ui_common_item_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_30"
+                android:paddingRight="@dimen/dimen_30"
+                app:enableOnClickItemEvents="false"
+                app:leftIconVisibility="GONE"
+                app:leftText="@string/managepwd_set_paypwd_problem"
+                app:leftTextColor="@color/color_gray_727485"
+                app:leftTextSize="@dimen/dimen_30"
+                app:rightArrowVisibility="VISIBLE"
+                app:rightTextMarginRight="@dimen/dimen_20"/>
+
+            <include layout="@layout/ui_divider_line"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

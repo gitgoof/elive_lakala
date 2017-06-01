@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/RelativeLayout1"
+              style="@style/app_background_white"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/id_input_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/combination_little_title_style"
+                    android:text="上传图片大小建议在300K以内"
+                    />
+
+
+                <TableLayout
+                    android:id="@+id/company"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+                    <View
+                        style="@style/seperator"/>
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:text="法人身份证正面"
+                            android:layout_margin="@dimen/common_distance_level_1"
+                            style="@style/style_fourteen_gray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <View android:layout_width="wrap_content"
+                              android:layout_height="1dp"
+                              android:layout_weight="1"/>
+                        <ImageView
+                            android:id="@+id/company_id_photo_front"
+                            style="@style/upload_pic_style"
+                            android:gravity="right|center_vertical"
+                            android:hint="点击上传"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/btn_arrow_go"
+                            android:layout_marginRight="@dimen/common_distance_level_1"
+                            android:layout_marginLeft="@dimen/dimen_10"/>
+                    </TableRow>
+
+                    <View
+                        style="@style/seperator_marginlef_15"
+                        android:layout_marginTop="0dp"/>
+
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:text="法人身份证反面"
+                            android:layout_margin="@dimen/common_distance_level_1"
+                            style="@style/style_fourteen_gray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <View android:layout_width="wrap_content"
+                              android:layout_height="1dp"
+                              android:layout_weight="1"/>
+                        <ImageView
+                            android:id="@+id/company_id_photo_back"
+                            style="@style/upload_pic_style"
+                            android:gravity="right|center_vertical"
+                            android:hint="点击上传"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/btn_arrow_go"
+                            android:layout_marginRight="@dimen/common_distance_level_1"
+                            android:layout_marginLeft="@dimen/dimen_10"/>
+                    </TableRow>
+
+                    <View
+                        style="@style/seperator"
+                        android:layout_marginTop="0dp"/>
+
+                    <View
+                        style="@style/app_background_white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="20dp"/>
+                </TableLayout>
+                <View
+                    style="@style/seperator"/>
+                <TableLayout
+                    android:id="@+id/individual"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:layout_margin="@dimen/common_distance_level_1"
+                            android:text="身份证正面"
+                            style="@style/style_fourteen_gray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <View android:layout_width="wrap_content"
+                              android:layout_height="1dp"
+                              android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/individual_id_photo_front"
+                            style="@style/upload_pic_style"
+                            android:clickable="true"
+                            android:gravity="right|center_vertical"
+                            android:hint="点击上传"
+                            android:textSize="12sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/common_distance_level_1"
+                            android:src="@drawable/btn_arrow_go"
+                            android:visibility="invisible"/>
+                    </TableRow>
+
+                    <View
+                        style="@style/seperator_marginlef_15"
+                        android:layout_marginTop="0dp"/>
+
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:text="身份证反面"
+                            android:layout_margin="@dimen/common_distance_level_1"
+                            style="@style/style_fourteen_gray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <View android:layout_width="wrap_content"
+                              android:layout_height="1dp"
+                              android:layout_weight="1"/>
+                        <ImageView
+                            android:id="@+id/individual_id_photo_back"
+                            style="@style/upload_pic_style"
+                            android:gravity="right|center_vertical"
+                            android:hint="点击上传"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/common_distance_level_1"
+                            android:src="@drawable/btn_arrow_go"
+                            android:visibility="invisible"/>
+                    </TableRow>
+                    <View
+                        style="@style/seperator"/>
+
+                    <View
+                        style="@style/app_background_white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="20dp"/>
+                </TableLayout>
+                <View
+                    style="@style/seperator"/>
+                <TableLayout
+                    android:id="@+id/individual_show"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    >
+
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:text="本人持证照"
+                            android:layout_margin="@dimen/common_distance_level_1"
+                            style="@style/style_fourteen_gray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <View android:layout_width="wrap_content"
+                              android:layout_height="1dp"
+                              android:layout_weight="1"/>
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical">
+                            <TextView
+                                android:id="@+id/add_id_hint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/add_id_hint"
+                                android:layout_gravity="center_vertical"
+                                style="@style/combination_right_edittext_style"
+                                />
+                            <ImageView
+                                android:id="@+id/individual_photo"
+                                style="@style/upload_pic_style"
+                                android:gravity="right|center_vertical"
+                                android:layout_gravity="right"
+                                android:textSize="15sp"
+                                android:visibility="invisible"/>
+                        </FrameLayout>
+
+                        <!--
+                        <TextView
+                            android:id="@+id/tv_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="请添加本人持证照"
+                            android:textColorHint="@color/hint_or_divider_color"
+                            android:layout_gravity="right|center_vertical"/>
+                            -->
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/common_distance_level_1"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:src="@drawable/btn_arrow_go"/>
+                    </TableRow>
+
+
+                </TableLayout>
+                <TableLayout
+                    android:id="@+id/mtou_show"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        style="@style/seperator"/>
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:text="营业执照"
+                            android:layout_margin="@dimen/common_distance_level_1"
+                            style="@style/style_fourteen_gray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <View android:layout_width="wrap_content"
+                              android:layout_height="1dp"
+                              android:layout_weight="1"/>
+                        <ImageView
+                            android:id="@+id/open_photo"
+                            style="@style/upload_pic_style"
+                            android:gravity="right|center_vertical"
+                            android:hint="点击上传"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/common_distance_level_1"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:src="@drawable/btn_arrow_go"/>
+                    </TableRow>
+
+                    <View
+                        style="@style/seperator_marginlef_15"
+                        android:layout_marginTop="0dp"/>
+
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        >
+
+                        <TextView
+                            android:text="门头照片"
+                            android:layout_margin="@dimen/common_distance_level_1"
+                            style="@style/style_fourteen_gray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <View android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"/>
+                        <ImageView
+                            android:id="@+id/mtou_phoho"
+                            style="@style/upload_pic_style"
+                            android:gravity="right|center_vertical"
+                            android:hint="点击上传"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/common_distance_level_1"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:src="@drawable/btn_arrow_go"/>
+
+                    </TableRow>
+
+                </TableLayout>
+                <TableLayout
+                    android:id="@+id/zuli_show"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <View
+                        style="@style/seperator_marginlef_15"
+                        android:layout_marginTop="0dp"/>
+
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:text="营业场所产权证明或租赁证明"
+                            android:layout_margin="@dimen/common_distance_level_1"
+                            style="@style/style_fourteen_gray"
+                            android:layout_gravity="center_vertical"/>
+
+                        <View android:layout_width="wrap_content"
+                              android:layout_height="1dp"
+                              android:layout_weight="1"/>
+                        <ImageView
+                            android:id="@+id/zuli_photo"
+                            style="@style/upload_pic_style"
+                            android:gravity="right|center_vertical"
+                            android:hint="点击上传"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/common_distance_level_1"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:src="@drawable/btn_arrow_go"/>
+                    </TableRow>
+
+                </TableLayout>
+                <View
+                    style="@style/seperator"/>
+                <Button
+                    android:id="@+id/upload"
+                    style="@style/btn_top_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/ok"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

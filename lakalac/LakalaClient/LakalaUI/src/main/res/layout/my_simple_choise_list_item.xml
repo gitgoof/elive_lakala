@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@android:id/text1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/icon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/home_icon_xzan_sel"/>
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/text"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="测测试测试测试试测测试测试测试试测测试测试测试试"
+        android:textSize="15sp"
+        android:textColor="#333333"/>
+</RelativeLayout>

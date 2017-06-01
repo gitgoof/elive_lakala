@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ll_swi">
+
+    <ImageView
+    android:id="@+id/iv_pic"
+    android:layout_centerInParent="true"
+    android:visibility="invisible"
+    android:background="@drawable/app_icon"
+    android:layout_width="100dp"
+    android:layout_height="130dp" />
+    <LinearLayout
+        android:id="@+id/ll_tack_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_take_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/btn_zxj" />
+
+        <TextView
+            android:id="@+id/tv_line1_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_distance_level_1"
+            android:text="点击拍摄本人手持"
+            android:textColor="@color/gray_999999"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_line2_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:text="身份证照片"
+            android:textColor="@color/main_nav_blue"
+            android:textSize="11sp" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_pic2"
+        android:layout_centerInParent="true"
+        android:src="@drawable/btn_sfz"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="110dp" />
+</RelativeLayout>

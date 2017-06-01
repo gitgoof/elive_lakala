@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Dialog类的颜色 -->
+    <color name="ui_dialog_title_color">#333333</color>
+    <color name="ui_alert_dialog_message_color">#333333</color>
+
+    <color name="l_white">#ffffff</color>
+    <color name="l_gray">#DDDDDD</color>
+    <color name="l_gray_cccccc">#CCCCCC</color>
+    <color name="l_box">#cccccc</color>
+    <color name="l_transparence">#00000000</color>
+    <color name="l_chenckeditem">#50282828</color>
+
+    <!--日历中用到的颜色值-->
+    <color name="l_calendar_active_month_bg">#fff5f7f9</color>
+    <color name="l_calendar_divider">#ffbababa</color>
+    <color name="l_calendar_inactive_month_bg">#ffd7d9db</color>
+    <color name="l_calendar_selected_day_bg">#ff379bff</color>
+    <color name="l_calendar_selected_range_bg">#ff96caff</color>
+    <color name="l_calendar_text_inactive">#40778088</color>
+    <color name="l_calendar_text_active">#ff778088</color>
+    <color name="l_calendar_text_unselectable">#7f778088</color>
+    <color name="l_calendar_text_holiday">#FF0000</color>
+    <color name="l_calendar_text_today">#FF9900</color>
+    <color name="l_calendar_blue_00AEFF">#00AEFF</color>
+    <color name="l_calendar_gray_f2f2f2">#F2F2F2</color>
+    <color name="l_light_gray">#a1a1a1</color>
+
+    <!--通用组件使用颜色-->
+    <color name="ui_divider_bg_color">#d3e0e3</color>
+    <color name="font_gray">#8F8F8F</color>
+    <color name="transparent_background">#00000000</color>
+    <color name="ui_white_bg_gray_border_color">#d4dfe4</color>
+
+    <!--通用颜色-->
+    <color name="hui">#f2f2f2</color>
+    <color name="white">#ffffff</color>
+    <color name="white_0_1">#1affffff</color>
+    <color name="black_0_1">#1a000000</color>
+    <color name="red_ff0000">#ff0000</color>
+    <color name="red_c80c0c">#c80c0c</color>
+    <color name="black">#000000</color>
+    <color name="black_727385">#727385</color>
+    <color name="main_text_color">#268DE5</color>
+
+    <color name="main_nav_blue">#03aaf3</color>
+    <color name="blue">#0000FF</color>
+    <color name="blue_006BB1">#006BB1</color>
+    <color name="blue_00AEFF">#00AEFF</color>
+    <color name="blue_34abf0">#34abf0</color>
+    <color name="blue_414574">#414574</color>
+    <color name="blue_18A4DD">#18a4dd</color>
+    <color name="blue_66FFFF">#66FFFF</color>
+    <color name="blue_6699cc">#6699cc</color>
+    <color name="blue_00458A">#00458A</color><!--pressed-->
+    <color name="blue_004992">#004992</color><!--背景颜色-->
+    <color name="blue_004181">#004181</color><!--item 背景-->
+    <color name="blue_0066cc">#0066cc</color>
+    <color name="blue_006699">#006699</color>
+    <color name="blue_195896">#195896</color><!--btn normal背景-->
+    <color name="blue_00468C">#00468C</color><!--btn selected 背景-->
+    <color name="blue_0c79ff">#0c79ff</color>
+    <color name="blue_0079cc">#0079cc</color>
+    <color name="gray">#f7f7f7</color>
+    <color name="gray_f2f2f2">#f2f2f2</color>
+    <color name="gray_f4f4f4">#f4f4f4</color>
+    <color name="gray_333333">#333333</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_999898">#999898</color>
+    <color name="gray_a1a1a1">#a1a1a1</color>
+    <color name="gray_A4A4A4">#A4A4A4</color>
+    <color name="gray_5e5e5e">#5e5e5e</color>
+    <color name="gray_b5b5b6">#b5b5b6</color>
+    <color name="gray_949494">#949494</color>
+    <color name="gray_CCCCCC">#CCCCCC</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_727485">#727485</color>
+    <color name="gray_808080">#808080</color>
+    <color name="gray_8f8f8f">#8f8f8f</color>
+    <color name="gray_bbbbbb">#bbbbbb</color>
+    <color name="gray_d3d3d3">#d3d3d3</color>
+    <color name="gray_dedede">#dedede</color>
+    <color name="gray_d7d7d7">#d7d7d7</color>
+    <color name="gray_e8e8e8">#E8E8E8</color>
+    <color name="gray_eff3f6">#eff3f6</color>
+    <color name="gray_e4e4e4">#e4e4e4</color>
+    <color name="gray_efefef">#EFEFEF</color>
+    <color name="orange_ff9900">#ff9900</color>
+    <color name="orange_FF8A00">#FF8A00</color>
+    <color name="orange_FF8308">#FF8308</color>
+    <color name="orange_ff7a1b">#ff7a1b</color>
+    <color name="pop_bg">#b0000000</color>
+
+    <color name="gray_e6e7e9">#e6e7e9</color>
+    <color name="gray_e7e7e7">#e7e7e7</color>
+
+    <color name="color_gray_727485">#727485</color>
+    <color name="color_gray_d3e0e3">#d3e0e3</color>
+    <color name="color_white_ffffff">#ffffff</color>
+    <color name="color_white_eceff6">#eceff6</color>
+    <color name="color_blue_3b4a78">#3b4a78</color>
+    <color name="color_blue_50bdef">#50bdef</color>
+    <color name="color_blue_33acf0">#33acf0</color>
+    <color name="color_blue_00458a">#00458a</color>
+    <color name="slime_color">#6aa1a8</color>
+    <color name="color_gray_EFEFEF">#EFEFEF</color>
+    <color name="blue_628ea4">#628ea4</color>
+    <color name="blue_009EDA">#009EDA</color>
+    <color name="gray_f7f7f7">#f7f7f7</color>
+
+
+    <color name="yellow_dec674">#dec674</color>
+    <color name="keyboard_background">#1d1d1d</color>
+    <color name="light_background">#F7F7F7</color>
+    <color name="light_gray_text">#999999</color>
+    <color name="main_blue">#ff00abed</color>
+    <color name="alert_dialog_button_selected_color">#e4e4e4</color>
+
+    <color name="gray_ff7b7c80">#ff7b7c80</color>
+
+    <color name="divider_color">@color/gray_f2f2f2</color>
+    <color name="main_grid_divider_color">#4bffffff</color>
+    <color name="two_left_btn_bg_pressed_color">#004e82</color>
+    <color name="two_left_btn_bg_unenabled_color">#340079cc</color>
+    <color name="two_left_btn_bg_normal_color">@color/white</color>
+    <color name="two_left_btn_text_normal_color">@color/blue_0079cc</color>
+    <color name="gray_main2">#EFEFEF</color>
+
+</resources>

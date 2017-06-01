@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 关于我们 -->
+<RelativeLayout android:id="@+id/relativeLayout1"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/gray">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_lkllogo"/>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        >
+
+        <TextView
+            style="@style/shoudan_text_small_green_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_info"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textview01"
+            style="@style/shoudan_text_medium_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/application_name"/>
+
+        <TextView
+            android:id="@+id/id_about_us_version_name"
+            style="@style/shoudan_text_medium_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/about_version_code"/>
+
+        <TextView
+            style="@style/shoudan_text_small_green_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/confirm_remit_protocal_text2"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/service_information"
+            style="@style/shoudan_text_medium_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:linksClickable="true"
+            android:text="@string/lkl_protocol_underline"/>
+
+        <TextView
+            android:id="@+id/service_shoudan_information"
+            style="@style/shoudan_text_medium_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:linksClickable="true"
+            android:text="@string/lkl_protocol_shoudan_underline"/>
+
+        <TextView
+            android:id="@+id/service_wx"
+            style="@style/shoudan_text_medium_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:linksClickable="true"
+            android:text="@string/lkl_protocol_service_wx"/>
+
+
+        <TextView
+            style="@style/shoudan_text_small_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/about_client_title"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/phone_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/call_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/about_call_button_selector"
+                android:text="@string/about_client_photo"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/linearlayout07"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical"
+                android:text="@string/about_registration_line1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout08"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_registration_line2"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Copyright©2004-2016 lakala.com lnc."
+            android:textColor="@color/shoudan_gray"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="All Rights Reserved"
+            android:textColor="@color/shoudan_gray"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

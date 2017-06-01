@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 22
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 22
+    }
+    // This is important, it will run lint checks but won't abort build
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFile 'proguard-rules.txt'
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+}
+
+dependencies {
+    compile project(':LakalaLibCore')
+    //    compile 'com.squareup.picasso:picasso:+'
+    //    compile 'com.android.support:appcompat-v7:20.+'
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile project(':PullToRefreshList')
+    compile files('libs/cc-iprotect-lakala-v3.9.jar')
+    compile 'com.android.support:support-v4:25.2.0'
+}

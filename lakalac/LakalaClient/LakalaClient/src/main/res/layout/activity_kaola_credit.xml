@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_kaola"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_kaola_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/x20"
+        android:text="@string/kaola_description"
+        android:textColor="@color/gray_3" />
+
+    <com.lakala.shoudan.component.KaoLaCreditView
+        android:id="@+id/kaolaView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/tv_kaola_description"
+        android:layout_marginBottom="@dimen/x20"
+        android:layout_marginTop="@dimen/x20" />
+
+    <Button
+        android:id="@+id/btnShare"
+        style="@style/btn_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kaolaView"
+        android:layout_centerHorizontal="true"
+        android:text="分享"
+        android:textSize="20sp" />
+</RelativeLayout>

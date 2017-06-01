@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="fraudmetrix-2.0.9a">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LakalaPlatform/libs/fraudmetrix-2.0.9a.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

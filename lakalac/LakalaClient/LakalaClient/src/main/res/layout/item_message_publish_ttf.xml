@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time_message"
+
+        style="@style/style_tv_time_message" />
+
+
+    <RelativeLayout style="@style/rl_container_message">
+
+        <RelativeLayout
+            android:id="@+id/ll_title"
+            style="@style/style_ll_title">
+
+            <ImageView
+                android:id="@+id/iv_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/wallet_phone" />
+
+            <TextView
+                android:id="@+id/tv_publish_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_size_10"
+                android:layout_toRightOf="@+id/iv_publish"
+                android:text="会员福利"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_18" />
+
+            <TextView
+                android:id="@+id/tv_publish_ammount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_size_15"
+                android:text="+50"
+                android:textSize="@dimen/font_size_18"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/view_seperator_1"
+            style="@style/news_seperator"
+            android:layout_below="@+id/ll_title" />
+
+        <TextView
+            android:id="@+id/tv_publish_description"
+            style="@style/style_tv_description_message"
+            android:layout_below="@+id/view_seperator_1"
+            android:text="领个红包一堆规则\n不想加班哈哈哈\n出差补助也不发\n放大镜看世界" />
+
+
+        <View
+            android:id="@+id/view_seprator"
+            style="@style/news_seperator"
+            android:layout_below="@+id/tv_publish_description" />
+
+        <TextView
+            android:id="@+id/tv_operation"
+            style="@style/style_tv_operation"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view_seprator"
+            android:layout_marginLeft="@dimen/x2"
+            android:text="阅读全文" />
+    </RelativeLayout>
+
+
+</LinearLayout>

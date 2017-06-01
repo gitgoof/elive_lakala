@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group"
+    style="@style/app_background_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:id="@+id/scroll_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/content_margin_actionbar"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.lakala.ui.component.LabelEditText
+                    android:id="@+id/let_credit_number"
+                    style="@style/labeledittext_sytle_for_shoudan"
+                    app:hint="@string/input_credit_number"
+                    app:labelText="@string/credit_number" />
+
+                <ImageView style="@style/combination_seperator_style" />
+
+                <com.lakala.ui.component.LabelEditText
+                    android:id="@+id/let_sure_credit_number"
+                    style="@style/labeledittext_sytle_for_shoudan"
+                    app:hint="@string/sure_input_credit_number"
+                    app:labelText="@string/credit_number" />
+
+                <ImageView
+                    android:id="@+id/seperator_below_sure_credit"
+                    style="@style/combination_seperator_style" />
+
+                <com.lakala.ui.component.LabelEditText
+                    android:id="@+id/let_repayment_money"
+                    style="@style/labeledittext_sytle_for_shoudan"
+                    app:hint="@string/repay_amount_hint"
+                    app:labelText="@string/repayment_money" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_date_prompt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:gravity="left"
+                android:textColor="@color/light"
+                android:textSize="@dimen/font_size_small"
+                android:visibility="gone"
+                tools:text="测试" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:orientation="vertical">
+
+                <com.lakala.ui.component.LabelSwitch
+                    android:id="@+id/ls_repayment_notify"
+                    style="@style/labeledittext_sytle_for_shoudan"
+                    android:background="@color/white"
+                    app:label="@string/repayment_notify" />
+
+                <TextView
+                    style="@style/combination_little_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="免费短信通知信用卡持有人" />
+
+                <com.lakala.ui.component.LabelSwitch
+                    android:id="@+id/ls_sms_notify"
+                    style="@style/labeledittext_sytle_for_shoudan"
+                    app:label="@string/sms_notify" />
+
+                <ImageView
+                    android:id="@+id/seperator_below_phone_number"
+                    style="@style/combination_seperator_style"
+                    android:visibility="gone" />
+
+                <com.lakala.ui.component.LabelEditText
+                    android:id="@+id/let_phone_number"
+                    style="@style/labeledittext_sytle_for_shoudan"
+                    android:visibility="gone"
+                    app:hint="@string/phone_number"
+                    app:labelText="@string/phone_number"
+                    app:rightIconMarginRight="0dp"
+                    app:rightIconSrc="@drawable/contact_selector"
+                    app:rightIconVisibility="VISIBLE"
+                    app:textSize="@dimen/font_size_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/btn_loan_for_you"
+                    style="@style/btn_comment_with_stroke"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal"
+                    android:layout_marginTop="@dimen/order_next_btn_margin_top"
+                    android:layout_weight="1"
+                    android:text="替我还" />
+
+                <TextView
+                    android:id="@+id/tv_next_step"
+                    style="@style/btn_top_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="下一步" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/layout_keyboard" />
+    </RelativeLayout>
+</RelativeLayout>

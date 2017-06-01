@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:apps="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/layout_bank_info_new"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/shoudan_account_receive"
+                style="@style/shoudan_text_medium_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/tendip"
+                android:paddingTop="@dimen/tendip"
+                android:text="@string/account_receive"
+                android:visibility="gone"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_account_type"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <RadioButton
+                    android:id="@+id/radio_private_account"
+                    style="@style/shoudan_text_normal_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_2way_left_selected"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/private_account"
+                    android:textColor="@color/btn_white_gray_text_selector">
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_enterprise_account"
+                    style="@style/shoudan_text_normal_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_2way_right_normal"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/enterprise_account"
+                    android:textColor="@color/btn_white_gray_text_selector">
+                </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/combination_text_edit_margin_left">
+
+            <TableRow
+                android:id="@+id/shoudan_openbank_type"
+                android:minHeight="@dimen/order_item_height">
+
+                <TextView
+                    android:id="@+id/bank_tag_type"
+                    style="@style/combination_left_textview_style"
+                    android:layout_height="match_parent"
+                    android:tag="10007"
+                    android:text="账户类型 "/>
+
+
+                <TextView
+                    android:id="@+id/bank_type"
+                    style="@style/combination_right_edittext_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:hint="请选择"/>
+
+                <ImageView
+                    android:id="@+id/img_account_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                    android:paddingRight="@dimen/combination_text_edit_margin_left"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_arrow_go"/>
+            </TableRow>
+
+            <View
+                style="@style/seperator"
+                android:layout_marginTop="0dp"/>
+
+
+            <TableRow
+                android:minHeight="@dimen/order_item_height">
+
+                <TextView
+                    android:id="@+id/account_name_tag"
+                    style="@style/combination_left_textview_style"
+                    android:layout_height="match_parent"
+                    android:tag="10009"
+                    android:text="开户名"/>
+
+                <EditText
+                    android:id="@+id/account_name"
+                    style="@style/combination_right_edittext_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:hint="请填写开户名"
+                    android:paddingRight="@dimen/combination_text_edit_margin_left"
+                    android:singleLine="true"/>
+            </TableRow>
+
+            <View
+                style="@style/seperator"
+                android:layout_marginTop="0dp"/>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+        <TextView
+            android:id="@+id/support_bank_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/watch_support_bank"
+            android:textSize="@dimen/dimen_24"
+            android:textColor="@color/common_blue_color"
+            android:layout_marginRight="@dimen/common_distance_level_1"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/combination_text_edit_margin_left">
+
+            <View
+                style="@style/seperator"
+                android:layout_marginTop="0dp"/>
+
+
+            <TableRow
+                android:minHeight="@dimen/order_item_height">
+
+                <TextView
+                    android:id="@+id/bank_account_tag"
+                    style="@style/combination_left_textview_style"
+                    android:layout_height="match_parent"
+                    android:tag="10008"
+                    android:text="银行账号"/>
+
+                <EditText
+                    android:id="@+id/bank_account"
+                    style="@style/combination_right_edittext_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:hint="请输入开户银行账号"
+                    android:paddingRight="@dimen/combination_text_edit_margin_left"
+                    android:phoneNumber="true"
+                    android:singleLine="true"/>
+            </TableRow>
+            <View
+                android:id="@+id/v_tag"
+                style="@style/seperator"
+                android:layout_marginTop="0dp"/>
+            <TableRow
+                android:id="@+id/shoudan_openbank"
+                android:minHeight="@dimen/order_item_height">
+
+                <TextView
+                    android:id="@+id/bank_tag"
+                    style="@style/combination_left_textview_style"
+                    android:layout_height="match_parent"
+                    android:tag="10007"
+                    android:text="开户银行 "/>
+
+                <TextView
+                    android:id="@+id/bank"
+                    style="@style/combination_right_edittext_style"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:hint="请填写开户银行名称"/>
+
+                <ImageView
+                    android:id="@+id/iv_bank_type_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                    android:paddingRight="@dimen/combination_text_edit_margin_left"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    android:src="@drawable/btn_arrow_go"/>
+                <View
+                    android:id="@+id/v_bank_empty"
+                    android:visibility="gone"
+                    android:layout_width="15dp"
+                    android:layout_height="0dp"/>
+            </TableRow>
+
+        </TableLayout>
+        <TextView
+            android:id="@+id/tv_result"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:paddingRight="15dp"
+            android:gravity="right"
+            android:textSize="12sp"
+            android:textColor="@color/font_gray_three2"
+            android:text=""
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+    <!--F码判定-->
+    <LinearLayout
+        android:id="@+id/layout_f_code_new"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/layout_f_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="我有F码"
+                    android:textColor="@color/blue4"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_description_f_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:text="如何获得并使用F码?"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_edit_f_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_f_code"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="2dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_btn_to_write_f"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="点击填写F码"
+                    android:visibility="gone"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_f_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:hint="点击填写F码"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp">
+
+        <CheckBox
+            android:id="@+id/agreement"
+            style="@style/mycheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:drawablePadding="1dp"
+            android:paddingRight="1dp"
+            android:text="我已阅读并同意"
+            android:textColor="@color/combination_title_text_color"
+            android:textSize="@dimen/small_text_size"/>
+        <TextView
+            android:id="@+id/lkl_cooperation_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lkl_protocol_cooperation"
+            style="@style/text_style_twelve_blue"/>
+        </LinearLayout>
+    <!--<TextView-->
+        <!--android:id="@+id/skb_scancode_protocol"-->
+        <!--android:layout_marginLeft="@dimen/common_distance_level_2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/lkl_protocol_service_wx1"-->
+        <!--style="@style/text_style_twelve_blue"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/immediate_withdrawl_protocol"-->
+        <!--android:layout_marginLeft="@dimen/common_distance_level_2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/lkl_protocol_service_wx1"-->
+        <!--style="@style/text_style_twelve_blue"/>-->
+
+    <LinearLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btn_pre_bank"
+            style="@style/btn_comment_with_stroke"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/order_next_btn_margin_top"
+            android:layout_weight="1"
+            android:text="上一步"
+            />
+
+        <Button
+            android:id="@+id/btn_next_bank"
+            style="@style/btn_top_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="提交审核"
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_setting_item_selector"
+              android:orientation="horizontal"
+              android:paddingRight="15dp"
+              android:paddingBottom="10dp"
+              android:paddingTop="10dp">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/connect_type_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <TextView
+        android:gravity="center_vertical"
+        android:id="@+id/device_name"
+        tools:text="LME30100009"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" />
+
+    <TextView
+        android:text="默认连接"
+        android:visibility="invisible"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/is_default"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

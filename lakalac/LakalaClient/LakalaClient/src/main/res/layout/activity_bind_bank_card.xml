@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            style="@style/seperator"
+            android:layout_marginTop="5dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <LinearLayout
+                style="@style/combination_item_style"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_distance_level_1"
+                android:paddingRight="@dimen/common_distance_level_1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="收款储蓄卡号"
+                    android:gravity="center"
+                    style="@style/style_fourteen_gray"
+                    />
+
+                <EditText
+                    android:id="@+id/wallet_transfer_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textCursorDrawable="@null"
+                    android:singleLine="true"
+                    style="@style/combination_right_edittext_style"
+                    android:hint="@string/toast_card_number_null"/>
+            </LinearLayout>
+            <View
+                style="@style/seperator_marginlef_15"/>
+
+            <RelativeLayout
+                style="@style/combination_item_style"
+                android:paddingLeft="@dimen/common_distance_level_1"
+                android:paddingRight="@dimen/common_distance_level_1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="开户银行"
+                    android:gravity="center"
+                    style="@style/style_fourteen_gray"/>
+
+                <TextView
+                    android:id="@+id/wallet_transfer_bank"
+                    style="@style/combination_right_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:drawablePadding="@dimen/common_distance_level_1"
+                    android:hint="@string/open_bank"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/seperator_marginlef_15" />
+            <LinearLayout
+                style="@style/combination_item_style"
+                android:paddingLeft="@dimen/common_distance_level_1"
+                android:paddingRight="@dimen/common_distance_level_1"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/combination_left_textview_style"
+                    android:text="持卡人姓名"
+                    android:gravity="center"
+                    android:textSize="@dimen/medium_text_size"/>
+
+                <EditText
+                    android:id="@+id/wallet_transfer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    style="@style/combination_right_edittext_style"
+                    android:hint="@string/user_name_error1"/>
+            </LinearLayout>
+
+            <View
+                style="@style/seperator"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/support_bank_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/watch_support_bank"
+            android:textSize="@dimen/dimen_24"
+            android:textColor="@color/common_blue_color"
+            android:layout_marginRight="@dimen/common_distance_level_1"
+            android:layout_marginTop="@dimen/common_distance_level_1"/>
+        <TextView
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_top_line"
+            android:text="添加"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/layout_keyboard" />
+    </RelativeLayout>
+</RelativeLayout>

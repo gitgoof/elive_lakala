@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_group"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/types"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <View
+            style="@style/seperator" />
+        <RelativeLayout
+            android:id="@+id/type_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/finance_prod_height"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/common_distance_level_1"
+                android:text="个人账户"
+                android:textSize="@dimen/big_text_size"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/iv_tick_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_distance_level_1"
+                android:visibility="gone"
+                android:src="@drawable/icon_slected"/>
+        </RelativeLayout>
+        <View
+            style="@style/seperator"
+            android:layout_marginLeft="@dimen/common_distance_level_1"/>
+
+        <RelativeLayout
+            android:id="@+id/type_public"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/finance_prod_height"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/common_distance_level_1"
+                android:text="对公账户"
+                android:textSize="@dimen/big_text_size"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/iv_tick_public"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_distance_level_1"
+                android:visibility="gone"
+                android:src="@drawable/icon_slected"/>
+        </RelativeLayout>
+        <View
+            style="@style/seperator" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+        <View
+            android:layout_marginTop="@dimen/content_margin_actionbar"
+            style="@style/seperator" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:gravity="center_vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/name_input"
+                style="@style/combination_left_textview_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal"
+                android:gravity="left|center_vertical"
+                android:inputType="text|textMultiLine"
+                tools:targetApi="honeycomb_mr1" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/exit"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_btn_cancel"
+                android:focusableInTouchMode="false"
+                android:padding="@dimen/common_distance_level_1"
+                android:scaleType="fitCenter"
+                android:clickable="true"
+                android:focusable="false"
+                android:layout_marginRight="@dimen/order_next_btn_margin_horizontal"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+        <View
+            style="@style/seperator" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/banks"
+                style="@style/combination_chang_merch_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_distance_level_1"
+                android:text="为保证您使用升级服务成功通过营业执照验证，请务必将店铺名称修改成与营业执照上名称完全一致；每个商户仅允许修改一次店铺名称"/>
+
+            <Button
+                android:id="@+id/info_sub"
+                style="@style/btn_top_line"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/post_code"></Button>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            >
+            <include layout="@layout/layout_keyboard" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

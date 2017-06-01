@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/dimen_40"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:layout_marginBottom="@dimen/dimen_24"
+        android:textColor="@color/color_blue_3b4a78"
+        android:visibility="gone"
+        android:id="@+id/id_title_text" />
+
+    <LinearLayout
+        android:id="@+id/id_verify_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80"
+        android:paddingLeft="@dimen/dimen_44"
+        android:paddingRight="@dimen/dimen_44"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:layout_marginBottom="@dimen/dimen_40"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.lakala.ui.component.ClearEditText
+            android:id="@+id/vercode_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_e6e7e9"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/dimen_6"
+            android:paddingRight="@dimen/dimen_6"
+            android:hint="@string/ui_input_your_verifycode"/>
+
+        <ImageView
+            android:id="@+id/vercode_image"
+            android:layout_width="@dimen/dimen_136"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_6"
+            android:layout_marginBottom="@dimen/dimen_6"
+            android:scaleType="center"
+            android:background="@drawable/plat_captcha_code_default"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

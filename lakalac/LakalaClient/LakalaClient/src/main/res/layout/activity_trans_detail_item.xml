@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/bg_box_nomarl_black">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="right">
+
+            <TextView
+                style="@style/wallet_detail_left"
+                android:text="交易类型 : "/>
+
+            <TextView
+                style="@style/wallet_detail_left"
+                android:text="交易金额 : "/>
+
+            <TextView
+                style="@style/wallet_detail_left"
+                android:text="钱包余额 : "/>
+
+            <TextView
+                style="@style/wallet_detail_left"
+                android:text="交易状态 : "/>
+
+            <TextView
+                style="@style/wallet_detail_left"
+                android:text="交易时间 : "/>
+
+            <TextView
+                style="@style/wallet_detail_left"
+                android:text="交易流水号 : "/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/common_distance_level_1"
+            android:gravity="left">
+
+            <TextView
+                android:id="@+id/wallet_trans_type"
+                style="@style/wallet_detail_right"
+                tools:text="提现"/>
+
+            <TextView
+                android:id="@+id/wallet_trans_amount"
+                style="@style/wallet_detail_right"
+                tools:text="1.00元"
+                android:textColor="@color/amount_color"/>
+
+            <TextView
+                android:id="@+id/wallet_balance"
+                style="@style/wallet_detail_right"
+                tools:text="3.0元"/>
+
+            <TextView
+                android:id="@+id/wallet_trans_status"
+                style="@style/wallet_detail_right"
+                tools:text="提现成功"/>
+
+            <TextView
+                android:id="@+id/wallet_trans_time"
+                style="@style/wallet_detail_right"
+                tools:text="2015-11-06 18:23:23"/>
+
+            <TextView
+                android:id="@+id/wallet_trans_token"
+                style="@style/wallet_detail_right"
+                tools:text="LAKALAYD327843288329789238572893758928"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

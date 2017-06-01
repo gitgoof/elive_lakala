@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              style="@style/app_background_white">
+
+
+    <View
+        style="@style/seperator"
+        android:layout_marginTop="20dp"/>
+    <ListView
+        android:background="@color/white"
+        style="@style/listview_style"
+        android:divider="@android:color/transparent"
+        android:listSelector="@drawable/collections_records_listselector"
+        android:id="@+id/business_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

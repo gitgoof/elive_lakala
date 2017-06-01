@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="basiclibrary">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LakalaPlatform/libs/basiclibrary.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

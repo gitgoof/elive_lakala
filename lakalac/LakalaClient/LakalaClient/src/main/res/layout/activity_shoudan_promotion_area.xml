@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_to_refresh_promotion_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:groupIndicator="@null"
+        android:divider="@null"
+        />
+    <include
+        android:id="@+id/layout_empty_promotion_ad"
+        layout="@layout/empry_view_layout"
+        />
+</LinearLayout>
+    <!--<ListView
+            android:id="@+id/lv_promotion_ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            >
+        </ListView>-->

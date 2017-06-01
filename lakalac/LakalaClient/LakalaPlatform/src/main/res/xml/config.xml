@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.helloCordova" version="2.0.0" xmlns="http://www.w3.org/ns/widgets">
+    <name>Hello Cordova</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <access origin="*" />
+    <access origin="*.apache.org" />
+    <content src="android.html" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="useBrowserHistory" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="LoadUrlTimeoutValue" value="60000" />
+    <feature name="App">
+        <param name="android-package" value="com.lakala.core.cordova.cordova.App" />
+    </feature>
+    <feature name="Analytics">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.AnalyticsPlugin" />
+    </feature>
+    <feature name="BusinessLauncher">
+        <param name="android-package"
+               value="com.lakala.platform.cordovaplugin.BusinessLauncherPlugin" />
+    </feature>
+    <feature name="BusinessParameter">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.BusinessParameter" />
+    </feature>
+    <feature name="DBPlugin">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.DBPlugin" />
+    </feature>
+    <feature name="HttpRequest">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.HttpPlugin" />
+    </feature>
+    <feature name="Navigation">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.Navigation" />
+    </feature>
+    <feature name="PhoneBook">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.PhoneBook" />
+    </feature>
+    <feature name="Session">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.Session" />
+    </feature>
+
+    <feature name="SoftKeyBoard">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.SoftKeyBoard" />
+    </feature>
+    <feature name="Dialog">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.DialogPlugin" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.CameraPlugin" />
+    </feature>
+    <feature name="PickerView">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.AreaDialogPlugin"/>
+    </feature>
+    <feature name="Swiper">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.SwipePlugin"/>
+    </feature>
+    <feature name="SaveInfoPlugin">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.SaveInfoPlugin"/>
+    </feature>
+    <feature name="MTS">
+        <param name="android-package" value="com.lakala.platform.cordovaplugin.MTSPlugin"/>
+    </feature>
+</widget>

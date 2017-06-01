@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_40"
+                android:layout_marginTop="@dimen/dimen_20" >
+
+                <ImageView
+                    android:id="@+id/result_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/success" />
+
+                <TextView
+                    android:layout_toRightOf="@id/result_icon"
+                    style="@style/shoudan_text_medium_black"
+                    android:id="@+id/result_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:text="@string/sign_requisitions" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_20"
+                android:background="@drawable/bg_layout"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_layout">
+
+                    <com.lakala.shoudan.component.VerticalListView
+                        android:id="@+id/vertical_result_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="2dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/error"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/box"/>
+
+                    <TextView
+                        android:id="@+id/err_ditail"
+                        style="@style/shoudan_text_small_orange"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/result_icon"
+                        android:layout_toRightOf="@id/result_icon"
+                        android:padding="@dimen/dimen_20"
+                        android:text="@string/consulting_case"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/result_buttons"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/common_distance_level_1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/button_left"
+                        style="@style/btn_comment_with_stroke"
+                        android:layout_marginTop="@dimen/order_next_btn_margin_top"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/login" />
+                    <TextView
+                        android:id="@+id/button_center"
+                        style="@style/btn_comment_with_stroke"
+                        android:layout_marginTop="@dimen/order_next_btn_margin_top"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:text="@string/login" />
+
+                    <TextView
+                        android:id="@+id/button_right"
+                        style="@style/btn_top_line"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="visible"
+                        android:text="@string/login" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/button_bottom"
+                    style="@style/btn_top_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="0dp"
+                    android:visibility="gone"
+                    android:text="@string/login" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/app_background_white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:apps="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_margin_actionbar"
+        android:orientation="vertical">
+        <com.lakala.ui.component.LabelTextView
+            android:id="@+id/prodInfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+            apps:labelText="产品信息"
+            apps:text="ceshi"/>
+        <ImageView
+            style="@style/combination_seperator_style"/>
+        <com.lakala.ui.component.LabelTextView
+            android:id="@+id/amountInfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+            apps:labelText="&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;金额"
+            apps:text="1.00元"></com.lakala.ui.component.LabelTextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/order_item_height"
+        android:layout_marginTop="@dimen/common_distance_level_2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+        android:paddingRight="@dimen/combination_text_edit_margin_left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="付款方式"
+            android:gravity="center"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="16dp"
+                android:gravity="center_vertical"
+                tools:text="刷卡支付"/>
+
+        <ImageView
+            android:id="@+id/iv_btn_arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/btn_arrow_go_gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_to_rechange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="零钱充值"
+            android:layout_gravity="right"
+            android:textColor="#fa3137"
+            android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+            android:textSize="@dimen/font_size_xsmall"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_common_guide_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_top_line"
+        android:layout_marginTop="25dp"
+        android:text="付款" />
+</LinearLayout>

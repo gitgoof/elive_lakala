@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cswiper5_api_v1.0.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../android_core/libs/cswiper5_api_v1.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

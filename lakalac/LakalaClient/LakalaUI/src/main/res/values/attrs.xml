@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DynamicHeightListView">
+        <attr name="useMaxHeight" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="BaseItemView">
+        <!-- 顶部条颜色-->
+        <attr name="topBarColor" format="reference|color" />
+        <!-- 顶部条高度-->
+        <attr name="topBarHeight" format="dimension" />
+        <!-- 底部条颜色-->
+        <attr name="bottomBarColor" format="reference|color" />
+        <!-- 底部条高度-->
+        <attr name="bottomBarHeight" format="dimension" />
+    </declare-styleable>
+    <!-- >>>>>>>>>>>>>>>>>两行文本控件片定义属性 >>>>>>>>>> -->
+    <declare-styleable name="OneIconTwoTextView">
+        <attr name="iconRes" format="reference"/>
+        <attr name="topText" format="reference|string"/>
+        <attr name="topTextSize" format="reference|dimension"/>
+        <attr name="topTextColor" format="reference|color"/>
+        <attr name="bottomText" format="reference|string"/>
+        <attr name="bottomTextSize" format="reference|dimension"/>
+        <attr name="bottomTextColor" format="reference|color"/>
+    </declare-styleable>
+    <declare-styleable name="IconItemView">
+        <!-- 左侧图标 -->
+        <attr name="leftIconSrc" format="reference" />
+        <!-- 左侧图标与左侧文本之间的距离-->
+        <attr name="leftIconMarginRight" format="dimension" />
+        <!-- 是否显示左侧图标-->
+        <attr name="leftIconVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+
+        <!--是否显示坚线-->
+        <attr name="isVerticalLine" format="boolean" />
+        <!--垂直线右则的 Margin-->
+        <attr name="verticalLineMarginRight" format="dimension" />
+
+        <!-- 右侧文本 -->
+        <attr name="rightText" format="reference|string"/>
+        <!-- 右侧按钮文本 -->
+        <attr name="rightButtonText" format="reference|string"/>
+        <!-- 右侧文本的Hint -->
+        <attr name="rightHint" format="reference|string"/>
+        <!-- 右侧文本的大小-->
+        <attr name="rightTextSize" format="dimension"/>
+        <!-- 右侧文本的颜色-->
+        <attr name="rightTextColor" format="reference|color" />
+        <!-- 右侧Hint文本的颜色 -->
+        <attr name="rightHintTextColor" format="reference|color" />
+        <!-- 右侧文本字体样式-->
+        <attr name="rightTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- 右侧文字可视属性-->
+        <attr name="rightTextVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+        <!-- 右侧文本背景 -->
+        <attr name="rightTextBackground" format="reference" />
+        <!--右侧文本与图标之间的距离-->
+        <attr name="rightTextMarginRight" format="dimension"/>
+
+        <!-- 右侧图标 -->
+        <attr name="rightIconSrc" format="reference" />
+        <!-- 右侧图标可视属性-->
+        <attr name="rightIconVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+        <!-- 右侧图标与箭头的间距-->
+        <attr name="rightIconMarginRight" format="dimension"/>
+
+        <!--是否显示右箭头-->
+        <attr name="rightArrowVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+
+        <!-- 是否启用子项目单击事件 -->
+        <attr name="enableOnClickItemEvents" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="LabelItemView">
+        <!-- 标签文本 -->
+        <attr name="labelText" format="reference|string"/>
+        <attr name="labelTextSize" format="dimension"/>
+        <attr name="labelTextColor" format="reference|color" />
+        <attr name="labelTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- 标签文本右侧的 margin 值 -->
+        <attr name="labelTextMarginRight" format="dimension"/>
+        <attr name="minEms" format="integer"/>
+        <attr name="maxEms" format="integer"/>
+        <attr name="gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77" />
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80" />
+            <!-- Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LabelTextView">
+        <!-- 标签文本 -->
+        <attr name="text" format="reference|string"/>
+        <attr name="hint" format="reference|string"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="reference|color" />
+        <attr name="hintTextColor" format="reference|color" />
+        <attr name="textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LabelEditText">
+        <attr name="text"/>
+        <attr name="hint"/>
+        <attr name="textSize"/>
+        <attr name="textColor"/>
+        <attr name="hintTextColor"/>
+        <attr name="textStyle"/>
+        <attr name="editGravity">
+            <flag name="left" value="0x00000003"/>
+            <flag name="right" value="0x00000005"/>
+        </attr>
+        <attr name="isText" format="boolean"/>
+        <!-- The type of data being placed in a text field, used to help an
+             input method decide how to let the user enter text.  The constants
+             here correspond to those defined by
+             {@link android.text.InputType}.  Generally you can select
+             a single value, though some can be combined together as
+             indicated.  Setting this attribute to anything besides
+             <var>none</var> also implies that the text is editable. -->
+        <attr name="inputType">
+            <!-- There is no content type.  The text is not editable. -->
+            <flag name="none" value="0x00000000" />
+            <!-- Just plain old text.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_NORMAL}. -->
+            <flag name="text" value="0x00000001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 request capitalization of all characters.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_CAP_CHARACTERS}. -->
+            <flag name="textCapCharacters" value="0x00001001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 request capitalization of the first character of every word.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_CAP_WORDS}. -->
+            <flag name="textCapWords" value="0x00002001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 request capitalization of the first character of every sentence.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_CAP_SENTENCES}. -->
+            <flag name="textCapSentences" value="0x00004001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 request auto-correction of text being input.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_AUTO_CORRECT}. -->
+            <flag name="textAutoCorrect" value="0x00008001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 specify that this field will be doing its own auto-completion and
+                 talking with the input method appropriately.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_AUTO_COMPLETE}. -->
+            <flag name="textAutoComplete" value="0x00010001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 allow multiple lines of text in the field.  If this flag is not set,
+                 the text field will be constrained to a single line.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_MULTI_LINE}. -->
+            <flag name="textMultiLine" value="0x00020001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 indicate that though the regular text view should not be multiple
+                 lines, the IME should provide multiple lines if it can.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_IME_MULTI_LINE}. -->
+            <flag name="textImeMultiLine" value="0x00040001" />
+            <!-- Can be combined with <var>text</var> and its variations to
+                 indicate that the IME should not show any
+                 dictionary-based word suggestions.  Corresponds to
+                 {@link android.text.InputType#TYPE_TEXT_FLAG_NO_SUGGESTIONS}. -->
+            <flag name="textNoSuggestions" value="0x00080001" />
+            <!-- Text that will be used as a URI.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_URI}. -->
+            <flag name="textUri" value="0x00000011" />
+            <!-- Text that will be used as an e-mail address.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_EMAIL_ADDRESS}. -->
+            <flag name="textEmailAddress" value="0x00000021" />
+            <!-- Text that is being supplied as the subject of an e-mail.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_EMAIL_SUBJECT}. -->
+            <flag name="textEmailSubject" value="0x00000031" />
+            <!-- Text that is the content of a short message.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_SHORT_MESSAGE}. -->
+            <flag name="textShortMessage" value="0x00000041" />
+            <!-- Text that is the content of a long message.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_LONG_MESSAGE}. -->
+            <flag name="textLongMessage" value="0x00000051" />
+            <!-- Text that is the name of a person.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_PERSON_NAME}. -->
+            <flag name="textPersonName" value="0x00000061" />
+            <!-- Text that is being supplied as a postal mailing address.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_POSTAL_ADDRESS}. -->
+            <flag name="textPostalAddress" value="0x00000071" />
+            <!-- Text that is a password.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_PASSWORD}. -->
+            <flag name="textPassword" value="0x00000081" />
+            <!-- Text that is a password that should be visible.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_VISIBLE_PASSWORD}. -->
+            <flag name="textVisiblePassword" value="0x00000091" />
+            <!-- Text that is being supplied as text in a web form.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_WEB_EDIT_TEXT}. -->
+            <flag name="textWebEditText" value="0x000000a1" />
+            <!-- Text that is filtering some other data.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_FILTER}. -->
+            <flag name="textFilter" value="0x000000b1" />
+            <!-- Text that is for phonetic pronunciation, such as a phonetic name
+                 field in a contact entry.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_TEXT} |
+                 {@link android.text.InputType#TYPE_TEXT_VARIATION_PHONETIC}. -->
+            <flag name="textPhonetic" value="0x000000c1" />
+            <!-- A numeric only field.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_NUMBER}. -->
+            <flag name="number" value="0x00000002" />
+            <!-- Can be combined with <var>number</var> and its other options to
+                 allow a signed number.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+                 {@link android.text.InputType#TYPE_NUMBER_FLAG_SIGNED}. -->
+            <flag name="numberSigned" value="0x00001002" />
+            <!-- Can be combined with <var>number</var> and its other options to
+                 allow a decimal (fractional) number.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+                 {@link android.text.InputType#TYPE_NUMBER_FLAG_DECIMAL}. -->
+            <flag name="numberDecimal" value="0x00002002" />
+            <!-- For entering a phone number.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_PHONE}. -->
+            <flag name="phone" value="0x00000003" />
+            <!-- For entering a date and time.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_DATETIME} |
+                 {@link android.text.InputType#TYPE_DATETIME_VARIATION_NORMAL}. -->
+            <flag name="datetime" value="0x00000004" />
+            <!-- For entering a date.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_DATETIME} |
+                 {@link android.text.InputType#TYPE_DATETIME_VARIATION_DATE}. -->
+            <flag name="date" value="0x00000014" />
+            <!-- For entering a time.  Corresponds to
+                 {@link android.text.InputType#TYPE_CLASS_DATETIME} |
+                 {@link android.text.InputType#TYPE_DATETIME_VARIATION_TIME}. -->
+            <flag name="time" value="0x00000024" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TwoLineTextView">
+        <!-- 第一行文本 -->
+        <attr name="firstLineText" format="reference|string"/>
+        <attr name="firstLineHint" format="reference|string"/>
+        <attr name="firstLineTextSize" format="dimension"/>
+        <attr name="firstLineTextColor" format="reference|color" />
+        <attr name="firstLineHintTextColor" format="reference|color" />
+        <attr name="firstLineTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="firstLineTextMarginBottom" format="dimension"/>
+
+        <!-- 第二行文本 -->
+        <attr name="secondLineText" format="reference|string"/>
+        <attr name="secondLineHint" format="reference|string"/>
+        <attr name="secondLineTextSize" format="dimension"/>
+        <attr name="secondLineTextColor" format="reference|color" />
+        <attr name="secondLineHintTextColor" format="reference|color" />
+        <attr name="secondLineTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+    <!-- <<<<<<<<<<<<< 两行文本控件片定义属性 <<<<<<<<<<<<< -->
+
+    <declare-styleable name="TwoLineSingleLineTextView">
+        <!-- 第一行文本 -->
+        <attr name="centerText" format="reference|string"/>
+        <attr name="centerHint" format="reference|string"/>
+        <attr name="centerTextSize" format="dimension"/>
+        <attr name="centerTextColor" format="reference|color" />
+        <attr name="centerHintTextColor" format="reference|color" />
+        <attr name="centerTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="centerTextMarginLeft" format="dimension"/>
+    </declare-styleable>
+    <!-- <<<<<<<<<<<<< 两行两列文本控件片定义属性 <<<<<<<<<<<<< -->
+
+
+    <declare-styleable name="SingleLineTextView">
+        <!-- 第一行文本 -->
+        <attr name="leftText" format="reference|string"/>
+        <attr name="leftHint" format="reference|string"/>
+        <attr name="leftTextSize" format="dimension"/>
+        <attr name="leftTextColor" format="reference|color" />
+        <attr name="leftHintTextColor" format="reference|color" />
+        <attr name="leftTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LineShape">
+        <attr name="lineWidth" format="dimension"/>
+        <attr name="lineShapeOrientation">
+            <flag name="horizontal" value="1" />
+            <flag name="vertical"   value="2" />
+            <flag name="slash" value="4" />
+            <flag name="backSlash" value="8" />
+        </attr>
+        <attr name="type">
+            <enum name="solid" value="0"/>
+            <enum name="dashed" value="1"/>
+        </attr>
+        <attr name="lineColor" format="reference|color" />
+        <!--虚线的实线长，仅在 type = dashed 有效-->
+        <attr name="dashedSolidLength" format="dimension" />
+        <!--虚线的空白长，仅在 type = dashed 有效-->
+        <attr name="dashedSpaceLength" format="dimension" />
+        <!--是否开启反锯齿-->
+        <attr name="antiAliased" format="boolean" />
+    </declare-styleable>
+
+    <!-- 自定义TabView属性 -->
+    <declare-styleable name="TabView">
+        <!-- tabview tab个数 -->
+        <attr name="tabCount" format="integer" />
+        <!-- tabview tab文字大小 -->
+        <attr name="tabTextSize" format="dimension" />
+        <!-- tabview tab文字颜色 -->
+        <attr name="tabTextColor" format="color|reference" />
+        <!-- tabview tab选中后文字颜色 -->
+        <attr name="tabSelectedTextColor" format="color|reference" />
+        <!-- tabview 整体背景 -->
+        <attr name="backgroundSrc" format="reference|color" />
+        <!-- 选中的tab背景 -->
+        <attr name="selectedTabBg" format="reference|color" />
+        <!-- tab之间分割线 -->
+        <attr name="splitImage" format="reference" />
+        <!-- tips背景 -->
+        <attr name="tipsBackground" format="reference|color" />
+        <!-- tips字体颜色 -->
+        <attr name="tipsTextColor" format="color|reference" />
+        <!-- tips字体大小 -->
+        <attr name="tipsTextSize" format="dimension" />
+        <!-- 四个tab图标-->
+        <attr name="tab1Src" format="reference" />
+        <attr name="tab2Src" format="reference" />
+        <attr name="tab3Src" format="reference" />
+        <attr name="tab4Src" format="reference" />
+        <!-- 四个tab选中状态图标 -->
+        <attr name="tab1SelectedSrc" format="reference" />
+        <attr name="tab2SelectedSrc" format="reference" />
+        <attr name="tab3SelectedSrc" format="reference" />
+        <attr name="tab4SelectedSrc" format="reference" />
+        <!--四个tab文字-->
+        <attr name="tab1Text" format="reference|string"/>
+        <attr name="tab2Text" format="reference|string"/>
+        <attr name="tab3Text" format="reference|string"/>
+        <attr name="tab4Text" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="DraggableGridView">
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="columnWidth" format="dimension" />
+        <attr name="rowHeight" format="dimension" />
+        <attr name="isOverreach" format="boolean" />
+        <!--是否充许长按后进入编辑模式，在编辑模式下可以随进托动图标，退出编辑模式时需要调用 exitEditMode -->
+        <attr name="isLongClickEditMode" format="boolean" />
+        <!--是否充许重排-->
+        <attr name="isAllowRearrange" format="boolean" />
+        <attr name="numColumns" format="integer" min="0">
+            <enum name="auto_fit" value="-1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="DragGridViewItem">
+        <!--是否充许删除-->
+        <attr name="isAllowDelete" format="boolean" />
+        <!--是否充许抖动-->
+        <attr name="isAllowShake" format="boolean" />
+        <attr name="isAllowRearrange" />
+    </declare-styleable>
+
+    <declare-styleable name="IconText">
+        <attr name="iconSrc" format="reference" /> <!---->
+        <attr name="iconMarginBottom" format="reference" />
+        <attr name="text"/>
+        <attr name="hint"/>
+        <attr name="textSize"/>
+        <attr name="textColor" />
+        <attr name="textPressedColor" format="reference|color"/>
+        <attr name="hintTextColor"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <!--导航条-->
+    <declare-styleable name="NavigationBar">
+        <!--导航栏主背景-->
+        <attr name="navBg" format="reference|color"/>
+        <!--导航条底部背景-->
+        <attr name="bottomBg" format="reference|color"/>
+        <!--返回按钮文字-->
+        <attr name="backText" format="reference|string"/>
+        <!--返回按钮背景-->
+        <attr name="backBg" format="reference|color"/>
+        <!--操作按钮文字-->
+        <attr name="actionText" format="reference|string"/>
+        <!--操作按钮背景-->
+        <attr name="actionBg" format="reference|color"/>
+        <!--文字颜色-->
+        <attr name="textColor" />
+        <!--button文字大小-->
+        <attr name="btnTextSize" format="dimension"/>
+        <!--title文字大小-->
+        <attr name="titleTextSize" format="dimension"/>
+        <!--title文字长度-->
+        <attr name="titleMaxLength" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="LabelSwitch">
+        <!--label内容-->
+        <attr name="label" format="string|reference"/>
+        <!--label内容文字大小-->
+        <attr name="labelFontSize" format="dimension"/>
+        <!--label内容文字颜色-->
+        <attr name="labelFontColor" format="reference|color"/>
+        <!--开关打开状态图片-->
+        <attr name="onImageSrc" format="reference"/>
+        <!--开关关闭状态图片-->
+        <attr name="offImageSrc" format="reference"/>
+        <attr name="tip" format="string"/>
+    </declare-styleable>
+
+    <!-- 搜索列表_索引布局 -->
+    <declare-styleable name="IndexLayout">
+        <!--索引文字大小-->
+        <attr name="indexTextSize" format="dimension"/>
+        <!--索引文字颜色-->
+        <attr name="indexTextColor" format="reference|color"/>
+        <!--索引文字选中状态时文字颜色-->
+        <attr name="indexChooseTextColor" format="reference|color"/>
+    </declare-styleable>
+
+    <!-- 搜索列表 -->
+    <declare-styleable name="SortListView">
+        <!--搜索索引布局背景-->
+        <attr name="indexLayoutBackground" format="reference|color"/>
+        <!--搜索框显示属性-->
+        <attr name="searchVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+        <!--搜索框hint文字内容-->
+        <attr name="searchHintText" format="string|reference"/>
+        <!--搜索框文字大小-->
+        <attr name="searchTextSize" format="dimension"/>
+        <!--列表索引条背景-->
+        <attr name="indexTextBackground" format="reference|color"/>
+        <!--列表索引文字大小-->
+        <attr name="indexTxtSize" format="dimension"/>
+        <!--列表索引文字颜色-->
+        <attr name="indexTxtColor" format="reference|color"/>
+        <!--列表item文字大小-->
+        <attr name="listItemTextSize" format="dimension"/>
+        <!--列表item文字颜色-->
+        <attr name="listItemTextColor" format="reference|color"/>
+        <!--索引悬浮提示文字大小-->
+        <attr name="overlayTextSize" format="dimension"/>
+        <!--索引悬浮提示文字颜色-->
+        <attr name="overlayTextColor" format="reference|color"/>
+
+    </declare-styleable>
+
+    <!--选择文本框（top:提示信息 bottom:显示信息）-->
+    <declare-styleable name="IconItemViewTwoLine">
+        <!--顶部布局宽度-->
+        <attr name="topLayoutWidth" format="dimension">
+            <flag name="fill_parent" value="-1"/>
+            <flag name="wrap_content" value="-2"/>
+        </attr>
+        <!--顶部布局高度-->
+        <attr name="topLayoutHeight">
+            <flag name="fill_parent" value="-1"/>
+            <flag name="wrap_content" value="-2"/>
+        </attr>
+
+        <!--顶部布局间距-->
+        <attr name="topLayoutPadding" format="dimension"/>
+         <!--顶部布局左间距-->
+        <attr name="topLayoutLeftPadding" format="dimension"/>
+        <!--顶部布局右间距-->
+        <attr name="topLayoutRightPadding" format="dimension"/>
+        <!--顶部布局上间距-->
+        <attr name="topLayoutTopPadding" format="dimension"/>
+        <!--顶部布局下间距-->
+        <attr name="topLayoutBottomPadding" format="dimension"/>
+
+        <!-- 顶部左侧图标 -->
+        <attr name="topLeftIconSrc" format="reference" />
+        <!-- 顶部左侧图标与左侧文本之间的距离-->
+        <attr name="topLeftIconSpacingRight" format="dimension" />
+        <!-- 顶部是否显示左侧图标-->
+        <attr name="topLeftIconVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+
+        <!-- 顶部左侧文本资源-->
+        <attr name="topLeftText" format="reference|string" />
+        <!-- 顶部左侧文本字体大小-->
+        <attr name="topLeftTextSize" format="dimension" />
+        <!-- 顶部左侧文本字体颜色-->
+        <attr name="topLeftTextColor" format="reference|color" />
+        <!-- 顶部左侧文本与左侧扩展布局之间的距离-->
+        <attr name="topLeftTextSpacingLayout" format="dimension" />
+        <!-- 顶部左侧文本样式-->
+        <attr name="topLeftTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- 底部左侧文本是否显示-->
+        <attr name="topLeftTextVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+        <!-- 顶部左侧文本内容位置-->
+        <attr name="topLeftTextGravity">
+            <flag name="top" value="48"/>
+            <flag name="bottom" value="80"/>
+            <flag name="left" value="3"/>
+            <flag name="right" value="5"/>
+            <flag name="center_vertical" value="16"/>
+            <flag name="center_horizontal" value="1"/>
+            <flag name="center" value="17"/>
+        </attr>
+
+        <!--顶部布局宽度-->
+        <attr name="bottomLayoutWidth" format="dimension">
+            <flag name="fill_parent" value="-1"/>
+            <flag name="wrap_content" value="-2"/>
+        </attr>
+        <!--顶部布局高度-->
+        <attr name="bottomLayoutHeight" format="dimension">
+            <flag name="fill_parent" value="-1"/>
+            <flag name="wrap_content" value="-2"/>
+        </attr>
+
+        <!--顶部布局宽度-->
+        <attr name="bottomBottomLayoutWidth" format="dimension">
+            <flag name="fill_parent" value="-1"/>
+            <flag name="wrap_content" value="-2"/>
+        </attr>
+        <!--顶部布局高度-->
+        <attr name="bottomBottomLayoutHeight" format="dimension">
+            <flag name="fill_parent" value="-1"/>
+            <flag name="wrap_content" value="-2"/>
+        </attr>
+
+        <!-- 底部引入边框样式-->
+        <attr name="bottomLayoutStyle" format="reference"/>
+
+        <!--底部布局内间距-->
+        <attr name="bottomLayoutPadding" format="dimension"/>
+        <!--底部布局左内间距-->
+        <attr name="bottomLayoutLeftPadding" format="dimension"/>
+        <!--底部布局右内间距-->
+        <attr name="bottomLayoutRightPadding" format="dimension"/>
+        <!--底部布局上内间距-->
+        <attr name="bottomLayoutTopPadding" format="dimension"/>
+        <!--底部布局下内间距-->
+        <attr name="bottomLayoutBottomPadding" format="dimension"/>
+
+        <!--底部布局外间距-->
+        <attr name="bottomLayoutMargin" format="dimension"/>
+        <!--底部布局左外间距-->
+        <attr name="bottomLayoutLeftMargin" format="dimension"/>
+        <!--底部布局右外间距-->
+        <attr name="bottomLayoutRightMargin" format="dimension"/>
+        <!--底部布局上外间距-->
+        <attr name="bottomLayoutTopMargin" format="dimension"/>
+        <!--底部布局下外间距-->
+        <attr name="bottomLayoutBottomMargin" format="dimension"/>
+
+        <!--底部布局内间距-->
+        <attr name="bottomBottomLayoutPadding" format="dimension"/>
+        <!--底部布局左内间距-->
+        <attr name="bottomBottomLayoutLeftPadding" format="dimension"/>
+        <!--底部布局右内间距-->
+        <attr name="bottomBottomLayoutRightPadding" format="dimension"/>
+        <!--底部布局上内间距-->
+        <attr name="bottomBottomLayoutTopPadding" format="dimension"/>
+        <!--底部布局下内间距-->
+        <attr name="bottomBottomLayoutBottomPadding" format="dimension"/>
+
+        <!--底部布局外间距-->
+        <attr name="bottomBottomLayoutMargin" format="dimension"/>
+        <!--底部布局左外间距-->
+        <attr name="bottomBottomLayoutLeftMargin" format="dimension"/>
+        <!--底部布局右外间距-->
+        <attr name="bottomBottomLayoutRightMargin" format="dimension"/>
+        <!--底部布局上外间距-->
+        <attr name="bottomBottomLayoutTopMargin" format="dimension"/>
+        <!--底部布局下外间距-->
+        <attr name="bottomBottomLayoutBottomMargin" format="dimension"/>
+
+        <!-- 底部布局上图标 -->
+        <attr name="bottomTopViewBg" format="reference" />
+        <!-- 底部布局上图标外间距-->
+        <attr name="bottomTopViewMargin" format="dimension"/>
+        <attr name="bottomTopViewLeftMargin" format="dimension"/>
+        <attr name="bottomTopViewRightMargin" format="dimension"/>
+        <attr name="bottomTopViewTopMargin" format="dimension"/>
+        <attr name="bottomTopViewBottomMargin" format="dimension"/>
+        <!-- 底部布局上图标是否显示-->
+        <attr name="bottomTopViewVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+
+        <!-- 底部左侧图标 -->
+        <attr name="bottomLeftIconSrc" format="reference" />
+        <!-- 底部左侧图标与左侧文本之间的距离-->
+        <attr name="bottomLeftIconSpacingLeft" format="dimension" />
+        <!-- 底部左侧图标与左侧文本之间的距离-->
+        <attr name="bottomLeftIconSpacingRight" format="dimension" />
+        <!-- 底部是否显示左侧图标-->
+        <attr name="bottomLeftIconVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+
+        <!-- 底部左侧文本资源-->
+        <attr name="bottomLeftText" format="reference|string" />
+        <!-- 底部左侧文本字体大小-->
+        <attr name="bottomLeftTextSize" format="dimension" />
+        <!-- 底部左侧文本字体颜色-->
+        <attr name="bottomLeftTextColor" format="reference|color" />
+        <!-- 底部左侧文本与左侧扩展布局之间的距离-->
+        <attr name="bottomLeftTextSpacingLayout" format="dimension" />
+        <!-- 底部左侧文本样式-->
+        <attr name="bottomLeftTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- 底部左侧文本是否显示-->
+        <attr name="bottomLeftTextVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+        <!-- 底部左侧文本内容位置-->
+        <attr name="bottomLeftTextGravity">
+            <flag name="top" value="48"/>
+            <flag name="bottom" value="80"/>
+            <flag name="left" value="3"/>
+            <flag name="right" value="5"/>
+            <flag name="center_vertical" value="16"/>
+            <flag name="center_horizontal" value="1"/>
+            <flag name="center" value="17"/>
+        </attr>
+
+        <!-- 底部右侧文本1资源-->
+        <attr name="bottomRightTextOne" format="reference|string" />
+        <!-- 底部右侧文本1字体大小-->
+        <attr name="bottomRightTextOneSize" format="dimension" />
+        <!-- 底部右侧文本1字体颜色-->
+        <attr name="bottomRightTextOneColor" format="reference|color" />
+        <!-- 底部右侧文本1文本与左侧扩展布局之间的距离-->
+        <attr name="bottomRightTextOneSpacingLayout" format="dimension" />
+        <!-- 底部右侧文本1样式-->
+        <attr name="bottomRightTextOneStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- 底部右侧文本1是否显示-->
+        <attr name="bottomRightTextOneVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+        <!-- 底部右侧文本1内容位置-->
+        <attr name="bottomRightTextOneGravity">
+            <flag name="top" value="48"/>
+            <flag name="bottom" value="80"/>
+            <flag name="left" value="3"/>
+            <flag name="right" value="5"/>
+            <flag name="center_vertical" value="16"/>
+            <flag name="center_horizontal" value="1"/>
+            <flag name="center" value="17"/>
+        </attr>
+
+        <!-- 底部右侧文本2资源-->
+        <attr name="bottomRightTextTwo" format="reference|string" />
+        <!-- 底部右侧文本2字体大小-->
+        <attr name="bottomRightTextTwoSize" format="dimension" />
+        <!-- 底部右侧文本2字体颜色-->
+        <attr name="bottomRightTextTwoColor" format="reference|color" />
+        <!-- 底部右侧文本2文本与左侧扩展布局之间的距离-->
+        <attr name="bottomRightTextTwoSpacingLayout" format="dimension" />
+        <!-- 底部右侧文本2样式-->
+        <attr name="bottomRightTextTwoStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- 底部右侧文本2是否显示-->
+        <attr name="bottomRightTextTwoVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+        <!-- 底部右侧文本2内容位置-->
+        <attr name="bottomRightTextTwoGravity">
+            <flag name="top" value="48"/>
+            <flag name="bottom" value="80"/>
+            <flag name="left" value="3"/>
+            <flag name="right" value="5"/>
+            <flag name="center_vertical" value="16"/>
+            <flag name="center_horizontal" value="1"/>
+            <flag name="center" value="17"/>
+        </attr>
+
+        <!--是否显示右箭头-->
+        <attr name="bottomRightArrowVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+
+    </declare-styleable>
+
+    <!-- 可展开布局 -->
+    <declare-styleable name="ExtendableLayout">
+        <!--展开方向-->
+        <attr name="extendOrientation">
+            <flag name="vertical" value="1" />
+            <flag name="horizontal"   value="2" />
+        </attr>
+        <!--是否展开-->
+        <attr name="extended" format="boolean"/>
+        <attr name="speed" format="integer" min="1"/>
+    </declare-styleable>
+
+    <!-- label两行text布局-->
+    <declare-styleable name="LabelTwoLineText">
+        <attr name="firstText" format="reference|string"/>
+        <attr name="firstTextSize" format="dimension" />
+        <attr name="firstTextColor" format="reference|color" />
+        <attr name="firstTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="firstTextIsSingleLine" format="boolean"/>
+        <attr name="firstTextMaxLine" format="integer"/>
+
+        <attr name="secondText" format="reference|string"/>
+        <attr name="secondTextSize" format="dimension" />
+        <attr name="secondTextColor" format="reference|color" />
+        <attr name="secondTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="secondTextIsSingleLine" format="boolean"/>
+        <attr name="secondTextMaxLine" format="integer"/>
+    </declare-styleable>
+
+   <declare-styleable name="LabelMultiLineText">
+        <attr name="thirdText" format="reference|string"/>
+        <attr name="thirdTextSize" format="dimension" />
+        <attr name="thirdTextColor" format="reference|color" />
+        <attr name="thirdTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold"   value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="thirdTextIsSingleLine" format="boolean"/>
+        <attr name="thirdTextMaxLine" format="integer"/>
+    </declare-styleable>
+
+    <!--日历中每个cell的属性-->
+    <declare-styleable name="calendar_cell">
+        <attr name="state_selectable" format="boolean" />
+        <attr name="state_current_month" format="boolean" />
+        <attr name="state_today" format="boolean" />
+        <attr name="state_range_first" format="boolean" />
+        <attr name="state_range_middle" format="boolean" />
+        <attr name="state_range_last" format="boolean" />
+        <attr name="state_holiday" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TextProgressBar">
+        <attr name="textColor"/>
+        <attr name="textSize"/>
+        <attr name="text"/>
+    </declare-styleable>
+
+    <!-- LockPatternView class attributes -->
+    <declare-styleable name="LockPatternView">
+        <!--
+             Aspect to use when drawing LockPatternView. Choices are "square"(default), "lock_width"
+             or "lock_height"
+        -->
+        <attr name="aspect">
+            <enum name="square" value="0" />
+            <enum name="lockWidth" value="1" />
+            <enum name="lockHeight" value="2" />
+        </attr>
+        <attr name="line" format="color" />
+        <attr name="btnNormal" format="reference" />
+        <attr name="btnTouched" format="reference" />
+        <attr name="circleNormal" format="reference" />
+        <attr name="circleGreen" format="reference" />
+        <attr name="circleRed" format="reference" />
+        <attr name="arrowGreenUp" format="reference" />
+        <attr name="arrowRedUp" format="reference" />
+    </declare-styleable>
+
+
+    <!--RoundProgressBar -->
+    <declare-styleable name="RoundProgressBar">
+        <attr name="max" format="integer"/>
+        <attr name="isFill" format="boolean"/>			<!-- 是否填充圆形区域 -->
+        <attr name="Paint_Width" format="integer"/>		<!-- 画笔宽度，填充模式下无效，会被重置为0 -->
+        <attr name="Paint_Color" format="integer"/>		<!-- 画笔颜色 -->
+        <attr name="Show_Bottom" format="boolean"/>		<!-- 是否显示底色 -->
+        <attr name="Inside_Interval" format="integer"/> <!-- 圆形区域向里缩进的距离 -->
+    </declare-styleable>
+
+    <!--LoadImageView-->
+    <declare-styleable name="LoadImageView">
+        <attr name="imageWidth" format="dimension"/>
+        <attr name="imageHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="GifMoviewView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTheme">
+        <attr name="gifMoviewViewStyle" format="reference" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="PullToRefresh">
+        <attr name="ptrAdapterViewBackground" format="reference|color" />
+        <attr name="ptrHeaderBackground" format="reference|color" />
+        <attr name="ptrHeaderTextColor" format="color" />
+        <attr name="ptrMode">
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+            <flag name="both" value="0x3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BubbleTextView">
+        <attr name="bubble_background_color" format="color"/>
+        <attr name="bubbleTextColor" format="color"/>
+        <attr name="bubbleTextSize" format="dimension"/>
+        <attr name="bubble_width" format="dimension">
+            <enum name="wrap_content" value="0xfffffffe"/>
+            <enum name="match_parent" value="0xffffffff"/>
+        </attr>
+        <attr name="bubble_height" format="dimension">
+            <enum name="wrap_content" value="0xfffffffe"/>
+            <enum name="match_parent" value="0xffffffff"/>
+        </attr>
+        <attr name="triangle_width" format="dimension"/>
+        <attr name="triangle_margin_end" format="dimension"/>
+        <attr name="bubble_radius" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="MenuItemLayout">
+        <!--分割线-->
+        <attr name="topDivideDrawable" format="reference"/>
+        <attr name="topDivideHeight" format="dimension"/>
+        <attr name="topDivideMarginLeft" format="dimension"/>
+        <attr name="topDivideMarginRight" format="dimension"/>
+        <attr name="topDivideMarginBottom" format="dimension"/>
+        <attr name="bottomDivideDrawable" format="reference"/>
+        <attr name="bottomDivideHeight" format="dimension"/>
+        <attr name="bottomDivideMarginLeft" format="dimension"/>
+        <attr name="bottomDivideMarginRight" format="dimension"/>
+        <attr name="bottomDivideMarginTop" format="dimension"/>
+        <attr name="divideAlignTitle" format="integer">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+        </attr>
+        <!-- 是否显示左侧图标-->
+        <attr name="leftIconDrawable" format="reference"/>
+        <attr name="iconVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+        <attr name="iconMarginLeft" format="dimension"/>
+        <attr name="iconMarginRight" format="dimension"/>
+        <!-- 第一行文本 -->
+        <attr name="leftTitle" format="reference|string"/>
+        <attr name="leftHintText" format="reference|string"/>
+        <attr name="leftSize" format="dimension"/>
+        <attr name="leftColor" format="reference|color" />
+        <attr name="leftHintColor" format="reference|color" />
+        <attr name="leftStyle">
+            <enum name="normal" value="0" />
+            <enum name="bold"   value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+        <!--是否显示右箭头-->
+        <attr name="arrowVisibility" >
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+            <enum name="GONE" value="8"/>
+        </attr>
+        <attr name="rightArrowMarginRight" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="ScreenWeightTextView">
+        <attr name="widthFloat" format="float"/>
+    </declare-styleable>
+</resources>

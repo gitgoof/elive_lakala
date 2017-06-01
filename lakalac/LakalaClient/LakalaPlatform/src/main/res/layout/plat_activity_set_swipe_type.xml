@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/l_gray"
+              android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/hint_txt"
+                      android:textColor="#3a4777"
+                      android:textSize="16sp"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dip"
+                      android:layout_marginTop="10dp"
+                      android:text="请选择刷卡器型号"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="157dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/choose_swipe_type_indicator_img"
+            />
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:gravity="center"
+                          android:background="@color/white">
+                <com.lakala.ui.common.GifMovieView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gif_movie_view"
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/swipe_types_ll"
+                          android:orientation="vertical">
+
+
+                <view android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      class="com.lakala.ui.module.CustomNestListView"
+                      android:dividerHeight="@dimen/dimen_1"
+                      android:cacheColorHint="@color/transparent"
+                      android:id="@+id/default_type_list"
+                      android:layout_marginBottom="@dimen/ui_margin_40"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/other_type_rel"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="#3a4777"
+                        android:text="其他设备"
+                        android:textSize="16sp"/>
+                    <ImageView android:id="@+id/other_type_select_img"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_centerVertical="true"
+                               android:layout_alignParentRight="true"
+                               android:background="@drawable/plat_down_blue_arrow"/>
+                </RelativeLayout>
+
+                <include layout="@layout/ui_divider_line"/>
+
+                <view android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      class="com.lakala.ui.module.CustomNestListView"
+                      android:cacheColorHint="@color/transparent"
+                      android:id="@+id/other_type_list"
+                      android:visibility="gone"
+                    />
+            </LinearLayout>
+            <include layout="@layout/plat_common_button"
+                />
+            <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="14sp"
+             android:textColor="@color/black"
+             android:singleLine="false"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_marginTop="@dimen/dimen_20"
+             android:text=" 温馨提示\n为了确保刷卡器成功识别，您可能需要\n1. 将音量调至最大\n2. 关闭多媒体或杜比音效\n3. 授权拉卡拉使用通话录音和本地录音"
+             android:lineSpacingExtra="@dimen/dimen_10"
+            />
+
+
+            <!--<ImageView android:layout_marginTop="10dp"-->
+                       <!--android:layout_marginBottom="10dp"-->
+                       <!--android:layout_width="match_parent"-->
+                       <!--android:layout_height="wrap_content"-->
+                       <!--android:background="@drawable/plat_select_swipe_img"/>-->
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_keypad_root_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="invisible" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_f7f7f7">
+            <View
+                style="@style/common_seperator_view"
+                android:id="@+id/view_seperator"/>
+            <ImageView
+                android:id="@+id/key_title"
+                android:layout_width="130dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/key_title"
+                android:visibility="visible"/>
+            <Button
+                android:layout_below="@+id/view_seperator"
+                android:id="@+id/id_keypad_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_20"
+                android:text="@string/complete"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size_large"
+                android:background="@color/gray_f7f7f7"
+                android:textColor="@color/complete_selector">
+            </Button>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <!--第一列-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:orientation="vertical" >
+                <ImageButton
+                    android:id="@+id/id_keypad_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:src="@drawable/lakala_icon_1"/>
+                <View style="@style/common_seperator_view"/>
+                <ImageButton
+                    android:id="@+id/id_keypad_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:src="@drawable/lakala_icon_4"
+                    >
+                </ImageButton>
+                <View style="@style/common_seperator_view"/>
+                <ImageButton
+                    android:id="@+id/id_keypad_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:src="@drawable/lakala_icon_7" >
+                </ImageButton>
+                <View style="@style/common_seperator_view"/>
+                <ImageButton
+                    android:id="@+id/id_keypad_comma"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:background="@drawable/btn_gray_white_keyboard_selector"
+
+                    >
+                </ImageButton>
+            </LinearLayout>
+
+            <View
+                style="@style/common_seperator_view2" />
+            <!--第二列-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/id_keypad_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:src="@drawable/lakala_icon_2"
+                    >
+                </ImageButton>
+                <View style="@style/common_seperator_view"/>
+                <ImageButton
+                    android:id="@+id/id_keypad_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    android:src="@drawable/lakala_icon_5"
+                    style="@style/layout_keyboard_button"
+                    >
+                </ImageButton>
+                <View style="@style/common_seperator_view"/>
+                <ImageButton
+                    android:id="@+id/id_keypad_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:src="@drawable/lakala_icon_8" >
+                </ImageButton>
+                <View style="@style/common_seperator_view"/>
+                <ImageButton
+                    android:id="@+id/id_keypad_0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:src="@drawable/lakala_icon_0" >
+                </ImageButton>
+            </LinearLayout>
+            <!--数值分割线-->
+            <View
+                style="@style/common_seperator_view2" />
+            <!--第三列-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/id_keypad_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:src="@drawable/lakala_icon_3"
+                    >
+                </ImageButton>
+                <View style="@style/common_seperator_view"/>
+                <ImageButton
+                    android:id="@+id/id_keypad_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:src="@drawable/lakala_icon_6" >
+                </ImageButton>
+                <View style="@style/common_seperator_view"/>
+                <ImageButton
+                    android:id="@+id/id_keypad_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    style="@style/layout_keyboard_button"
+                    android:src="@drawable/lakala_icon_9" >
+                </ImageButton>
+                <View style="@style/common_seperator_view"/>
+                <ImageButton
+                    android:id="@+id/id_keypad_del"
+                    android:layout_width="fill_parent"
+                    style="@style/layout_keyboard_button"
+                    android:background="@drawable/btn_gray_white_selector"
+                    android:src="@drawable/lakala_icon_backpace">
+                </ImageButton>
+            </LinearLayout>
+
+            <!--第四列-->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/dimen_8"
+                android:layout_marginRight="@dimen/dimen_2"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginBottom="@dimen/dimen_20"
+                android:layout_weight="2.5"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/id_keypad_00"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/dimen_10" >
+                </ImageButton>
+                <ImageButton
+                    android:id="@+id/id_keypad_c"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimen_92"
+                    android:layout_weight="2.5"
+                    android:layout_marginTop="@dimen/dimen_10" >
+                </ImageButton>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

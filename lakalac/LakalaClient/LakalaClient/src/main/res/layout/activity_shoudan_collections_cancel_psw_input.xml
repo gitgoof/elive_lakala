@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_margin_actionbar"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/combination_little_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入登录密码确认交易安全" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/combination_right_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                android:drawableLeft="@drawable/icon_username"
+                android:drawablePadding="@dimen/combination_text_edit_margin_left"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                tools:hint="hint"/>
+
+            <ImageView style="@style/combination_seperator_style"/>
+
+            <EditText
+                android:id="@+id/shoudan_cancel_pwd"
+                style="@style/combination_right_edittext_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                android:drawableLeft="@drawable/icon_inputpw"
+                android:drawablePadding="@dimen/combination_text_edit_margin_left"
+                android:gravity="center_vertical"
+                android:hint="请输入登录密码"
+                android:inputType="textPassword"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/shoudan_cancel_pwd_next"
+            style="@style/btn_top_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ok" >
+        </Button>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+</LinearLayout>

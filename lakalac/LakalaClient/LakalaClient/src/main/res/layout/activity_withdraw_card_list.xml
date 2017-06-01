@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_distance_level_1"
+    style="@style/app_background_white">
+    <ListView
+        android:id="@+id/lv_credit_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/common_distance_level_1"
+        android:dividerHeight="@dimen/common_distance_level_1"
+        android:divider="@color/bg_main_gray_color"
+        android:scrollbars="none">
+    </ListView>
+</LinearLayout>

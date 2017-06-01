@@ -1,0 +1,141 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'newlens'
+android {
+    compileSdkVersion 22
+    buildToolsVersion '25.0.2'
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+        }
+    }
+    signingConfigs {
+        release_store {
+            storeFile file('shoudan.keystore')
+            storePassword 'lakalashoukuanbao963741852'
+            keyAlias 'shoudan'
+            keyPassword 'shoukuan852123'
+        }
+    }
+    defaultConfig {
+        versionCode 62
+        versionName '5.0.0'
+        minSdkVersion 14
+        targetSdkVersion 22
+        testApplicationId "com.lakala.android.test"
+        testInstrumentationRunner 'android.test.InstrumentationTestRunner'
+        //设置avos cloud渠道，将AndroidManifest.xml中的${CHANNEL_VALUE}替换为"99"
+
+        manifestPlaceholders = [CHANNEL_VALUE: "93"]
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release_store
+//            proguardFile 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release_store
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    // This is important, it will run lint checks but won't abort build
+    lintOptions {
+        abortOnError false
+    }
+    productFlavors {
+
+        '备机' {
+//            buildConfigField "String", "URL", "\"https://mpos.lakala.com:7777/mpos4.0/api/\""
+
+            buildConfigField "String", "URL", "\"https://mpos.lakala.com:7777/mpos4.0/api/\""
+//            buildConfigField "String", "URL", "\"https://wgmpos.lakala.com:4443/mpos4.0/api/\""
+            buildConfigField "boolean", "isScreen", "true"
+            buildConfigField "String", "typUrl", "\"https://mpos.lakala.com:7777/images/1080.png\""
+        }
+        '内网测试' {
+
+//            buildConfigField "String", "URL", "\"https://10.7.111.32:11443/mpos_21669/api/\""
+            buildConfigField "String", "URL", "\"http://10.7.111.32:8280/mpos_21669/api/\""
+            buildConfigField "boolean", "isScreen", "true"
+            buildConfigField "String", "typUrl", "\"http://10.7.111.32:8280/19751/api/v1.0/images/1080.png\""
+        }
+        '外网测试' {
+//            buildConfigField "String", "URL", "\"http://180.166.12.107:8280/19751/api/\""
+            buildConfigField "String", "URL", "\"http://180.166.12.107:8280/mpos_21669/api/\""
+            buildConfigField "boolean", "isScreen", "true"
+            buildConfigField "String", "typUrl", "\"http://10.7.111.32:8280/19751/api/v1.0/images/1080.png\""
+        }
+
+        '生产' {
+            buildConfigField "String", "URL", "\"https://mpos.lakala.com/mpos4.0/api/\""
+            buildConfigField "boolean", "isScreen", "false"
+            buildConfigField "String", "typUrl", "\"https://mpos.lakala.com/images/1080.png\""
+        }
+
+//
+//        '生产无密' {
+//            buildConfigField "String", "URL", "\"https://mpos.lakala.com/mpos4.0/api/\""
+//        }
+//
+//        '外网测试无密' {
+//            buildConfigField "String", "URL", "\"http://180.166.12.107:8280/mpos3.2/api/\""
+//        }
+//
+//        '内网测试无密' {
+//            buildConfigField "String", "URL", "\"http://10.7.111.32:8280/mpos3.2/api/\""
+//        }
+//
+//        '备机无密' {
+//            buildConfigField "String", "URL", "\"https://mpos.lakala.com:7777/mpos4.0/api/\""
+//        }
+
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/DEPENDENCIES.txt'
+    }
+    tasks.withType(JavaCompile) {
+        options.encoding = "utf-8"
+    }
+    dexOptions {
+        javaMaxHeapSize '2g'
+    }
+
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+//android {    useLibrary 'org.apache.http.legacy'}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile project(':LakalaPlatform')
+    compile project(':common')
+    compile "com.networkbench.newlens.agent.android:nbs.newlens.agent:2.5.0"
+    compile(name: 'zhangdanloansdklib-release', ext: 'aar')
+    compile(name: 'cordovaLib-release', ext: 'aar')
+    compile(name: 'networkLibrary-release', ext: 'aar')
+    compile(name: 'sweetalert-release', ext: 'aar')
+    compile(name: 'toolslibrary-release', ext: 'aar')
+    compile(name: 'camera-release', ext: 'aar')
+    compile(name: 'gfdAgent-release', ext: 'aar')
+    compile(name: 'library-release', ext: 'aar')
+    compile(name: 'ILoanLib', ext: 'aar')
+}
+

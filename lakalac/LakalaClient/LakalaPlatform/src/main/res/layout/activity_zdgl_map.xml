@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.lakala.ui.component.NavigationBar
+        android:id="@+id/id_navigation_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        app:navBg="@drawable/nav_blue_bg"
+        app:backBg="@drawable/plat_left_arrow"
+        app:titleTextSize="18sp"
+        app:titleMaxLength="9"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/id_navigation_bar" >
+
+        <com.mapabc.mapapi.map.MapView
+            android:id="@+id/poisearch_MapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:apiKey="@string/lakala_map_key"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/text_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:orientation="horizontal"
+                 >
+
+                <LinearLayout
+                    android:id="@+id/bank_list_text_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@color/gray_CCCCCC"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/bank_list_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/city_down"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="拉卡拉"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/branch_text_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@color/gray_CCCCCC"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/branch_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/city_down"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="全部网点"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/branch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:padding="3dip"
+                android:scrollbarStyle="outsideOverlay"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/bank_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:padding="3dip"
+                android:scrollbarStyle="outsideOverlay"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

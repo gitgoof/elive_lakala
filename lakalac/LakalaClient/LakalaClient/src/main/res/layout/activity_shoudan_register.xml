@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><!-- autor More 注册收款宝 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <include
+        android:id="@+id/tips"
+        layout="@layout/activity_shoudan_register_step_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:id="@+id/id_input_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tips"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <FrameLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <!-- 基本资料 -->
+            <include
+                android:id="@+id/layout_base_info"
+                layout="@layout/activity_shoudan_register_base_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            <!-- 商户信息 -->
+            <include
+                android:id="@+id/layout_merchant_info"
+                layout="@layout/activity_shoudan_register_merchant_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone" />
+            <!-- 银行卡信息 -->
+            <include
+                android:id="@+id/layout_bank_account_info"
+                layout="@layout/activity_shoudan_register_bank_account_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </FrameLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <include layout="@layout/layout_keyboard" />
+    </RelativeLayout>
+</RelativeLayout>

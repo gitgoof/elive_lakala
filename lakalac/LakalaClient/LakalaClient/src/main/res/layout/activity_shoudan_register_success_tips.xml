@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_success_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/success"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/gray_333333"
+            android:text="@string/merchant_open_success"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_time_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_success_tips"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:text="恭喜！您的商户开通申请已受理，您可以即刻使用拉卡拉收款服务了！"
+        android:textSize="14sp"
+        android:textColor="@color/gray_666666"
+        />
+
+    <View
+        android:id="@+id/view_seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_time_tips"
+        android:layout_marginTop="40dp"
+        android:background="@color/blue4"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/tv_time_tips"
+        android:id="@+id/result_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/common_distance_level_1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/button_left"
+            style="@style/btn_top_line"
+            android:layout_marginTop="@dimen/order_next_btn_margin_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sure" />
+    </LinearLayout>
+</RelativeLayout>

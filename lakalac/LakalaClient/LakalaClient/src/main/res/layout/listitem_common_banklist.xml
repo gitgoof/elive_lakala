@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 组合一行上显示左右两个TextView的布局 -->
+<com.lakala.ui.component.MenuItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    style="@style/CommunityMenuStyle"
+    android:layout_height="@dimen/dimen_88"
+    android:background="@color/white"
+    app:arrowVisibility="GONE"
+    app:bottomDivideDrawable="@drawable/u11_line"
+    app:bottomDivideHeight="@dimen/dimen_1"
+    app:bottomDivideMarginTop="@dimen/dimen_8"
+    app:iconMarginLeft="0dp"
+    app:iconMarginRight="0dp"
+    app:leftColor="@color/black"
+    app:rightArrowMarginRight="0dp"
+    app:topDivideDrawable="@drawable/menu_item_divide_selector"
+    app:topDivideHeight="@dimen/dimen_1"
+    app:topDivideMarginBottom="@dimen/dimen_8" />

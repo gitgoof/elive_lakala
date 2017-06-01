@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_parent"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_distance_level_1"/>
+    <View
+         style="@style/seperator"/>
+    <LinearLayout
+        style="@style/combination_item_style"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+        android:paddingRight="@dimen/combination_text_edit_margin_left"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            style="@style/combination_left_textview_style"
+            android:gravity="center"
+            android:text="充值金额(元)"/>
+
+        <EditText
+            android:id="@+id/recharge_amount"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:singleLine="true"
+            style="@style/combination_right_edittext_style"
+            android:inputType="numberDecimal"
+            android:hint="请输入充值金额"/>
+    </LinearLayout>
+    <View
+        style="@style/seperator"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="温馨提示:"
+        android:textSize="@dimen/small_text_size"
+        android:visibility="gone"
+        android:textColor="@color/gray_main1"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/common_distance_level_1"/>
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/small_text_size"
+        tools:text="单笔充值限额:储蓄卡单笔最高5000元,单日累计最高10000元,暂不支持信用卡."
+        android:textColor="@color/gray_main1"
+        android:layout_marginLeft="@dimen/common_distance_level_1"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/btn_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="充值"
+        style="@style/btn_top_line"/>
+</LinearLayout>

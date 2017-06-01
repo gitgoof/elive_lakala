@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:background="@color/white"
+        android:spinnerMode="dialog"
+        android:layout_marginLeft="@dimen/dimen_6"
+        android:layout_marginRight="@dimen/dimen_6"
+        android:id="@+id/spinner_provice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        style="@style/lakala_seperator"
+        />
+    <Spinner
+        android:background="@color/white"
+        android:spinnerMode="dialog"
+        android:layout_marginLeft="@dimen/dimen_6"
+        android:layout_marginRight="@dimen/dimen_6"
+        android:id="@+id/spinner_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        style="@style/lakala_seperator"
+        />
+    <Spinner
+        android:background="@color/white"
+        android:spinnerMode="dialog"
+        android:layout_marginLeft="@dimen/dimen_6"
+        android:layout_marginRight="@dimen/dimen_6"
+        android:id="@+id/spinner_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

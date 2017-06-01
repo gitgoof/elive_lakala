@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ILoanLib-">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/ILoanLib/res" />
+      <root url="jar://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/ILoanLib/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

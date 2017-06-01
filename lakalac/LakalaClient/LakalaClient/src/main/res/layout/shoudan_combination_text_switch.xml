@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 组合TextView和开关按钮，自定义开关按钮 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/RelativeLayout1"
+                style="@style/combination_item_style"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp" >
+
+    <TextView
+        android:id="@+id/id_combination_text_switch_text"
+        style="@style/shoudan_text_medium_black"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="TextView"
+        android:textAppearance="@style/text_style_normal" />
+
+    <TextView
+        android:id="@+id/id_combination_text_middle_text"
+        style="@style/shoudan_text_medium_black"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/id_combination_text_switch_switch"
+        android:gravity="center"
+        android:textAppearance="@style/text_style_normal"
+        android:textColor="@color/blue"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/id_combination_text_switch_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/check_selector"
+        android:button="@null" />
+
+</RelativeLayout>

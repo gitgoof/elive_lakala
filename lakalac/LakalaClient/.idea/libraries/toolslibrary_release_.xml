@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="toolslibrary-release-">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/toolslibrary-release/res" />
+      <root url="jar://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/toolslibrary-release/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

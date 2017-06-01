@@ -1,0 +1,60 @@
+<resources>
+    <string name="ui_progress_dialog_default_message">正在加载 ...</string>
+    <string name="ui_progress_dialog_location_message">正在定位 ...</string>
+
+    <string name="ui_network_not_avaiable">网络无法连接</string>
+
+    <string name="ui_alert_dialog_default_message">AlertDialog title</string>
+    <string name="ui_certain">确定</string>
+
+    <string name="ui_cancel">取消</string>
+    <string name="ui_give_up">放弃</string>
+    <string name="ui_continue">继续</string>
+    <string name="ui_tip">提示</string>
+    <string name="day_name_format">E</string>
+    <string name="invalid_date">Date must be between %1$s and %2$s.</string>
+    <string name="month_name_format">yyyy年M月</string>
+
+    <string name="ui_email_error">请输入正确的邮箱</string>
+
+    <!--pattern-->
+    <string name="lockscreen_access_pattern_start">"开始绘制图案"</string>
+    <string name="lockscreen_access_pattern_cleared">"图案已清除"</string>
+    <string name="lockscreen_access_pattern_cell_added">"已添加单元格"</string>
+    <string name="lockscreen_access_pattern_detected">"图案绘制完成"</string>
+    <!--pattern结束-->
+
+    <!--自定义下拉刷新上滑加载ListView-->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <!--倒计时输入框-->
+    <string name="ui_get_verifycode">获取验证码</string>
+    <string name="ui_input_your_verifycode">请输入验证码</string>
+    <string name="ui_SMS_verifyCode">短信验证码</string>
+    <string name="ui_count_prompt">(%d秒后)重新获取</string>
+    <string name="ui_count_prompt2">%d秒</string>
+    <string name="again_send">重新获取</string>
+
+    <string name="complete">完成</string>
+    <string name="card_end_num_title">卡背面末位三位数字</string>
+    <string name="card_end_num_bottom">标注在信用卡背面的最后三位数字</string>
+
+    <!-- 上拉刷新，下拉加载 -->
+    <string name="pull_to_load_pull_label">向上滑动加载更多…</string>
+    <string name="pull_to_load_release_label">松手加载更多…</string>
+    <string name="pull_to_load_tap_label">点击刷新…</string>
+    <string name="pull_to_load_loading_label">努力加载中…</string>
+    <string name="pull_to_refresh_pull_label">向下滑动刷新…</string>
+    <string name="pull_to_refresh_release_label">松手刷新…</string>
+    <string name="pull_to_refresh_tap_label">点击刷新…</string>
+    <string name="pull_to_refresh_refreshing_label">努力加载中…</string>
+    <string name="please_input_phone_pinzheng">请输入接受凭证的手机号码</string>
+
+    <!-- 高德地图mapey -->
+    <string name="lakala_map_key">1557766abd1c0c689304a34236065547a118cbaf1c1b55f2424be28bc9c5c0d7c34ac11981629242</string>
+</resources>

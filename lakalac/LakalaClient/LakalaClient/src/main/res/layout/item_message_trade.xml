@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time_message"
+        style="@style/style_tv_time_message" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_container"
+            style="@style/rl_container_message">
+
+            <RelativeLayout
+                android:id="@+id/ll_title"
+                style="@style/style_ll_title">
+
+                <ImageView
+                    android:id="@+id/iv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/wallet_phone" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/style_tv_title_message"
+                    android:layout_toRightOf="@+id/iv_title"
+                    android:text="扫码收款业务通知" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    style="@style/style_tv_title_message"
+                    android:layout_alignParentRight="true"
+                    android:text="+50" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_seperator_1"
+                style="@style/news_seperator"
+                android:layout_below="@+id/ll_title" />
+
+            <FrameLayout
+                android:id="@+id/fl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_seperator_1">
+
+                <include layout="@layout/layout_trade_info" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    style="@style/style_tv_description_message"
+                    android:text="恭喜您,您的扫码业务开通已审核通过，快去使用吧!"
+                    android:visibility="invisible" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/view_seprator"
+                style="@style/news_seperator"
+                android:layout_below="@+id/fl_content" />
+
+
+            <TextView
+                android:id="@+id/tv_function"
+                style="@style/style_tv_operation"
+                android:layout_below="@+id/view_seprator"
+                android:text="立即提交" />
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</LinearLayout>

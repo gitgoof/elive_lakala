@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 立即提款业务开通页面 -->
+
+<LinearLayout
+    style="@style/app_background_white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/business_description_text_style"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="首次使用“立即提款”功能，需要开通“提前划款”业务，请确认以下商户信息并接收《拉卡拉自然日提前划款服务协议》。相关规则说明，请参考页面右上角“业务说明”。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/combination_little_title_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="商户基本信息"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left">
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="商户名称"/>
+                    <TextView
+                        android:id="@+id/merchantName"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        tools:text="演示商户A"/>
+                </TableRow>
+                <View
+                    style="@style/seperator" />
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="商户地址"/>
+                    <TextView
+                        android:id="@+id/detailAddress"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        tools:text="丹棱街6号中关村金融大厦"/>
+                </TableRow>
+                <View
+                    style="@style/seperator" />
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="法人姓名"/>
+                    <TextView
+                        android:id="@+id/realName"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        tools:text="张三"/>
+                </TableRow>
+                <View
+                    style="@style/seperator" />
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="身份证号"/>
+                    <EditText
+                        android:id="@+id/idCardNo"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        tools:text="110224197903160034"/>
+                </TableRow>
+                <View
+                    style="@style/seperator" />
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="收款银行"/>
+                    <TextView
+                        android:id="@+id/collectionBank"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        tools:text="光大银行"/>
+                </TableRow>
+                <View
+                    style="@style/seperator" />
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:text="收款卡号"/>
+                    <TextView
+                        android:id="@+id/collectCardNo"
+                        style="@style/combination_right_edittext_style"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        tools:text="356889******2628"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                style="@style/text_style_small_gary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:text="结算账户开户行信息"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="bold" />
+            <TableLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="20dp">
+                <TableRow
+                    android:paddingTop="10dp">
+                    <TextView
+                        style="@style/shoudan_text_medium_black"
+                        android:text="所在省份"/>
+                    <RelativeLayout
+                        style="@style/common_edittext_style">
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/right_arrow1"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/right_arrow_gray"
+                            android:scaleType="fitCenter"
+                            android:onClick="onClick"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                        <TextView
+                            android:id="@+id/provice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:hint="请选择"
+                            android:layout_centerVertical="true"
+                            android:textColorHint="@color/black"
+                            android:layout_toLeftOf="@id/right_arrow1"/>
+                    </RelativeLayout>
+                </TableRow>
+                <View
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/seperator" />
+                <TableRow>
+                    <TextView
+                        style="@style/shoudan_text_medium_black"
+                        android:text="所在城市"/>
+                    <RelativeLayout
+                        style="@style/common_edittext_style">
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/right_arrow2"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/right_arrow_gray"
+                            android:scaleType="fitCenter"
+                            android:onClick="onClick"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                        <TextView
+                            android:id="@+id/city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:hint="请选择"
+                            android:layout_centerVertical="true"
+                            android:textColorHint="@color/black"
+                            android:layout_toLeftOf="@id/right_arrow2"/>
+                    </RelativeLayout>
+                </TableRow>
+                <View
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/seperator" />
+                <TableRow
+                    android:paddingBottom="10dp">
+                    <TextView
+                        style="@style/shoudan_text_medium_black"
+                        android:text="银行名称"/>
+                    <RelativeLayout
+                        style="@style/common_edittext_style">
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/right_arrow3"
+                            android:onClick="onClick"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/right_arrow_gray"
+                            android:scaleType="fitCenter"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                        <TextView
+                            android:id="@+id/bank_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:hint="请选择"
+                            android:layout_centerVertical="true"
+                            android:textColorHint="@color/black"
+                            android:layout_toLeftOf="@id/right_arrow3"/>
+                    </RelativeLayout>
+                </TableRow>
+            </TableLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/check_agree"
+                    style="@style/mycheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:checked="true"
+                    android:gravity="center_vertical"
+                    android:text="阅读并同意"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/scan_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/trans_drawmoney_protocal_text"
+                    android:textColor="@color/common_blue_color"
+                    android:textSize="@dimen/small_text_size" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/open_business"
+                style="@style/btn_top_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="提交申请"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
