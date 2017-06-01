@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header_layout" />
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:background="@color/gray_bg3">
+
+        <ImageView
+            android:id="@+id/img_progress"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+    </FrameLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/license"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营业执照号"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/edt_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:background="@null"
+                    android:digits="@string/filter_vcode"
+                    android:hint="请输入营业执照号"
+                    android:inputType="text"
+                    android:maxLength="32"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+
+                <View
+                    android:id="@+id/v0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/edt_license"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_line" />
+
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/v0"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_enabled_bg"
+                    android:enabled="false"
+                    android:text="查询"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_license_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="营业执照信息"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_license_info_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/license_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营业执照名称"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/edt_license_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="125dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/edt_license_name"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_line" />
+
+
+                <TextView
+                    android:id="@+id/legal_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v1"
+                    android:layout_marginTop="10dp"
+                    android:text="法人姓名"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/edt_legal_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/legal_name"
+                    android:layout_marginLeft="125dp"
+                    android:background="@null"
+                    android:maxLength="4"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/edt_legal_name"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_line" />
+
+                <TextView
+                    android:id="@+id/license_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v2"
+                    android:layout_marginTop="10dp"
+                    android:text="营业执照地址"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/edt_license_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/license_address"
+                    android:layout_marginLeft="125dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/edt_license_address"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_line" />
+
+                <TextView
+                    android:id="@+id/valid_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v3"
+                    android:layout_marginTop="10dp"
+                    android:text="营业执照有效期"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/v4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tv_valid_date"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_line" />
+
+                <TextView
+                    android:id="@+id/tv_valid_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_color"
+                    android:layout_marginLeft="140dp"
+                    android:textSize="17sp"
+                    android:layout_alignBaseline="@+id/valid_date"
+                    android:layout_alignBottom="@+id/valid_date"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_license_photo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_license_photo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/selector_photo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:text="营业执照照片"
+                        android:textColor="@color/black_color"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_license_photo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/selector_photo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:text="营业场所照片"
+                        android:textColor="@color/black_color"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_search_bg"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>

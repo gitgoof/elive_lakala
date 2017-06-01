@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent" >
+
+    <TextView
+        android:id="@+id/tv_pop_task_call_bottom_two"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/gray_4"
+        android:background="@drawable/bg_radiu_10_white"
+        android:text="从工单加入"/>
+
+    <TextView
+        android:id="@+id/tv_pop_task_call_bottom_three"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/gray_4"
+        android:background="@drawable/bg_radiu_10_white"
+        android:text="自动载入待处理的所有工单"/>
+
+    <TextView
+        android:id="@+id/tv_pop_task_call_bottom_one"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/gray_4"
+        android:background="@drawable/bg_radiu_10_white"
+        android:text="从日常维护加入"/>
+
+    <TextView
+        android:id="@+id/tv_pop_task_call_bottom_five"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/gray_4"
+        android:background="@drawable/bg_radiu_10_white"
+        android:text="搜索所辖网点加入"/>
+
+    <TextView
+        android:id="@+id/tv_pop_task_call_bottom_four"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/gray_4"
+        android:background="@drawable/bg_radiu_10_white"
+        android:text="从网点地图添加"/>
+
+    <TextView
+        android:id="@+id/tv_pop_task_call_bottom_six"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/gray_4"
+        android:background="@drawable/bg_radiu_10_white"
+        android:text="从历史任务载入未完成项"/>
+
+    <TextView
+        android:id="@+id/btn_pop_task_call_bottom_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        android:background="@drawable/bg_radiu_10_white"
+        android:text="取消"/>
+
+</LinearLayout>

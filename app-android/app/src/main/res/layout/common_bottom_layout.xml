@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:baselineAligned="false"
+    android:background="@drawable/bg_bottom"
+    android:orientation="horizontal" >
+
+    
+    <RelativeLayout
+        android:id="@+id/home_rl_menu"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        
+        <ImageView
+            android:id="@+id/home_btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_home_menu_on" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_rl_contact"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/home_btn_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_home_contact_off" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_rl_plus"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/home_btn_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_plus" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_rl_session"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/home_btn_session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_home_session_off" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_rl_setting"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        
+        <ImageView
+            android:id="@+id/home_btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_home_setting_off" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

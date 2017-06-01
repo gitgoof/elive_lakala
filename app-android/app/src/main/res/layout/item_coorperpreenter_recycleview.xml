@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="15dp"
+android:background="@android:color/white"
+android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp">
+
+        <TextView
+            android:id="@+id/tv_applyid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_color2"
+            android:textSize="15sp"
+            android:text="ID274892374324"
+            />
+
+        <TextView
+            android:id="@+id/tv_applystyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_color2"
+            android:layout_marginLeft="15dp"
+        android:textSize="17sp"
+        android:text="终端申请"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp">
+
+        <TextView
+            android:id="@+id/tv_mechantname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_color2"
+            android:textSize="15sp"
+            android:text="上海食品中江路店（3223242）"
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_mechantststue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_base_green"
+            android:textSize="15sp"
+            android:text="处理成功" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp">
+
+        <TextView
+            android:id="@+id/tv_mechantaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_color2"
+            android:textSize="15sp"
+            android:text="上海市普陀区中江路888号" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_mechantphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_color2"
+            android:textSize="15sp"
+            android:text="021-232324223" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="7dp"
+        >
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_color2"
+        android:textSize="15sp"
+        android:text="2016-3-4"
+        />
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:background="@android:color/white"-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingTop="10dp">-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/applyid"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:textColor="@color/black_color2"-->
+        <!--android:textSize="17sp"-->
+        <!--android:text="进件ID：" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_state"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:textColor="@color/black_color2"-->
+        <!--android:textSize="17sp"-->
+        <!--tools:text="对公" />-->
+
+    <!--<View-->
+        <!--android:id="@+id/v1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_below="@+id/tv_applyid"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@color/gray_line" />-->
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/v1"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:paddingTop="5dp">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_store_name"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/black_color2"-->
+            <!--android:textSize="17sp"-->
+            <!--tools:text="上海食品公司" />-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/merchant_code"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_below="@+id/tv_store_name"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="商户号："&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textColor="@color/black_color2"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="17sp" />&ndash;&gt;-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/address"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/tv_store_name"-->
+            <!--android:text="地址："-->
+            <!--android:textColor="@color/black_color2"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_address"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/tv_store_name"-->
+            <!--android:layout_toRightOf="@+id/address"-->
+            <!--android:textColor="@color/black_color2"-->
+            <!--android:textSize="17sp"-->
+            <!--tools:text="上海市普陀区上海市普陀区" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/phone"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/tv_address"-->
+            <!--android:text="手机："-->
+            <!--android:textColor="@color/black_color2"-->
+            <!--android:textSize="17sp" />-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tv_merchant_code"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_alignBaseline="@+id/merchant_code"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_toRightOf="@+id/merchant_code"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:ellipsize="end"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:singleLine="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textColor="@color/black_color2"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textSize="17sp"&ndash;&gt;-->
+            <!--&lt;!&ndash;tools:text="643523422345235" />&ndash;&gt;-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_phone"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBaseline="@+id/phone"-->
+            <!--android:layout_toRightOf="@+id/phone"-->
+            <!--android:ellipsize="end"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/black_color2"-->
+            <!--android:textSize="17sp"-->
+            <!--tools:text="13000000000" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/date"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/phone"-->
+            <!--android:textColor="@color/black_color2"-->
+            <!--android:textSize="17sp"-->
+            <!--android:text="进件时间：" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_date"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/phone"-->
+            <!--android:layout_toRightOf="@+id/date"-->
+            <!--android:textColor="@color/black_color2"-->
+            <!--android:textSize="17sp"-->
+            <!--tools:text="2016-01-01 12:13" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_applyid"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/black_color2"-->
+        <!--android:textSize="17sp"-->
+        <!--tools:text="2016-01-01 12:13"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_toRightOf="@+id/applyid"-->
+        <!--android:layout_toEndOf="@+id/applyid" />-->
+
+<!--</RelativeLayout>-->

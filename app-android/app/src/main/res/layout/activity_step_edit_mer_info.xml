@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/text_white"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_header_title"
+        layout="@layout/common_header_layout">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--商户号-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="商户号"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_merchant_code"
+                    style="@style/text_mer_value_style"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--商户名称-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="商户名称"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_merchant_name"
+                    style="@style/text_mer_value_style"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!-- 网点号 -->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="网点号"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_shop_no"
+                    style="@style/text_mer_value_style"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!-- 网点名称 -->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="网点名称"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_shop_name"
+                    style="@style/et_mer_value_style"
+                    android:maxLength="30" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!-- 网点地址 -->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style"
+                android:layout_height="80dp">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="网点地址"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_shop_addr"
+                    style="@style/et_mer_value_style"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="0dp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_shop_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/btn_show_visitor_location"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!-- 网点状态 -->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="网点状态" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_shop_status"
+                    style="@style/text_mer_value_style"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--网点联系人-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="网点联系人" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <EditText
+                    android:id="@+id/et_contactor"
+                    style="@style/et_mer_value_style"
+                    android:maxLength="10"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--网点联系人手机-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="联系人手机" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_mobile_no"
+                    style="@style/et_mer_value_style"
+                    android:maxLength="13" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--网点固定电话-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="固定电话" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <EditText
+                    android:id="@+id/et_tel_no"
+                    style="@style/et_mer_value_no_style"
+                    android:maxLength="13" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--邮箱地址-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="邮箱地址" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/et_mer_value_no_style"
+                    android:maxLength="80" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_submit_edit"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_submit_bg"
+                    android:textColor="@color/text_white"
+                    android:textSize="20sp"
+                    android:text="下一步"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

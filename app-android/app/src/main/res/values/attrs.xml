@@ -1,0 +1,33 @@
+<resources>
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="debugDraw" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout_LayoutParams">
+        <attr name="layout_newLine" format="boolean" />
+        <attr name="layout_horizontalSpacing" format="dimension" />
+        <attr name="layout_verticalSpacing" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="AmountView">
+        <attr name="setInputType" format="enum">
+            <enum name="number" value="1" />
+            <enum name="numberDecimal" value="2" />
+        </attr>
+        <attr name="setText" format="string" />
+        <attr name="proportion" format="string" />
+        <attr name="symbolColor" format="color" />
+        <attr name="fontColor" format="color" />
+        <attr name="overallSize" format="dimension" />
+        <attr name="enabled" format="boolean"/>
+        <attr name="maxCount" format="float"/>
+        <attr name="maxRate" format="string"/>
+    </declare-styleable>
+
+</resources>

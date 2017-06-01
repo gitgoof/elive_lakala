@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 查询输入框 -->
+    <com.lakala.elive.common.widget.SearchView
+        android:id="@+id/main_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.lakala.elive.common.widget.SearchView>
+
+    <!-- 下拉筛选条件 -->
+    <com.yyydjk.library.DropDownMenu
+        android:id="@+id/dropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ddmenuTextSize="13sp"
+        app:ddtextUnselectedColor="@color/drop_down_unselected"
+        app:ddtextSelectedColor="#ff009fd3"
+        app:dddividerColor="@color/gray"
+        app:ddunderlineColor="@color/gray"
+        app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+        app:ddmaskColor="@color/mask_color"
+        app:ddmenuBackgroundColor="@color/white"
+        app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon" />
+
+
+    <!-- 查询结果 -->
+    <LinearLayout
+        android:id="@+id/ll_lv_daily_work"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/pull_to_refresh_mer_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/list_divider"
+            android:dividerHeight="1dp"/>
+
+        <!-- Here is the view to show if the list is emtpy -->
+        <ScrollView
+            android:id="@+id/lv_mer_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_empty_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="0.92"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip"
+                    android:text="@string/no_merchant_info"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp">
+
+        <TextView
+            android:id="@+id/tv_search_ret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/myred"
+            android:background="@null"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:text="查询结果:"/>
+
+        <ImageButton
+            android:id="@+id/iv_remove_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:src="@drawable/iv_delete_bg"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

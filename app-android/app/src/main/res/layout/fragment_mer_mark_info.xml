@@ -1,0 +1,284 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_detail_ui" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 商户真实性核查 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="商户真实性核查"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_mer_info_truth"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--商户成熟度-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="商户成熟度"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_mer_mature"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--商户等级-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="商户等级"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_mer_level"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 商户主营 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="商户主营"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_mer_main_sale"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--商户类别-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="商户类别"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_mer_class"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--商铺位置-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="商铺位置"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_mer_shop_area"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--商户已有产品-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="商户已有产品"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_card_app_type"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--其他pos优势 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="其他POS优势"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_other_pos_advance"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--电子平台绑定结果-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="电子平台绑定结果"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_bind_ele_platform_result"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--电子平方台未绑定原因-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="电子平方台未绑定原因"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_no_bind_ele_platform_reason"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--是否换签-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="是否换签"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_is_exchange_sign"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

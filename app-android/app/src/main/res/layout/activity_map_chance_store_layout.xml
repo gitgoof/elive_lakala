@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_above="@+id/linear_map_chance_store_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map_map_chance_store_map"
+            android:layout_above="@+id/linear_map_chance_store_more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" ></com.baidu.mapapi.map.MapView>
+
+        <CheckBox
+            android:id="@+id/check_map_chance_store_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/map_location_btn_bg"
+            android:layout_above="@+id/linear_map_chance_store_more"
+            android:layout_margin="10dp"
+            android:button="@null"/>
+
+        <LinearLayout
+            android:id="@+id/linear_map_chance_store_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="15dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_map_chance_store_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="上海食品中江路店asdfadsfadsfadsfasdfasd(1234566)"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/img_map_chance_food_green_bg"
+                    android:padding="5dp"
+                    android:src="@drawable/map_food_img"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_map_chance_store_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="餐饮"
+                    android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_map_chance_store_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="地址:上海市洪山区中江路32号"/>
+
+                <TextView
+                    android:id="@+id/tv_map_chance_store_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:text="查看详情"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_map_chance_store_tel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="电话:15299987700"/>
+
+                <TextView
+                    android:id="@+id/tv_map_chance_store_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7天无交易"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_map_chance_store_addplan"
+            android:layout_above="@+id/linear_map_chance_store_more"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/text_add_plan_cir_bg"
+            android:lineSpacingExtra="0dp"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="63dp"
+            android:layout_marginBottom="-30dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:maxLines="2"
+            android:text="加入\n拜访"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_map_chance_store_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_map_chance_store_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/item_hrecycleview_shape"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="我的网点"/>
+        <Button
+            android:id="@+id/btn_map_chance_store_tasklist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/item_hrecycleview_shape"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="任务列表"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_search_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:id="@+id/img_map_choose_store_showdialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/map_choose_img"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"/>
+
+        <LinearLayout
+            android:id="@+id/linear_map_choose_store_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/item_hrecycleview_shape"
+                    android:text="筛选"/>
+                <com.lakala.elive.map.view.MapChooseViewGroup
+                    android:id="@+id/self_viewgroup_map_choose_store_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.lakala.elive.map.view.MapChooseViewGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/item_hrecycleview_shape"
+                    android:text="交易"/>
+                <com.lakala.elive.map.view.MapChooseViewGroup
+                    android:id="@+id/self_viewgroup_map_choose_store_deal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.lakala.elive.map.view.MapChooseViewGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/item_hrecycleview_shape"
+                    android:text="距离"/>
+
+                <com.lakala.elive.map.view.MapChooseViewGroup
+                    android:id="@+id/self_viewgroup_map_choose_store_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.lakala.elive.map.view.MapChooseViewGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/item_hrecycleview_shape"
+                    android:text="类型"/>
+                <com.lakala.elive.map.view.MapChooseViewGroup
+                    android:id="@+id/self_viewgroup_map_choose_store_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.lakala.elive.map.view.MapChooseViewGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_map_chance_store_center_reset"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="重置"/>
+                <TextView
+                    android:id="@+id/tv_map_chance_store_center_ok"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="确定"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!-- 查询输入框 -->
+    <com.lakala.elive.common.widget.SearchMapView
+        android:id="@+id/main_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </com.lakala.elive.common.widget.SearchMapView>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_map_chance_store_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_task_history_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/map_back_img"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/edit_map_chance_store_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_map_choose_store_bg"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/img_task_history_back"
+            android:hint="请输入搜索内容"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/img_task_history_title_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/map_search_img" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

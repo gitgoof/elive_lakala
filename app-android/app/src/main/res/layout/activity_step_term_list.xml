@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/text_white"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_header_title"
+        layout="@layout/common_header_layout">
+    </include>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/pull_to_refresh_term_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/list_divider"
+            android:dividerHeight="1dp" />
+
+        <!-- Here is the view to show if the list is emtpy -->
+        <ScrollView android:id="@+id/lv_term_empty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="gone"
+                    android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_empty_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/no_term_info"
+                    android:textSize="20sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip"
+                    android:lineSpacingMultiplier="0.92"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_divide_bg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <CheckBox
+            android:id="@+id/cb_term_check_fin"
+            android:button="@drawable/btn_check"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/myred"
+            android:layout_toRightOf="@id/cb_term_check_fin"
+            android:hint="@string/shop_term_check_title" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btn_pre_edit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_submit_bg"
+            android:textColor="@color/text_white"
+            android:textSize="20sp"
+            android:text="上一步"/>
+
+        <Button
+            android:id="@+id/btn_submit_edit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_submit_bg"
+            android:textColor="@color/text_white"
+            android:textSize="20sp"
+            android:text="下一步"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lakala.elive.common.widget.TagView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawablePadding="0.0dip"
+    android:minHeight="0.0dip"
+    android:padding="3dp"
+    android:textColor="#ff000000"
+    android:textSize="12.0sp" />

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <include layout="@layout/include_merapply_info" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="上传照片"
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tv"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.lakala.elive.common.widget.XCRoundRectImageView
+                    android:id="@+id/img_id_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_photo"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:text="身份证头像面"
+                    android:textColor="@color/black_color2"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.lakala.elive.common.widget.XCRoundRectImageView
+                    android:id="@+id/img_id_photo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_photo"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_id2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:text="身份证国徽面"
+                    android:textColor="@color/black_color2"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/ll1"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.lakala.elive.common.widget.XCRoundRectImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_photo"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:text="银行卡正面"
+                    android:textColor="@color/black_color2"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.lakala.elive.common.widget.XCRoundRectImageView
+                    android:id="@+id/img_protocol_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_photo"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_protocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:text="商户协议"
+                    android:textColor="@color/black_color2"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/ll2"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.lakala.elive.common.widget.XCRoundRectImageView
+                    android:id="@+id/img_protocol_photo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_photo"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_protocol1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:text="商户协议2"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.lakala.elive.common.widget.XCRoundRectImageView
+                    android:id="@+id/img_protocol_photo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_photo"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_protocol2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:text="商户协议3"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加任务"
+        android:padding="5dp"
+        android:background="@android:color/white"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/hrecycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="9dp"
+        android:background="@android:color/white"/>
+
+    <RelativeLayout
+        android:id="@+id/add_point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:text=""
+            android:textColor="#42A8FA"
+            android:textSize="12sp"
+            android:tag="编辑"/>
+
+        <TextView
+            android:id="@+id/tv_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="已添加 : 2个网点"
+            android:textColor="#42A8FA"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/point_info_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp" />
+
+        <TextView
+            android:id="@+id/tv_task_list_show_recyclerview_emptyview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务列表为空!"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

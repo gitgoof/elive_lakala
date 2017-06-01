@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/text_white"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_header_title"
+        layout="@layout/common_header_layout">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/line_divide_bg"
+                android:padding="8dp"
+                android:text="基本信息："/>
+
+            <!--商户名称-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:orientation="vertical"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_merchant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="商户名称："
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_merchant_name"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:padding="5dip"
+                    android:textCursorDrawable="@null"
+                    android:focusable="false"
+                    android:background="@drawable/bg_edittext"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:orientation="vertical"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="网点名称："
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_shop_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:padding="5dip"
+                    android:textCursorDrawable="@null"
+                    android:focusable="false"
+                    android:background="@drawable/bg_edittext"
+                    android:textSize="15sp"/>
+
+                <!--BMCP网点名称-->
+                <TextView
+                    android:id="@+id/tv_bmcp_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:text=""
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:orientation="vertical"
+                android:background="@color/text_white">
+
+                <LinearLayout
+                    android:id="@+id/ll_shop_addr"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title_shop_addr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:text="网点地址："
+                        android:textSize="16sp"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_shop_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/tv_title_shop_addr"
+                        android:background="@null"
+                        android:src="@drawable/btn_show_visitor_location"/>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_shop_addr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_shop_addr"
+                    android:text=""
+                    android:padding="5dip"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:textCursorDrawable="@null"
+                    android:focusable="false"
+                    android:background="@drawable/bg_edittext"
+                    android:textSize="15sp"/>
+
+                <!--BMCP网点地址-->
+                <TextView
+                    android:id="@+id/tv_bmcp_shop_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:text=""
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/line_divide_bg"
+                android:padding="8dp"
+                android:text="商户标签："/>
+
+            <!-- 商户真实性核查 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_mer_info_truth"
+                    android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="商户真实性核查"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_mer_info_truth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_mer_info_truth"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_mer_info_truth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_mer_info_truth"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--商户成熟度-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_mer_mature"
+                    android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="商户成熟度"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_mer_mature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_mer_mature"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_mer_mature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_mer_mature"
+                    android:textColor="@color/text_hint_color"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--商户等级-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_mer_level"
+                    android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="商户等级"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_mer_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_mer_level"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_mer_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_mer_level"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--商户主营-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_mer_main_sale"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="商户主营"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_mer_main_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_mer_main_sale"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_mer_main_sale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_mer_main_sale"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--商户类别-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_mer_class"
+                    android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="商户类别"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_mer_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_mer_class"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_mer_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:layout_toRightOf="@id/tv_split_mer_class"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--商铺位置-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_mer_shop_area"
+                    android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="商铺位置"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_mer_shop_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_mer_shop_area"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_mer_shop_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_mer_shop_area"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--产品类型-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_product_class"
+                    android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="产品类型"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_product_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_product_class"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_product_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_product_class"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!-- 无交易原因 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_no_tran_reason"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="无交易原因"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_no_tran_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_no_tran_reason"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_no_tran_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_no_tran_reason"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--商户已有产品-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_card_app_type"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="商户已有产品"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_card_app_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_card_app_type"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_card_app_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_card_app_type"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--其他pos优势 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_other_pos_advance"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="其他pos优势"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_other_pos_advance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_other_pos_advance"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_other_pos_advance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_other_pos_advance"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--无交易梳理结果-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_no_tran_analyse_result"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="无交易梳理结果"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_no_tran_analyse_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_no_tran_analyse_result"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_no_tran_analyse_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_no_tran_analyse_result"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--非接改造结果-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_non_conn_change_result"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="非接改造结果"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_non_conn_change_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_non_conn_change_result"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+
+                <Spinner
+                    android:id="@+id/spinner_non_conn_change_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_non_conn_change_result"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--强挥升级结果-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_swing_upgrade_result"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="强挥升级结果"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_swing_upgrade_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_swing_upgrade_result"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_swing_upgrade_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_swing_upgrade_result"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--电子平台绑定结果-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_bind_ele_platform_result"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="电子平台绑定结果"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_bind_ele_platform_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_bind_ele_platform_result"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_bind_ele_platform_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_bind_ele_platform_result"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--电子平方台未绑定原因-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_no_bind_ele_platform_reason"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="电子平方台未绑定原因"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_no_bind_ele_platform_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_no_bind_ele_platform_reason"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_no_bind_ele_platform_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_no_bind_ele_platform_reason"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--是否换签-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/text_white">
+
+                <TextView
+                    android:id="@+id/tv_title_is_exchange_sign"
+                   android:layout_width="@dimen/mer_info_edit_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="是否换签"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_split_is_exchange_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_title_is_exchange_sign"
+                    android:layout_centerVertical="true"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner_is_exchange_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_split_is_exchange_sign"
+                    android:layout_marginRight="@dimen/mer_info_edit_sppiner_right"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_submit_edit"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_submit_bg"
+                    android:textColor="@color/text_white"
+                    android:textSize="20sp"
+                    android:text="提交编辑"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/text_white"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_header_title"
+        layout="@layout/common_header_layout">
+
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/line_divide_bg"
+                android:padding="8dp"
+                android:text="终端基本信息："/>
+
+            <!-- 物理终端号 -->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="物理终端号"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_terminal_code"
+                    style="@style/text_mer_value_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--终端序列号-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="终端SN号"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <EditText
+                    android:id="@+id/et_device_sn"
+                    style="@style/et_mer_value_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/btn_scan_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/btn_border_shape"
+                    android:text="获取"
+                    android:textColor="@color/text_black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--终端开通时间-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="开通时间"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_open_time"
+                    style="@style/text_mer_value_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--终端状态 -->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="终端状态" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_term_status"
+                    style="@style/text_mer_value_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--产品类型-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="产品类型"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_product_class"
+                    style="@style/spinner_mer_value_style"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--机具领用类型-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="机具领用类型"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_device_draw_method"
+                    style="@style/spinner_mer_value_style"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--机具核查状态-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="机具状态核查"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_device_check_status"
+                    style="@style/spinner_mer_value_style"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--业务终端号-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="业务终端号"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_term_no"
+                    style="@style/text_mer_value_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--签约机构名称-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="签约机构"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_sign_org"
+                    style="@style/text_mer_value_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--对应分公司名称-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="对应分公司"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_branch_org"
+                    style="@style/text_mer_value_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/line_divide_bg"
+                android:padding="8dp"
+                android:text="终端标签："/>
+
+            <!-- 终端类型 -->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="终端类型"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_term_type"
+                    style="@style/spinner_mer_value_style"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!-- 无交易原因 -->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="无交易原因"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_no_tran_reason"
+                    style="@style/spinner_mer_value_style_no_input"/>
+
+            </LinearLayout>
+
+            <!-- 其它无交易备注 -->
+            <LinearLayout
+                android:id="@+id/ll_no_tran_desc"
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="其它无交易原因备注"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/et_no_tran_desc"
+                    style="@style/et_mer_value_style"
+                    android:maxLength="50" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--无交易梳理结果-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="无交易梳理结果"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_no_tran_analyse_result"
+                    style="@style/spinner_mer_value_style_no_input"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--非接改造结果-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="非接改造结果"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_non_conn_change_result"
+                    style="@style/spinner_mer_value_style"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <!--强挥升级结果-->
+            <LinearLayout
+                style="@style/ll_mer_edit_header_style">
+
+                <TextView
+                    style="@style/text_mer_title_style"
+                    android:text="强挥升级结果"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="："
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_swing_upgrade_result"
+                    style="@style/spinner_mer_value_style"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_divide_bg"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_submit_edit"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_submit_bg"
+                    android:text="下一步"
+                    android:textColor="@color/text_white"
+                    android:textSize="20sp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

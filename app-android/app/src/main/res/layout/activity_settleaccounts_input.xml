@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bank_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header_layout" />
+
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:background="@color/gray_bg3">
+
+        <ImageView
+            android:id="@+id/img_progress"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="入账户名"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <com.lakala.elive.common.widget.ChinaEdtText
+                    android:id="@+id/edt_settle_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:background="@null"
+                    android:hint="请输入开户姓名"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="卡号"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/edt_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/card_number"
+                    android:layout_marginLeft="110dp"
+                    android:layout_toLeftOf="@+id/tv_scan_card_number"
+                    android:background="@null"
+                    android:hint="请输入收款卡号"
+                    android:inputType="number"
+                    android:maxLength="32"
+                    android:singleLine="true"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_scan_card_number"
+                    android:layout_width="17dp"
+                    android:layout_height="18dp"
+                    android:layout_alignBaseline="@+id/edt_card_number"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/saoma" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+            <RelativeLayout
+                android:id="@+id/relative_people_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_people_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="法人姓名"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/edit_people_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_people_name"
+                    android:layout_marginLeft="110dp"
+                    android:background="@null"
+                    android:hint="请输入法人姓名"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v21"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/id_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="身份证号"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/edt_id_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/id_number"
+                    android:layout_marginLeft="110dp"
+                    android:background="@null"
+                    android:hint="请输入身份证号码"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    android:singleLine="true"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/id_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="身份证有效期"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_id_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/id_date"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/id_date"
+                    android:layout_toLeftOf="@+id/btn_id_perpetual"
+                    android:background="@null"
+                    android:hint="请选择日期"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/btn_id_perpetual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/id_date"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_search_bg"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@android:color/white"
+                    android:text="长期"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="开户行"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_select_bank_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/bank_name"
+                    android:layout_marginLeft="110dp"
+                    android:drawableRight="@drawable/icon_setting_item_left_arrow"
+                    android:hint="请选择开户银行"
+                    android:textColor="@color/black_color"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+                <!--<Button-->
+                <!--android:id="@+id/btn_id_perpetual"-->
+                <!--android:layout_width="75dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_alignBaseline="@+id/tv_id_date"-->
+                <!--android:layout_alignBottom="@+id/tv_id_date"-->
+                <!--android:layout_alignEnd="@+id/tv_select_bank_name"-->
+                <!--android:layout_alignRight="@+id/tv_select_bank_name"-->
+                <!--android:background="@drawable/btn_search_bg"-->
+                <!--android:text="永久"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="17sp" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_search_bg"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>

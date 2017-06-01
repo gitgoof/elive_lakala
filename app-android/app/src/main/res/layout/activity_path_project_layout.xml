@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00A9EB"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_path_project_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/back_image"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_path_project_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="5dp"
+            android:text="拜访规划"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_path_project_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_alignParentRight="true"
+            android:textSize="25sp"
+            android:visibility="gone"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="+"/>
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map_path_projeect_map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></View>
+
+        <LinearLayout
+            android:id="@+id/linear_path_project_bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/white">
+            <TextView
+                android:id="@+id/tv_path_project_refresh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/item_hrecycleview_shape"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="重新规划"/>
+
+            <TextView
+                android:id="@+id/tv_path_project_daohang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/item_hrecycleview_shape"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="导航"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:layout_above="@+id/linear_path_project_bottom"
+            android:id="@+id/recycler_path_project_bottom_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</LinearLayout>

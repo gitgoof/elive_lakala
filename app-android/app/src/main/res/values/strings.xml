@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">ELIVE工作平台</string>
+
+    <!-- 登录界面  -->
+    <string name="btn_login_submit_title">登&#160;&#160;录</string>
+    <!-- Splash -->
+    <string name="check_network">正在检测网络</string>
+    <string name="current_version_info">当前版本:%1$s</string>
+    <string name="no_valid_network">对不起，请检查网络是否可用</string>
+
+    <string name="et_input_mobile_title">请输入您在平台预留的手机号</string>
+    <string name="et_mobile_check_title">请输入短信验证码</string>
+
+    <string name="shop_term_check_title">终端列表需要全部核查一遍</string>
+
+
+    <string name="login_user_name_title">请输入登录用户名</string>
+    <string name="login_user_pwd_title">请输入登录密码</string>
+    <string name="login_remember_name_title">记住用户名</string>
+    <string name="login_remember_pwd_title">记住密码</string>
+    <string name="login_forget_pwd_title">重置密码</string>
+
+    <string name="btn_get_check_title">获取验证码</string>
+    <string name="btn_mail_check_title">验&#160;&#160;证</string>
+    <string name="login">登录中，请稍候</string>
+    <string name="input_new_user_pwd">请输入新登录密码</string>
+    <string name="input_two_user_pwd">请再次输入新登录密码</string>
+    <string name="update_pwd_title">修&#160;改&#160;密&#160;码</string>
+    <!-- 主界面  -->
+    <string name="home_check_ui">用户验证</string>
+    <string name="home_passwd_set">密码修改</string>
+    <string name="home_main_ui">主页</string>
+    <string name="home_contact_ui">通讯录</string>
+    <string name="home_session_ui">会话</string>
+    <string name="home_setting_ui">我的</string>
+
+    <!-- 设置界面 -->
+    <string name="setting_logout">退出</string>
+    <string name="setting_update_pwd">修改密码</string>
+    <string name="setting_version_check">新版本检查</string>
+
+    <string name="setting_data_clear">空间清理</string>
+
+    <string name="forget_pwd_title">忘记密码</string>
+    <string name="forget_pwd_info">请联系管理员\n邮箱：report@lakala.com</string>
+
+    <string name="alert_err_title">错误提示</string>
+
+    <string name="title_map_location">商户地图定位</string>
+    <string name="title_order_deal">商户工单处理</string>
+    <string name="title_daily_work">商户日常拜访</string>
+    <string name="no_attention_data">您没有关注的报表</string>
+    <string name="no_report_data">没有报表数据</string>
+    <string name="no_notice_data">没有公告数据</string>
+    <string name="no_vote_data">没有投票任务数据</string>
+
+    <string name="title_merchant_detail">商户网点详情</string>
+    <string name="title_task_detail">工单任务详情</string>
+
+    <string name="title_merchant_visit_add">商户网点签到</string>
+    <string name="title_merchant_shop_edit">商户网点信息编辑</string>
+
+    <string name="no_task_info">没有工单任务数据</string>
+    <string name="no_visit_info">暂无签到记录</string>
+    <string name="no_merchant_info">没有商户数据</string>
+    <string name="no_term_info">没有终端数据</string>
+    <string name="no_vote_detail_info">没有投票选项</string>
+
+    <string name="no_menu_info">您暂无授权功能菜单，请联系Elive平台管理员！</string>
+    <string name="edit_pwd_title">* 6位以上密码，数字、大写字母、小写字母必选包含2种！</string>
+
+    <string-array name="spingarr">
+        <item>装机</item>
+        <item>客诉处理</item>
+        <item>日常回访</item>
+        <item>正常回访</item>
+        <item>非接改造</item>
+        <item>价改换签</item>
+        <item>现场注册</item>
+        <item>撤机</item>
+        <item>风险调查</item>
+        <item>无交易梳理</item>
+    </string-array>
+
+    <string name="retry">重试</string>
+    <string name="back">返回</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取&#160;消</string>
+    <string name="ok">确定</string>
+    <string name="attention">注意</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="info">消息</string>
+    <string name="loading">加载中</string>
+
+    <string name="remove">移除</string>
+    <string name="stop">停止</string>
+    <string name="start">开始下载</string>
+
+    <!-- Download Manager -->
+    <string name="install_fail_file_not_exist">安装文件已不存在</string>
+    <string name="download_remain_bytes">剩余%1$s%2$s</string>
+    <string name="download_start">下载马上开始</string>
+
+
+    <string name="exit_user">切&#160;换&#160;账&#160;号</string>
+    <string name="close_app">关&#160;闭&#160;应&#160;用</string>
+
+    <string name="done">完成</string>
+
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="quit">退出</string>
+
+
+    <string name="attetion_cancel">取消</string>
+    <string name="attetion_add">关注</string>
+    <string name="filter_vcode">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+</resources>

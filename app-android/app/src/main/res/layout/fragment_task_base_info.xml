@@ -1,0 +1,474 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_detail_ui" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 终端号 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="终端号"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_task_terminal_id"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 工单号 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="业务工单号"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_task_biz_id"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 工单类型 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="工单类型"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_task_type"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 工单来源 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="工单来源"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_task_channel"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 工单标题 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="工单标题"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_task_subject"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 工单说明 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style" >
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="工单说明"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_task_desc"
+                style="@style/text_mer_value_style"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--联系人-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="联系人" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+
+            <TextView
+                android:id="@+id/tv_contactor"
+                style="@style/text_mer_value_style"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+
+        <!--联系电话-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="联系人电话" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_tel_no"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--联系手机-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="联系人手机" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_tel_phone_no"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!--详细地址-->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="详细地址" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_shop_addr"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 创建时间 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="创建时间" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_create_time"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+        <!-- 要求受理时间 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="要求时效" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_finish_limit_days"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 工单紧急程度 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="紧急程度"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_task_level"
+                style="@style/text_mer_value_style"/>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+
+
+        <!-- 工单状态 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="工单状态" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_task_status"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 处理人 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="处理人" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_operator_name"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 实际结单时间 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="处理时间" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_actual_deal_time"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 实际结单时间 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="处理结果" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_deal_result"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_divide_bg"/>
+
+        <!-- 实际结单时间 -->
+        <LinearLayout
+            style="@style/ll_mer_edit_header_style">
+
+            <TextView
+                style="@style/text_mer_title_style"
+                android:text="处理描述" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="："
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_deal_desc"
+                style="@style/text_mer_value_style"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,311 @@
+[
+    {
+        "outputFile": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1660,
+                    "endColumn": 63,
+                    "endOffset": 1719
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1660,
+                        "endColumn": 63,
+                        "endOffset": 1719
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1724,
+                    "endColumn": 63,
+                    "endOffset": 1783
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1724,
+                        "endColumn": 63,
+                        "endOffset": 1783
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1788,
+                    "endColumn": 54,
+                    "endOffset": 1838
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1788,
+                        "endColumn": 54,
+                        "endOffset": 1838
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1843,
+                    "endColumn": 56,
+                    "endOffset": 1895
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1843,
+                        "endColumn": 56,
+                        "endOffset": 1895
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1900,
+                    "endColumn": 54,
+                    "endOffset": 1950
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1900,
+                        "endColumn": 54,
+                        "endOffset": 1950
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1955,
+                    "endColumn": 58,
+                    "endOffset": 2009
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1955,
+                        "endColumn": 58,
+                        "endOffset": 2009
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2014,
+                    "endColumn": 56,
+                    "endOffset": 2066
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2014,
+                        "endColumn": 56,
+                        "endOffset": 2066
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2071,
+                    "endColumn": 37,
+                    "endOffset": 2104
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 2071,
+                        "endColumn": 37,
+                        "endOffset": 2104
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2109,
+                    "endColumn": 39,
+                    "endOffset": 2144
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 2109,
+                        "endColumn": 39,
+                        "endOffset": 2144
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2149,
+                    "endColumn": 36,
+                    "endOffset": 2181
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 2149,
+                        "endColumn": 36,
+                        "endOffset": 2181
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2186,
+                    "endColumn": 101,
+                    "endOffset": 2283
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 2186,
+                        "endColumn": 101,
+                        "endOffset": 2283
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2288,
+                    "endColumn": 113,
+                    "endOffset": 2397
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 2288,
+                        "endColumn": 113,
+                        "endOffset": 2397
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2402,
+                    "endColumn": 107,
+                    "endOffset": 2505
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2402,
+                        "endColumn": 107,
+                        "endOffset": 2505
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2510,
+                    "endColumn": 71,
+                    "endOffset": 2577
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 2510,
+                        "endColumn": 71,
+                        "endOffset": 2577
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2582,
+                    "endColumn": 69,
+                    "endOffset": 2647
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 2582,
+                        "endColumn": 69,
+                        "endOffset": 2647
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 2652,
+                    "endColumn": 77,
+                    "endOffset": 2725
+                },
+                "from": {
+                    "file": "/Users/gaofeng/Documents/Android/workspace/app-android/Android-PullToRefresh-master/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 2652,
+                        "endColumn": 77,
+                        "endOffset": 2725
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="基本信息"
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@color/gray_line" />-->
+        <!--基本信息-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/sign_order_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="签购单名称"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_sign_order_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请输入签购单名称" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_sign_order_name"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v1"
+                android:layout_marginTop="10dp"
+                android:text="联系人"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/contact"
+                android:layout_marginLeft="110dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请输入商户联系人" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/contact"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v2"
+                android:layout_marginTop="10dp"
+                android:text="手机号码"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/phone"
+                android:layout_marginLeft="110dp"
+                android:background="@null"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请输入手机号码" />
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/phone"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v3"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="邮箱"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/email"
+                android:layout_below="@+id/v3"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="110dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="填入邮箱" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_email"
+                android:background="@color/gray_line" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_merchant_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="商户类别"
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@color/gray_line" />-->
+
+        <!--商户类别-->
+        <LinearLayout
+            android:id="@+id/liner_merchant_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_big_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请选择/大类别" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/tv_centre_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请选择/中类别" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line" />
+
+
+            <TextView
+                android:id="@+id/tv_small_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请选择/小类别" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/tv_mcc_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请选择/MCC编码" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="商户地址"
+            android:textColor="@color/blue_color"
+            android:textSize="16sp" />
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@color/gray_line" />-->
+
+        <!--商户地址-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <TextView
+                android:id="@+id/tv_merchants_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请输入详细的商户地址" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line" />
+
+        </LinearLayout>
+
+        <!--其他-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="营业用地面积"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/area"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@+id/area"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请选择营业用地面积" />
+
+            <View
+                android:id="@+id/v8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/area"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/business_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v8"
+                android:layout_marginTop="10dp"
+                android:text="营业时间"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_business_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/business_hours"
+                android:layout_marginLeft="110dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="请选择营业时间" />
+
+            <View
+                android:id="@+id/v9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/business_hours"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+
+            <TextView
+                android:id="@+id/biz_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v9"
+                android:layout_marginTop="10dp"
+                android:text="经营内容"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_biz_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v9"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black_color2"
+                android:textSize="17sp"
+                tools:text="经营内容" />
+
+            <View
+                android:id="@+id/v10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_biz_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

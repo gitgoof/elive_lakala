@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="入账户名"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/username"
+            android:layout_marginLeft="120dp"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp"
+            tools:text="张三" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_username"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_line" />
+
+
+        <TextView
+            android:id="@+id/card_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v1"
+            android:layout_marginTop="10dp"
+            android:text="卡号"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_card_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/card_number"
+            android:layout_marginLeft="120dp"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp"
+            tools:text="43532413342312" />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/v21"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_card_number"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_line" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/id_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v21"
+            android:layout_marginTop="10dp"
+            android:text="法人姓名"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/id_card_name"
+            android:layout_below="@id/v21"
+            android:layout_marginLeft="120dp"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp"
+            android:text="12"/>
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/id_card_name"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_line" />
+
+        <TextView
+            android:id="@+id/id_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v2"
+            android:layout_marginTop="10dp"
+            android:text="身份证号"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_id_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/id_number"
+            android:layout_marginLeft="120dp"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp"
+            tools:text="43532413342312" />
+
+        <View
+            android:id="@+id/v3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_id_number"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_line" />
+
+
+        <TextView
+            android:id="@+id/id_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v3"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="身份证有效期"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_id_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/id_date"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/id_date"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp"
+            tools:text="1999-01-01" />
+
+        <View
+            android:id="@+id/v5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_id_date"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_line" />
+
+        <TextView
+            android:id="@+id/bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v5"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="开户行"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/bank_name"
+            android:layout_marginLeft="120dp"
+            android:textColor="@color/black_color2"
+            android:textSize="17sp"
+            tools:text="广发银行" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_bank_name"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_line" />
+
+    </RelativeLayout>

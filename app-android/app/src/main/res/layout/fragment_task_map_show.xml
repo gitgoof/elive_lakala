@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/map_task_list_map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/tv_task_map_bottom_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已添加：0个网点"
+            android:layout_gravity="right"
+            android:textColor="#42A8FA"
+            android:textSize="12sp"
+            android:padding="5dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></View>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_task_map_bottom_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_task_map_recyclerview_emptyview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="没有任务列表!"/>
+    </LinearLayout>
+
+</LinearLayout>
