@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                style="@style/shoudan_text_small_green_blue"
+                android:text="为保证交易安全，请持卡人上传真实有效的付款银行卡正面照、本人持付款卡照、销售凭证照及用于接收交易通知短信的付款人手机号码。"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TableLayout
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/seperator" />
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        style="@style/combination_left_textview_style"
+                        android:text="付款银行卡正面照" />
+
+                    <View
+                        android:layout_weight="1"
+                        android:layout_height="1dp"
+                        android:layout_width="wrap_content" />
+
+                    <ImageView
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/bank_card_photo_front"
+                        style="@style/upload_pic_style"
+                        android:background="@drawable/bank_card_capture_selector" />
+
+                </TableRow>
+
+                <View
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/seperator" />
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        style="@style/combination_left_textview_style"
+                        android:text="本人持付款卡照" />
+
+                    <View
+                        android:layout_weight="1"
+                        android:layout_height="1dp"
+                        android:layout_width="wrap_content" />
+
+                    <ImageView
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/personal_photo"
+                        style="@style/upload_pic_style"
+                        android:background="@drawable/cardholder_capture_normal" />
+
+                </TableRow>
+
+                <View
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/seperator" />
+
+                <TableRow>
+
+                    <RelativeLayout
+
+                        android:layout_weight="1">
+
+                        <TextView
+                            style="@style/combination_left_textview_style"
+                            android:id="@+id/merchant_cer_photo_name"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="销售凭证照" />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/merchant_cer_sample"
+                            android:layout_toRightOf="@+id/merchant_cer_photo_name"
+                            android:src="@drawable/icon_question"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"
+                            android:id="@+id/merchant_cer_photo"
+                            style="@style/upload_pic_style"
+                            android:background="@drawable/sales_cer_capture_normal" />
+
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <View
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/seperator" />
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/combination_left_textview_style"
+                        android:text="持卡人手机号"
+                        tools:text="呵呵" />
+
+                    <EditText
+                        android:layout_weight="1"
+                        android:inputType="phone"
+                        android:layout_marginRight="20dp"
+                        android:hint="请付款人输入手机号"
+                        android:id="@+id/phone_num"
+                        android:layout_width="match_parent"
+                        style="@style/combination_right_edittext_style"
+                        tools:text="呵呵" />
+
+                </TableRow>
+
+                <View
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/seperator" />
+
+            </TableLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:paddingBottom="5dp"
+                android:layout_marginLeft="20dp"
+                style="@style/shoudan_text_small_orange"
+                android:text="费率标准：借记卡0.78%，贷记卡0.78%"
+                android:textColor="@color/red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                style="@style/btn_top_line"
+                android:id="@+id/confirm"
+                android:text="确认收款"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_pub"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/whiteitem_longclick"
+    android:layout_marginTop="@dimen/common_size_16"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_line_top"
+        style="@style/seperator" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y37">
+
+        <TextView
+            android:id="@+id/tv_msgType_pub"
+            style="@style/style_tv_msg_center"
+            android:text="系统公告" />
+
+        <ImageView
+            android:id="@+id/iv_msgType"
+            style="@style/style_iv_msg_center"
+            android:layout_toLeftOf="@+id/iv_arrow_go"
+            android:src="@drawable/pic_xtggz" />
+
+        <ImageView
+            android:id="@+id/iv_unread_pub"
+            android:visibility="invisible"
+            style="@style/style_unread_msg_center"
+            android:layout_toLeftOf="@+id/iv_arrow_go"
+            android:src="@drawable/pic_prompt" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_go"
+            style="@style/style_arrow_go"
+            android:src="@drawable/btn_arrow_go_gray" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/seperator"
+        android:layout_marginLeft="@dimen/common_size_15" />
+
+</LinearLayout>

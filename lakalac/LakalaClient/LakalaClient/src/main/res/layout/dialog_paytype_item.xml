@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:paddingRight="@dimen/combination_text_edit_margin_left"
+              android:paddingLeft="@dimen/combination_text_edit_margin_left"
+              android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/iv_typeicon"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingTop="@dimen/combination_text_edit_margin_left"
+        android:paddingBottom="@dimen/combination_text_edit_margin_left"
+        android:visibility="gone"
+        android:src="@drawable/app_icon"/>
+    <TextView
+        android:id="@+id/tv_typetext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="刷卡支付"
+        android:drawableRight="@drawable/btn_arrow_go_gray"/>
+</LinearLayout>

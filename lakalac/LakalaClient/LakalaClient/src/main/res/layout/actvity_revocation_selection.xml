@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#30000000"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="412dp"
+        android:layout_marginTop="94dp">
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/gray"
+            >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="2dp"
+                    android:background="@color/common_blue_color"/>
+                <ImageView
+                    android:id="@+id/iv_cancel"
+                    android:layout_width="24dp"
+                    android:layout_height="29dp"
+                    android:src="@drawable/btn_cancel"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/common_distance_level_1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_distance_level_1"
+                    android:layout_marginTop="@dimen/common_distance_level_1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="12sp"
+                        tools:text="23423998298"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/common_distance_level_1"
+                        android:paddingTop="10dp"
+                        android:layout_below="@id/tv_card"
+                        android:text="有如下成功交易，请选择"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View style="@style/seperator"></View>
+
+
+            <ListView
+                android:id="@+id/revocation_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1dp"
+                android:descendantFocusability="blocksDescendants"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none"
+                />
+
+            <View style="@style/seperator"></View>
+
+            <TextView
+                android:id="@+id/tv_bottom_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/gray_999999"
+                android:text="已显示全部交易"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

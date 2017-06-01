@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="nine_old_androids">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LakalaUI/libs/nine_old_androids.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

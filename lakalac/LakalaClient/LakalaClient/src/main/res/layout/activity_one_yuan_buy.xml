@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/common_distance_level_1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_distance_level_1"
+            android:text="总需支付"/>
+
+        <TextView
+            android:id="@+id/beans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="欢乐豆"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_distance_level_1"/>
+
+        <TextView
+            android:id="@+id/beans_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/beans"
+            android:text="10"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/common_distance_level_1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_distance_level_1"
+            android:text="支付方式"/>
+
+        <TextView
+            android:id="@+id/tv_pay_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="零钱余额10.00元"
+            android:textColor="@color/gray_666666"
+            android:gravity="right"
+            android:padding="@dimen/common_distance_level_1"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_arrow_go_gray"
+            android:layout_marginRight="@dimen/common_distance_level_1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wallet_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/wallet_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_distance_level_1"
+            android:layout_gravity="right"
+            android:text="零钱充值"
+            android:textSize="@dimen/font_size_12"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_distance_level_1"
+                android:text="红包"/>
+
+            <TextView
+                android:id="@+id/tv_red_package"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="请选择红包"
+                android:gravity="right"
+                android:padding="@dimen/common_distance_level_1"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_arrow_go_gray"
+                android:layout_marginRight="@dimen/common_distance_level_1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/next_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_top_line"
+        android:text="支付"/>
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:apps="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/combination_text_edit_margin_left">
+
+
+        <TableRow
+            android:minHeight="@dimen/order_item_height">
+
+            <TextView
+                android:id="@+id/mer_name_tag"
+                style="@style/combination_left_textview_style"
+                android:layout_height="match_parent"
+                android:tag="10001"
+                android:text="店铺名称 "/>
+
+            <EditText
+                android:id="@+id/mer_name"
+                style="@style/combination_right_edittext_style"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="请输入店铺名称"
+                android:singleLine="true"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"/>
+        </TableRow>
+
+        <View
+            style="@style/seperator"/>
+
+        <TableRow
+            android:id="@+id/layout_tv_area"
+            android:minHeight="@dimen/order_item_height">
+
+
+            <TextView
+                style="@style/combination_left_textview_style"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="地区"/>
+            <LinearLayout
+                android:id="@+id/ll_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+               >
+                <TextView
+                    android:id="@+id/tv_area_value"
+                    style="@style/combination_right_edittext_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:hint="点击获取当前位置"/>
+
+                <ImageView
+                    android:id="@+id/img_area_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_location"/>
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:src="@drawable/btn_arrow_go"
+                    android:layout_width="25dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </TableRow>
+
+        <View
+            style="@style/seperator"/>
+
+        <TableRow
+            android:minHeight="@dimen/order_item_height">
+
+            <TextView
+                android:id="@+id/mer_addr_tag"
+                style="@style/combination_left_textview_style"
+                android:layout_height="match_parent"
+                android:tag="10002"
+                android:text="店铺地址"/>
+
+            <EditText
+                android:id="@+id/mer_addr"
+                style="@style/combination_right_edittext_style"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="请填写详细地址"
+                android:singleLine="true"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/btn_pre_merchant"
+            style="@style/btn_comment_with_stroke"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/order_next_btn_margin_top"
+            android:layout_weight="1"
+            android:text="上一步"
+            />
+
+        <TextView
+            android:id="@+id/btn_next_merchant"
+            style="@style/btn_top_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="下一步"
+            />
+    </LinearLayout>
+
+</LinearLayout>

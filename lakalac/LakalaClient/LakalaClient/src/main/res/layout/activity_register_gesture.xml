@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--手势界面-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_background_blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_gestrue_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:visibility="gone"
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/back"
+            android:src="@drawable/icon_return_selector"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp" />
+
+        <TextView
+            style="style/text_style_large_white"
+            android:padding="@dimen/dimen_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_large"
+            android:text="@string/plat_set_gesture_password"/>
+        <TextView
+            android:id="@+id/tv_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_small"
+            android:text="@string/plat_skip"
+            android:textColor="@color/action_text_color_selector"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_20"
+            />
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@id/layout_gestrue_title"
+        android:id="@+id/lock_pattern_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_40"
+        android:paddingRight="@dimen/dimen_40"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/lock_pattern_bottom_right_btn"
+            style="@style/text_style_normal_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/action_text_color_selector"
+            android:text="@string/plat_other_user_login"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_10"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:text="@string/login"
+            android:layout_centerInParent="true"
+            style="@style/text_style_large_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/lock_pattern_bottom_left_btn"
+            style="@style/text_style_normal_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/action_text_color_selector"
+            android:text="@string/plat_reset_gesture_pwd"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dimen_10"
+            android:layout_alignParentRight="true"/>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_img_confirm_tips"
+        android:layout_below="@+id/lock_pattern_bottom_layout"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.lakala.ui.component.CircleImageView
+            android:id="@+id/id_avatar_img"
+            android:layout_width="@dimen/dimen_120"
+            android:layout_height="@dimen/dimen_120"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_60"
+            android:layout_marginBottom="@dimen/dimen_40"
+            android:src="@drawable/ui_user_photo_normal"
+            android:visibility="gone"/>
+        <com.lakala.ui.module.lockpattern.LockPatternView
+            android:visibility="invisible"
+            android:id="@+id/lock_pattern_view_confirm"
+            android:layout_width="@dimen/dimen_120"
+            android:layout_height="@dimen/dimen_120"/>
+        <TextView
+            android:layout_marginTop="@dimen/dimen_20"
+            android:id="@+id/lock_pattern_top_prompt_text"
+            android:textSize="@dimen/font_size_normal"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/plat_set_gesture_password_prompt"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/layout_img_confirm_tips"
+        android:id="@+id/lock_pattern_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <com.lakala.ui.module.lockpattern.LockPatternView
+            android:id="@+id/lock_pattern_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

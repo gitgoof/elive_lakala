@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="drawable_gray">@color/gray</drawable>
+    <drawable name="blue_18A4DD">@color/blue</drawable>
+
+    <drawable name="blue_004181">@color/blue_004181</drawable><!--item 颜色-->
+    <drawable name="blue_004992">@color/blue_004992</drawable><!--背景颜色-->
+    <drawable name="transparent">@android:color/transparent</drawable><!--透明背景-->
+    <drawable name="white">@color/white</drawable><!--白色-->
+    <drawable name="gray_EFEFEF">@color/color_gray_EFEFEF</drawable>
+    <drawable name="bg_transparent">@android:color/transparent</drawable>
+
+    <!--撤销交易-->
+    <drawable name="blue_bg">@color/blue4</drawable>
+    <drawable name="gray_bg">@color/gray</drawable>
+    <drawable name="gray_setting">@color/gray_main2</drawable>
+</resources>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--   交易管理页面  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/app_background_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_trade"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/today_date"
+                style="@style/text_style_small_gary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:text="2015/04/13" />
+            <TextView
+                style="@style/text_style_small_gary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text="今日收款(元)" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/shoudan_text_big_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="25sp"
+                android:visibility="gone"
+                android:text="¥" />
+
+            <TextView
+                android:id="@+id/tv_current_amount"
+                style="@style/shoudan_text_big_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="25sp"
+                android:text="0.00" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/draw_tag"
+            style="@style/text_style_small_gary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="可提款(元)" />
+
+        <LinearLayout
+            android:id="@+id/draw_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/shoudan_text_big_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="25sp"
+                android:visibility="gone"
+                android:text="¥" />
+
+            <TextView
+                android:id="@+id/tv_account_balance"
+                style="@style/shoudan_text_big_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="25sp"
+                android:text="0.00" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/box"
+            style="@style/seperator"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+        <RelativeLayout
+            android:id="@+id/rl_draw_money"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即提款"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/medium_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_arrow_go" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_trade"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        <View
+            style="@style/seperator"/>
+        <RelativeLayout
+            android:id="@+id/rl_trade_record"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收款记录"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/medium_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_arrow_go" />
+        </RelativeLayout>
+        <View
+            style="@style/seperator"
+            android:layout_marginLeft="10dp"/>
+        <RelativeLayout
+            android:id="@+id/rl_transfer_record"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="划款记录"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/medium_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_arrow_go" />
+        </RelativeLayout>
+
+        <View
+            style="@style/seperator"
+            android:layout_marginLeft="10dp"/>
+        <RelativeLayout
+            android:id="@+id/life_trade_query"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生活交易查询"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/medium_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_arrow_go" />
+        </RelativeLayout>
+
+        <View
+            style="@style/seperator"
+            android:layout_marginLeft="10dp"/>
+        <RelativeLayout
+            android:id="@+id/wallet_trade_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="零钱收支明细"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/medium_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_arrow_go" />
+        </RelativeLayout>
+        <View
+            style="@style/seperator"/>
+    </LinearLayout>
+
+</RelativeLayout>

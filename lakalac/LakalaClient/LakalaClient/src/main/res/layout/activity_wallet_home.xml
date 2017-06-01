@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/common_navigation_bar"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_distance_level_2"
+                android:layout_marginBottom="@dimen/common_distance_level_1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wallet_home_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/common_distance_level_1"
+                    android:text="零钱余额(元)"
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="@color/gray_666666"/>
+
+                <TextView
+                    android:id="@+id/change_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    tools:text="0.00元"
+                    android:textColor="@color/gray_666666"
+                    android:layout_marginTop="@dimen/font_size_10"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <View
+                    style="@style/seperator"/>
+                <RelativeLayout
+                    android:id="@+id/change_recharge"
+                    style="@style/combination_item_style"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_distance_level_1"
+                    android:paddingRight="@dimen/common_distance_level_1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/medium_text_size"
+                        android:text="零钱充值"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/btn_arrow_go"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/seperator"
+                    android:layout_marginLeft="@dimen/common_distance_level_1"/>
+
+                <RelativeLayout
+                    android:id="@+id/change_withdrawal"
+                    style="@style/combination_item_style"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_distance_level_1"
+                    android:paddingRight="@dimen/common_distance_level_1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/medium_text_size"
+                        android:text="零钱转出"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/btn_arrow_go"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/seperator"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/common_distance_level_2"
+                android:background="@color/white">
+
+                <View
+                    style="@style/seperator"/>
+                <RelativeLayout
+                    android:id="@+id/change_red_package"
+                    style="@style/combination_item_style"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_distance_level_1"
+                    android:paddingRight="@dimen/common_distance_level_1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/medium_text_size"
+                        android:text="红包"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/btn_arrow_go"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/seperator"
+                    android:layout_marginLeft="@dimen/common_distance_level_1"/>
+
+                <RelativeLayout
+                    android:id="@+id/change_bank_card"
+                    style="@style/combination_item_style"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_distance_level_1"
+                    android:paddingRight="@dimen/common_distance_level_1">
+
+                    <TextView
+                        android:id="@+id/bank_card_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/medium_text_size"
+                        android:text="银行卡"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/btn_arrow_go"/>
+                    <TextView
+                        style="@style/text_style_fourteen_gray"
+                        android:visibility="gone"
+                        android:id="@+id/add_bank_card_hint"
+                        android:layout_below="@+id/bank_card_name"
+                        android:text="绑定多家银行卡可以增加您的支付限额"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/change_happy_bean"
+                    style="@style/combination_item_style"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_distance_level_1"
+                    android:paddingRight="@dimen/common_distance_level_1"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/medium_text_size"
+                        android:text="欢乐豆"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/btn_arrow_go"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/change_coupon"
+                    style="@style/combination_item_style"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_distance_level_1"
+                    android:paddingRight="@dimen/common_distance_level_1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/gray_666666"
+                        android:textSize="@dimen/medium_text_size"
+                        android:text="代金券"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/btn_arrow_go"/>
+                </RelativeLayout>
+                <View
+                    style="@style/seperator"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

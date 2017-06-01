@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/middle_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimen_10">
+
+    <com.lakala.ui.component.DynamicHeightListView
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:id="@+id/alert_list"
+        android:headerDividersEnabled="true"
+        android:footerDividersEnabled="true"
+        android:listSelector="@null"
+        android:divider="@color/light_gray_text"
+        android:dividerHeight="0.5dp"
+        app:useMaxHeight="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

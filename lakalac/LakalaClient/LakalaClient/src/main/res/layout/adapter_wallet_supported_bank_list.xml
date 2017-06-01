@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/order_item_height"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/order_item_height"
+            android:layout_height="@dimen/order_item_height"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            style="@style/combination_right_edittext_style"
+            android:layout_marginLeft="@dimen/common_distance_level_1"
+            tools:text="中国银行"/>
+        <TextView
+            android:id="@+id/tv_supported_card_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/combination_right_edittext_card_type_style"
+            android:layout_marginRight="@dimen/common_distance_level_1"
+            tools:text="*仅支持信用卡"
+            android:visibility="invisible"/>
+    </LinearLayout>
+    <ImageView
+        style="@style/combination_seperator_style"/>
+</LinearLayout>

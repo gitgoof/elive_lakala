@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.lakala.ui.component.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="19dp"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_height="160dp">
+                <com.lakala.ui.component.GridViewInScrollView
+                    android:id="@+id/list_adv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/font_gray_three4"
+                    android:numColumns="4"
+                    android:verticalSpacing="0.5dp" />
+            </RelativeLayout>
+
+            <com.lakala.shoudan.component.AdViewPager
+                android:id="@+id/viewpager_adv2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/layout_adv3"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                android:paddingRight="@dimen/combination_text_edit_margin_left">
+
+                <ImageView
+                    android:id="@+id/iv_adv3_1"
+                    android:layout_width="93dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/iv_adv3_2"
+                    android:layout_width="93dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/iv_adv3_3"
+                    android:layout_width="93dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/logo" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_adv4"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                android:paddingRight="@dimen/combination_text_edit_margin_left"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_adv4_1"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/iv_adv4_2"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/logo" />
+
+                <ImageView
+                    android:id="@+id/iv_adv4_3"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/logo" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_adv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x15"
+                android:background="@color/gray">
+
+                <com.lakala.ui.component.ListViewInScrollView
+                    android:id="@+id/lv_ad4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/x15"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0dp"
+                    android:listSelector="@drawable/transparent" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.lakala.ui.component.OverScrollView>
+</LinearLayout>

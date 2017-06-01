@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com_confirm">确定</string>
+    <string name="com_next">下一步</string>
+    <string name="com_cancel">取消</string>
+    <string name="com_quit">退出</string>
+    <string name="com_complete">完成</string>
+    <string name="com_update">确认更换</string>
+    <string name="com_set">设置</string>
+
+    <string name="common_get_image_vercode_fail">获取验证码图片失败.</string>
+</resources>

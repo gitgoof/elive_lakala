@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="7dp"
+                android:gravity="left"
+                android:text="上传图片大小建议在300K以内"
+                android:textColor="@color/gray_main1"
+                android:textSize="15sp"/>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:minHeight="44dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:padding="12dp"
+                        android:text="身份证照片"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/shoudan_id_photo_front"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:src="@drawable/btn_upload_idcard_face_selector"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="12dp"
+                            android:text="+"
+                            android:textSize="16sp"/>
+
+                        <ImageView
+                            android:id="@+id/shoudan_id_photo_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:src="@drawable/btn_upload_idcard_back_selector"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <View
+                    style="@style/seperator"
+                    android:layout_marginTop="0dp"/>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:minHeight="44dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:padding="12dp"
+                        android:text="手持证件照"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/individual_photo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/btn_upload_idcard_face_selector"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <View
+                    style="@style/seperator"
+                    android:layout_marginTop="0dp"/>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:minHeight="44dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:padding="12dp"
+                        android:text="营业执照"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/open_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:src="@drawable/btn_upload_idcard_face_selector"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <View
+                    style="@style/seperator"
+                    android:layout_marginTop="0dp"/>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:minHeight="44dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:padding="12dp"
+                        android:text="店铺租赁合同"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/zuli_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:src="@drawable/btn_upload_idcard_face_selector"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <View
+                    style="@style/seperator"
+                    android:layout_marginTop="0dp"/>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:minHeight="44dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:padding="12dp"
+                        android:text="店铺门头照"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/mtou_phoho"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:src="@drawable/btn_upload_idcard_face_selector"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <View
+                    style="@style/seperator"
+                    android:layout_marginTop="0dp"/>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:minHeight="44dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:padding="12dp"
+                        android:text="店内照"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/store_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:src="@drawable/btn_upload_idcard_face_selector"/>
+                    </LinearLayout>
+                </TableRow>
+
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bank_info_new"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    style="@style/seperator"
+                    android:layout_marginTop="0dp"/>
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:id="@+id/shoudan_openbank"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:id="@+id/bank_tag"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="right|center_vertical"
+                            android:padding="12dp"
+                            android:text="        开户银行 "
+                            />
+
+                        <TextView
+                            android:id="@+id/bank"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:hint="请选择"/>
+
+                        <ImageView
+                            android:id="@+id/img_area_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/right_arrow"/>
+                    </TableRow>
+
+                    <View
+                        style="@style/seperator"
+                        android:layout_marginTop="0dp"/>
+                    <TableRow
+                        android:id="@+id/shoudan_openbank_branch"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:id="@+id/bank_branch"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="right|center_vertical"
+                            android:padding="12dp"
+                            android:text="        支行信息 "
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_bank_branch"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:hint="请选择"/>
+
+                        <ImageView
+                            android:id="@+id/img_area_more_barnch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/right_arrow"/>
+                    </TableRow>
+
+                    <View
+                        style="@style/seperator"
+                        android:layout_marginTop="0dp"/>
+
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:id="@+id/bank_account_tag"
+                            android:gravity="right|center_vertical"
+                            android:padding="12dp"
+                            android:tag="10008"
+                            android:text="银行帐号"
+                            />
+
+                        <EditText
+                            android:id="@+id/bank_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="1"
+                            android:background="@color/transparence"
+                            android:gravity="center_vertical"
+                            android:hint="请输入开户银行账号"
+                            android:phoneNumber="true"
+                            android:singleLine="true"
+                            android:textSize="14sp"/>
+                    </TableRow>
+
+                    <View
+                        style="@style/seperator"
+                        android:layout_marginTop="0dp"/>
+
+                    <TableRow
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:id="@+id/account_name_tag"
+                            android:gravity="right|center_vertical"
+                            android:padding="12dp"
+                            android:tag="10009"
+                            android:text="开户名"
+                            />
+
+                        <EditText
+                            android:id="@+id/account_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="1"
+                            android:background="@color/transparence"
+                            android:gravity="center_vertical"
+                            android:hint="请填写开户名"
+                            android:singleLine="true"
+                            android:textSize="14sp"/>
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btn_next"
+                    style="@style/btn_top_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

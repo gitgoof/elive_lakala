@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <com.lakala.ui.component.CircleImageView
+        android:id="@+id/iv_user"
+        android:layout_width="@dimen/x80"
+        android:layout_height="@dimen/x80"
+        android:layout_marginTop="@dimen/x70"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_mykt"
+        />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_999999"
+        android:textSize="@dimen/font_size_16"
+        android:layout_marginTop="@dimen/x15"
+        android:text="621483******1624" />
+    <TextView
+        android:id="@+id/user_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_999999"
+        android:textSize="@dimen/font_size_16"
+        android:layout_marginTop="@dimen/x8"
+        android:text="您还没有开通商户" />
+    <Button
+        android:id="@+id/ll_update"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/x24"
+        android:textColor="@drawable/btn_freg_color_selector"
+        android:textSize="@dimen/font_size_12"
+        android:layout_marginTop="@dimen/x12"
+        android:gravity="center"
+        android:background="@drawable/btn_freg_selector"
+        android:text="立即开通" />
+</LinearLayout>

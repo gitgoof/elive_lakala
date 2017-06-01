@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_margin_actionbar"
+        android:orientation="vertical">
+
+        <View style="@style/seperator" />
+
+
+       <!--  <RelativeLayout
+              android:id="@+id/rl_distct"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/order_item_height"
+              android:background="@color/white">
+
+              <TextView
+                  style="@style/combination_left_textview_style"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:text="地区"
+                  android:id="@+id/accDistct"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="@dimen/common_distance_level_1"/>
+              <View
+                  style="@style/seperator"
+                  android:layout_marginLeft="@dimen/common_distance_level_1"
+                  android:layout_below="@id/accDistct"/>
+
+              <ImageView
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentRight="true"
+                  android:background="@drawable/right_arrow_gray"
+                  android:layout_marginRight="@dimen/common_distance_level_1"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp" />
+
+              <TextView
+                  android:id="@+id/shop_distct"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_toLeftOf="@+id/right_arrow"
+                  android:layout_centerVertical="true"
+                  android:layout_marginRight="@dimen/common_distance_level_1"/>
+          </RelativeLayout>
+          <View
+              style="@style/seperator"
+              android:layout_marginLeft="@dimen/common_distance_level_1"
+              android:layout_below="@id/accName"/>-->
+
+          <RelativeLayout
+              android:id="@+id/rl_place"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/order_item_height"
+              android:background="@color/white">
+
+              <TextView
+                  style="@style/combination_left_textview_style"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:text="用户姓名"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal"/>
+
+              <TextView
+                  android:id="@+id/user_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  android:layout_marginRight="@dimen/order_next_btn_margin_horizontal"/>
+          </RelativeLayout>
+          <View
+              style="@style/seperator"
+              android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal"
+              android:layout_below="@id/accName"/>
+
+        <LinearLayout
+            android:id="@+id/rl_admin_type"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/order_item_height"
+            android:paddingRight="@dimen/order_next_btn_margin_horizontal"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/combination_left_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal"
+                android:text="账户类型" />
+
+
+            <TextView
+                android:id="@+id/admin_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_centerVertical="true"
+                 />
+            <ImageView
+                android:id="@+id/right_arrow2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/x8"
+                android:background="@drawable/right_arrow_gray" />
+        </LinearLayout>
+
+        <View
+            style="@style/seperator"
+            android:layout_below="@id/accName"
+            android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/rl_bank_admin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:paddingRight="@dimen/order_next_btn_margin_horizontal"
+            android:background="@color/white">
+            <TextView
+                style="@style/combination_left_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal"
+                android:text="银行账号" />
+
+            <EditText
+                android:id="@+id/bank_admin"
+                style="@style/combination_left_textview_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="请输入本人银行卡号"
+                android:duplicateParentState="true"
+                android:background="@color/white"
+                android:focusable="false"
+                android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal"
+                android:gravity="right|center_vertical"
+                tools:targetApi="honeycomb_mr1" >
+            </EditText>
+        </LinearLayout>
+
+        <View
+            style="@style/seperator"
+            android:layout_below="@id/accName"
+            android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bank_open"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/combination_left_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal"
+                android:text="开户银行" />
+
+            <LinearLayout
+                android:id="@+id/bank_see"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:clickable="true"
+                android:paddingRight="@dimen/order_next_btn_margin_horizontal"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/bank_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请选择开户银行"
+                    android:gravity="right"
+                    android:textColorHint="@color/hint_or_divider_color"
+                    android:layout_gravity="center_vertical"
+                     />
+                <ImageView
+                    android:id="@+id/right_arrow3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+
+                    android:paddingLeft="@dimen/x8"
+                    android:visibility="gone"
+                    android:background="@drawable/right_arrow_gray" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View style="@style/seperator" />
+
+        <TextView
+            style="@style/combination_chang_merch_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_distance_level_1"
+            android:text="为保证您的结算资金顺利入账，修改账号时，请务必填写商户本人的银行卡账号，最多允许修改三次结算信息。对公账号可以修改个人账户，个人账户暂不支持改为对公账户。"/>
+        <TextView
+            android:id="@+id/see_bank_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/watch_support_bank"
+            android:textSize="@dimen/dimen_24"
+            android:clickable="true"
+            android:textColor="@color/main_nav_blue"
+            android:layout_marginRight="@dimen/order_next_btn_margin_horizontal"
+            android:layout_marginTop="@dimen/x7"/>
+
+        <Button
+            android:id="@+id/change_info_next"
+            style="@style/btn_top_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/post_code"></Button>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true" >
+        <include layout="@layout/layout_keyboard" />
+    </RelativeLayout>
+</RelativeLayout>

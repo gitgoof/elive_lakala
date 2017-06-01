@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    style="@style/app_background_white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/viewgroup"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    xmlns:tool="http://schemas.android.com/tools">
+    <requestFocus/>
+    <!-- 基本资料 -->
+
+    <!--     <LinearLayout -->
+    <!--         android:layout_width="wrap_content" -->
+    <!--         android:layout_height="0dp" -->
+    <!--         android:layout_weight="1" -->
+    <!--         android:orientation="vertical" > -->
+
+    <ScrollView
+        android:id="@+id/scrollview_loan_trail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/combination_little_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/content_margin_actionbar"
+                    android:text="@string/loan_apply_info"/>
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:minHeight="@dimen/order_item_height">
+
+                        <TextView
+                            android:id="@+id/loanmoney_tag"
+                            style="@style/combination_left_textview_style"
+                            android:layout_height="match_parent"
+                            android:text="@string/loan_apply_money"
+                            android:layout_marginLeft="@dimen/combination_text_edit_margin_left"/>
+
+
+                        <EditText
+                            android:id="@+id/loanmoney"
+                            style="@style/combination_right_edittext_style"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@+id/view"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/loan_apply_money_limit"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:paddingRight="@dimen/combination_text_edit_margin_left"
+                            />
+                    </TableRow>
+                    <ImageView
+                        style="@style/combination_seperator_style"/>
+                    <TableRow
+                        android:minHeight="@dimen/order_item_height">
+
+                        <TextView
+                            android:id="@+id/staging_tag"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                            style="@style/combination_left_textview_style"
+                            android:text="申请还款周期"/>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/staging"
+                                style="@style/combination_right_edittext_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                                android:layout_weight="1"
+                                android:ellipsize="start"
+                                android:gravity="right|center"
+                                android:hint="@string/select_staging"
+                                android:singleLine="true"/>
+
+                            <ImageView
+                                android:id="@+id/staging_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                                android:src="@drawable/btn_arrow_go"/>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <!--<View-->
+                    <!--style="@style/seperator"-->
+                    <!--android:layout_marginTop="0dp" />-->
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_distance_level_1"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <!--<View-->
+                    <!--style="@style/seperator"-->
+                    <!--android:layout_marginTop="0dp" />-->
+
+                    <TableRow
+                        android:minHeight="@dimen/order_item_height">
+
+                        <TextView
+                            style="@style/combination_left_textview_style"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                            android:text="@string/right_money"/>
+
+                        <TextView
+                            android:id="@+id/loanmoney_text"
+                            style="@style/combination_right_edittext_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                            android:layout_weight="1"
+                            android:ellipsize="start"
+                            android:gravity="right|center"
+                            android:singleLine="true"
+                            android:text="@string/common_money"/>
+                    </TableRow>
+                    <ImageView
+                        style="@style/combination_seperator_style"/>
+
+                    <TableRow
+                        android:minHeight="@dimen/order_item_height">
+
+                        <TextView
+                            style="@style/combination_left_textview_style"
+                            android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                            android:layout_height="match_parent"
+                            android:text="@string/fee"
+                            />
+
+                        <TextView
+                            android:id="@+id/fee"
+                            style="@style/combination_right_edittext_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                            android:layout_weight="1"
+                            android:ellipsize="start"
+                            android:gravity="right|center"
+                            android:singleLine="true"
+                            android:text="@string/common_money"/>
+
+                    </TableRow>
+                    <ImageView
+                        style="@style/combination_seperator_style"/>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:minHeight="@dimen/order_item_height">
+
+                        <TextView
+                            style="@style/combination_left_textview_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:ellipsize="start"
+                            android:gravity="left|center"
+                            android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                            android:singleLine="true"
+                            android:text="@string/loan_info1"
+                            />
+
+                        <TextView
+                            android:id="@+id/info1"
+                            style="@style/combination_left_textview_style"
+                            android:textColor="@color/amount_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:ellipsize="start"
+                            android:gravity="left|center"
+                            tool:text="2015-09-13"
+                            android:singleLine="true"
+                            android:text="      "
+                            />
+
+                        <TextView
+                            style="@style/combination_right_edittext_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="@string/loan_info2"
+                            />
+
+                        <TextView
+                            android:id="@+id/info2"
+                            style="@style/combination_right_edittext_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:ellipsize="start"
+                            android:gravity="left|center"
+                            android:singleLine="true"
+                            android:textColor="@color/amount_color"
+                            android:text="0.00"
+                            />
+
+                        <TextView
+                            style="@style/combination_right_edittext_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                            android:ellipsize="start"
+                            android:gravity="left|center"
+                            android:singleLine="true"
+                            android:text="@string/yuan"
+                            />
+
+                    </TableRow>
+
+                    <!--<View-->
+                    <!--style="@style/seperator"-->
+                    <!--android:layout_marginTop="0dp" />-->
+                </TableLayout>
+
+                <TextView
+                    android:id="@+id/next"
+                    style="@style/btn_top_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--     </LinearLayout> -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <include layout="@layout/layout_keyboard"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

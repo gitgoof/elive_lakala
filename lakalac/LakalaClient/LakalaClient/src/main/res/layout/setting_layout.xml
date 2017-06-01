@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:apps="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              style="@style/app_background_white"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_main_gray_color"
+                android:orientation="vertical">
+
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/slt_allowance"
+                    style="@style/style_setting_item"
+                    android:layout_height="50dp"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconSrc="@drawable/btn_service_shengji_selector"
+                    app:leftIconVisibility="VISIBLE"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:leftText="@string/allowance"
+                    app:leftTextSize="@dimen/medium_text_size"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:rightTextVisibility="VISIBLE"
+                    app:rightTextMarginRight="@dimen/combination_text_edit_margin_left"
+                    app:rightTextColor="@color/text_blue_back_selector"
+                    >
+                </com.lakala.ui.component.SingleLineTextView>
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/slt_credit_card"
+                    style="@style/style_setting_item"
+                    android:layout_height="50dp"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconSrc="@drawable/btn_service_shengji_selector"
+                    app:leftIconVisibility="VISIBLE"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:leftText="@string/credit_card"
+                    app:leftTextSize="@dimen/medium_text_size"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:rightTextVisibility="VISIBLE"
+                    app:rightTextMarginRight="@dimen/combination_text_edit_margin_left"
+                    app:rightTextColor="@color/text_blue_back_selector"
+                    >
+                </com.lakala.ui.component.SingleLineTextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_main_gray_color"
+                android:orientation="vertical">
+
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/personal_setting"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/personal_setting"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+                </com.lakala.ui.component.SingleLineTextView>
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/open_merchant_signature_payment"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/merchant_signatrue_payement"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+
+                </com.lakala.ui.component.SingleLineTextView>
+
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/join_shoukuanbao"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="16sp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/join_lakala_swip"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+
+                </com.lakala.ui.component.SingleLineTextView>
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/upgrade"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="16sp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/upgrade_service"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+
+                </com.lakala.ui.component.SingleLineTextView>
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/id_update"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/more_check_update"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+
+                </com.lakala.ui.component.SingleLineTextView>
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/device_management"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/device_management"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+
+                </com.lakala.ui.component.SingleLineTextView>
+
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/rule_help"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/rule_help"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+
+                </com.lakala.ui.component.SingleLineTextView>
+                <com.lakala.ui.component.SingleLineTextView
+                    android:visibility="gone"
+                    android:id="@+id/id_feedback"
+                    style="@style/style_setting_item"
+                    android:paddingLeft="15dp"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/more_feedback"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+
+                </com.lakala.ui.component.SingleLineTextView>
+
+
+
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/id_weibo"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="关注拉卡拉"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+
+                </com.lakala.ui.component.SingleLineTextView>
+
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/buy_shoukuanbao"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="10dp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/buy_lakala_swip"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+
+                </com.lakala.ui.component.SingleLineTextView>
+
+                <com.lakala.ui.component.SingleLineTextView
+                    android:id="@+id/id_about_us"
+                    style="@style/style_setting_item"
+                    app:enableOnClickItemEvents="false"
+                    app:leftIconMarginRight="16sp"
+                    app:leftIconVisibility="GONE"
+                    app:leftText="@string/more_about_us"
+                    app:leftTextColor="@color/text_blue_back_selector"
+                    app:leftTextSize="14sp"
+                    app:rightArrowVisibility="VISIBLE"
+                    app:rightTextMarginRight="10dp">
+                </com.lakala.ui.component.SingleLineTextView>
+
+            </LinearLayout>
+            <com.lakala.ui.component.SingleLineTextView
+                android:id="@+id/exit_app"
+                style="@style/style_setting_item"
+                app:enableOnClickItemEvents="false"
+                app:leftIconMarginRight="16sp"
+                app:leftIconVisibility="GONE"
+                app:leftText="@string/exit_app"
+                app:leftTextColor="@color/text_blue_back_selector"
+                app:leftTextSize="14sp"
+                app:rightArrowVisibility="VISIBLE"
+                app:rightTextMarginRight="10dp">
+            </com.lakala.ui.component.SingleLineTextView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

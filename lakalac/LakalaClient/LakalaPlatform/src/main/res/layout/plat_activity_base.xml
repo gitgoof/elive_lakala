@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#eff3f6"
+              android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/viewf"
+        android:background="@color/main_nav_blue"/>
+    <view
+        android:id="@+id/navigation_bar"
+        class="com.lakala.ui.component.NavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_100"
+        android:layout_gravity="center_horizontal"
+        app:backBg="@drawable/shoudan_top_back_normal_selector"
+        app:textColor="@color/white"
+        app:navBg="@color/main_nav_blue"
+        app:titleMaxLength="12"
+        app:btnTextSize="14sp"
+        app:bottomBg="@color/gray_d7d7d7"
+        app:titleTextSize="17sp"/>
+
+    <FrameLayout
+        android:id="@+id/base_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

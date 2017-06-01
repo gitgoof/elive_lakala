@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="nlmobjack_ME30E_20131223">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../android_core/libs/nlmobjack_ME30E_20131223.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

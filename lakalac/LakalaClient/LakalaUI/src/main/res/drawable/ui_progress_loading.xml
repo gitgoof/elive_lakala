@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item android:duration="150" android:drawable="@drawable/ui_loading_01"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_02"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_03"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_04"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_05"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_06"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_07"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_08"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_09"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_10"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_11"/>
+    <item android:duration="150" android:drawable="@drawable/ui_loading_12"/>
+</animation-list>
+
+
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >-->
+    <!--<item>-->
+        <!--<rotate-->
+            <!--android:drawable="@drawable/ui_loading_12"-->
+            <!--android:fromDegrees="0.0"-->
+            <!--android:pivotX="50.0%"-->
+            <!--android:pivotY="50.0%"-->
+            <!--android:toDegrees="1079" />-->
+    <!--</item>-->
+<!--</layer-list>-->

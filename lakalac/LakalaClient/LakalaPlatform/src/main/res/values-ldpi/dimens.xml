@@ -1,0 +1,14 @@
+<resources>
+
+    <dimen name="dimen_20px">27dp</dimen>
+    <dimen name="dimen_30px">40dp</dimen>
+    <dimen name="dimen_40px">53dp</dimen>
+    <dimen name="dimen_48px">64dp</dimen>
+    <dimen name="dimen_50px">67dp</dimen>
+    <dimen name="dimen_88px">117dp</dimen>
+    <dimen name="dimen_90px">120dp</dimen>
+    <dimen name="dimen_120px">160dp</dimen>
+    <dimen name="dimen_140px">187dp</dimen>
+    <dimen name="dimen_600px">800dp</dimen>
+
+</resources>

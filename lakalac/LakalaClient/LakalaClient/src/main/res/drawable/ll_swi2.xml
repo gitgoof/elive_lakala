@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--   按下时的效果 
+ -->
+    <item android:drawable="@color/hui" android:state_pressed="true"/>
+    <item android:drawable="@color/hui" android:state_focused="true"/>
+<!--   正常时的效果
+ -->
+    <item android:drawable="@color/transparence"/>
+
+</selector>

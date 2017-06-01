@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 通用确认按钮，下一步，确定，确定付款等 -->
+
+<Button
+    android:id="@+id/id_common_guide_button"
+    style="@style/text_style_large_white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/dimen_88"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/plat_btn_deep_blue_selector"/>

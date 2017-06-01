@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_gray_color"
+    android:orientation="vertical">
+    <!-- 头部 商户信息 -->
+
+    <com.lakala.ui.component.OverScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_merchant_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_merchant_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/x15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/finance_twelve_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/x12"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/x10"
+                        android:text="商户等级"
+                        android:textSize="@dimen/x12" />
+
+                    <TextView
+                        android:id="@+id/jbsm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:paddingTop="@dimen/x12"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingLeft="@dimen/common_distance_level_1"
+                        android:paddingRight="@dimen/x15"
+                        android:text="@string/merchant_management_right"
+                        android:textColor="@color/main_nav_blue"
+                        android:textSize="@dimen/x12" />
+                </LinearLayout>
+                <View
+
+                    style="@style/seperator"
+                    />
+                <LinearLayout
+                    android:id="@+id/merchant_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/x15"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/x10"
+                        android:layout_marginRight="@dimen/x15"
+                        android:layout_marginTop="@dimen/x10"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/xqq"
+                                android:layout_width="@dimen/dimen_30"
+                                android:layout_height="@dimen/dimen_30"
+                                android:visibility="gone"
+                                android:background="@drawable/pic_sj" />
+
+                            <TextView
+                                android:id="@+id/tv_lv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/xqq"
+                                android:textColor="@color/gray_333333"
+                                android:textSize="@dimen/x12"
+                                android:text="189****1185" />
+
+                            <TextView
+                                android:id="@+id/tv_succuss"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_lv"
+                                android:layout_marginTop="@dimen/x10"
+                                android:layout_toRightOf="@+id/xqq"
+                                android:textColor="@color/gray_999999"
+                                android:visibility="gone"
+                                android:textSize="@dimen/x10"
+                                 />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_cuccuss_change"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|center_vertical"
+                            android:clickable="true"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/x140"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/x8"
+                                android:drawableRight="@drawable/btn_arrow_go_gray"
+                                android:gravity="right|center_vertical"
+                                android:text="升级服务"
+                                android:textColor="@color/gray_666666"
+                                android:textSize="@dimen/x14" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+              <!--  <View
+                    style="@style/seperator"
+                    />
+                <TextView
+                    style="@style/finance_twelve_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="业务开通状态"
+                    android:layout_marginTop="@dimen/x15"
+                    android:paddingLeft="@dimen/x15"
+                    android:textSize="@dimen/x12" />-->
+                <View
+                    style="@style/seperator"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/sksk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_msgType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y40"
+                        android:paddingLeft="@dimen/x35"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/tv_msgType"
+                            style="@style/style_tv_bottom_yhgl"
+                            android:text="刷卡收款" />
+
+                        <TextView
+                            android:id="@+id/iv_msgType"
+                            style="@style/style_tv_bottom_yhgl"
+                            android:layout_marginRight="@dimen/common_size_8"
+                            android:layout_toLeftOf="@+id/iv_arrow_go"
+                            android:text="已开通"
+                            android:textColor="@color/gray_333333" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_arrow_go"
+                            android:layout_width="@dimen/x10"
+                            android:scaleType="fitCenter"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/common_size_15"
+                            android:src="@drawable/btn_arrow_go_gray" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/hint0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+                        <View
+                            android:layout_marginLeft="@dimen/x35"
+                            style="@style/seperator"
+                            />
+                        <LinearLayout
+                            android:id="@+id/hint01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/x35"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/mer_limit_text_size"
+                                android:textColor="@color/gray_666666"
+                                android:text="@string/bankcard_limit"
+                                />
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="@dimen/common_distance_level_2">
+                                <TableRow>
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_account"/>
+                                    <TextView
+                                        style="@style/text_style_fourteen_gray"
+                                        android:gravity="right"
+                                        tools:text="1,000"
+                                        android:id="@+id/tv_single_account_bankcard" />
+                                    <TextView
+                                        style="@style/text_style_fourteen_gray"
+                                        android:gravity="right"
+                                        android:text="、"
+                                        />
+
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_day"/>
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        tools:text="10,000"
+                                        android:id="@+id/tv_single_day_bankcard" />
+                                    <TextView
+                                        style="@style/text_style_fourteen_gray"
+                                        android:gravity="right"
+                                        android:text="、"
+                                        />
+
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_month"/>
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        tools:text="10,000"
+                                        android:id="@+id/tv_single_month_bankcard" />
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+                        <!--<View
+                            style="@style/seperator"
+                            />-->
+                        <LinearLayout
+                            android:id="@+id/hint02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/x35"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/mer_limit_text_size"
+                                android:textColor="@color/gray_666666"
+                                android:text="@string/creditcard_limit" />
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_marginRight="@dimen/common_distance_level_2">
+                                >
+                                <TableRow>
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_account"/>
+                                    <TextView
+                                        android:id="@+id/tv_single_account_creditcard"
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        tools:text="1,000"/>
+                                    <TextView
+                                        style="@style/text_style_fourteen_gray"
+                                        android:gravity="right"
+                                        android:text="、"
+                                        />
+
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_day"/>
+                                    <TextView
+                                        android:id="@+id/tv_single_day_creditcard"
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        tools:text="10,000"/>
+                                    <TextView
+                                        style="@style/text_style_fourteen_gray"
+                                        android:gravity="right"
+                                        android:text="、"
+                                        />
+
+
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_month"/>
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        tools:text="10,000"
+                                        android:id="@+id/tv_single_month_creditcard" />
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_marginLeft="@dimen/x35"
+                    style="@style/seperator"
+                    />
+                    <LinearLayout
+                        android:id="@+id/ljtk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:id="@+id/ll_jsType"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y40"
+                            android:paddingLeft="@dimen/x35"
+                            android:clickable="true"
+                            android:background="@drawable/merchant_jsdz_selector">
+
+                            <TextView
+                                style="@style/style_tv_bottom_yhgl"
+                                android:text="立即提款" />
+
+                            <TextView
+                                android:id="@+id/iv_jsType"
+                                style="@style/style_tv_bottom_yhgl"
+                                android:layout_marginRight="@dimen/common_size_8"
+                                android:layout_toLeftOf="@+id/iv_arrow_go2"
+                                android:text="已开通"
+                                android:textColor="@color/gray_333333" />
+
+
+                            <ImageView
+                                android:id="@+id/iv_arrow_go2"
+                                android:layout_width="@dimen/x10"
+                                android:scaleType="fitCenter"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/common_size_15"
+                                android:src="@drawable/btn_arrow_go_gray" />
+
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:id="@+id/hint2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/x35"
+                            android:paddingBottom="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+                            <View
+                                android:paddingTop="10dp"
+                                style="@style/seperator"
+                                />
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_marginRight="@dimen/common_distance_level_2">
+                                >
+                                <TableRow>
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_account"/>
+                                    <TextView
+                                        android:id="@+id/tv_single_account_creditcard2"
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        tools:text="1,000"/>
+                                    <TextView
+                                        style="@style/text_style_fourteen_gray"
+                                        android:gravity="right"
+                                        android:text="、"
+                                        />
+
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_day"/>
+                                    <TextView
+                                        android:id="@+id/tv_single_day_creditcard2"
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        tools:text="10,000"/>
+                                    <TextView
+                                        style="@style/text_style_fourteen_gray"
+                                        android:gravity="right"
+                                        android:text="、"
+                                        />
+
+
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_month"/>
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        android:text="不限"
+                                        android:id="@+id/tv_single_month_creditcard2" />
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                <View
+                    android:layout_marginLeft="@dimen/x35"
+                    style="@style/seperator"
+                    />
+                    <LinearLayout
+                        android:id="@+id/smsk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:id="@+id/ll_smType"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y40"
+                            android:paddingLeft="@dimen/x35"
+                            android:background="@color/white">
+
+                            <TextView
+                                style="@style/style_tv_bottom_yhgl"
+                                android:text="扫码收款" />
+
+                            <TextView
+                                android:id="@+id/iv_smType"
+                                style="@style/style_tv_bottom_yhgl"
+                                android:layout_marginRight="@dimen/common_size_8"
+                                android:layout_toLeftOf="@+id/iv_arrow_go1"
+                                android:text="已开通"
+                                android:textColor="@color/gray_333333" />
+
+
+                            <ImageView
+                                android:id="@+id/iv_arrow_go1"
+                                android:layout_width="@dimen/x10"
+                                android:scaleType="fitCenter"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/common_size_15"
+                                android:src="@drawable/btn_arrow_go_gray" />
+
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:id="@+id/hint1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="@dimen/x35"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+                            <View
+                                android:paddingTop="10dp"
+                                style="@style/seperator"
+                                />
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_marginRight="@dimen/common_distance_level_2">
+                                >
+                                <TableRow>
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_account"/>
+                                    <TextView
+                                        android:id="@+id/tv_single_account_creditcard1"
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        tools:text="1,000"/>
+                                    <TextView
+                                        style="@style/text_style_fourteen_gray"
+                                        android:gravity="right"
+                                        android:text="、"
+                                        />
+
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_day"/>
+                                    <TextView
+                                        android:id="@+id/tv_single_day_creditcard1"
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        tools:text="10,000"/>
+                                    <TextView
+                                        style="@style/text_style_fourteen_gray"
+                                        android:gravity="right"
+                                        android:text="、"
+                                        />
+
+
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:text="@string/single_month"/>
+                                    <TextView
+                                        android:textColor="@color/gray_999999"
+                                        android:gravity="right"
+                                        android:text="不限"
+                                        android:id="@+id/tv_single_month_creditcard1" />
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                <View
+                    android:layout_marginLeft="@dimen/x35"
+                    style="@style/seperator"
+                    />
+                <LinearLayout
+                    android:id="@+id/desk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:id="@+id/ll_deType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y40"
+                        android:paddingLeft="@dimen/x35"
+                        android:background="@color/white">
+
+                        <TextView
+                            style="@style/style_tv_bottom_yhgl"
+                            android:text="大额收款" />
+
+                        <TextView
+                            android:id="@+id/iv_deType"
+                            style="@style/style_tv_bottom_yhgl"
+                            android:layout_marginRight="@dimen/common_size_8"
+                            android:layout_toLeftOf="@+id/iv_arrow_go3"
+                            android:text="已开通"
+                            android:textColor="@color/gray_333333" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_arrow_go3"
+                            android:layout_width="@dimen/x10"
+                            android:scaleType="fitCenter"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/common_size_15"
+                            android:src="@drawable/btn_arrow_go_gray" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/hint3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        >
+                        <View
+                            android:layout_marginLeft="@dimen/x35"
+                            style="@style/seperator"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/hint31"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/x35"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_31"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/mer_limit_text_size"
+                                android:textColor="@color/gray_666666"
+                                android:text="@string/bankcard_limit"
+                                />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_marginRight="@dimen/common_distance_level_2">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                       style="@style/merchant_daek"
+                                        android:text="@string/single_account"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:id="@+id/tv_single_account_creditcard31"
+                                        tools:text="1,000"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="以上"
+                                        />
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="、"
+                                        />
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:id="@+id/tv_single_day_creditcard31"
+                                        tools:text="10,000"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="以下"
+                                        />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="@string/single_day"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        tools:text="10,000"
+                                        android:id="@+id/tv_single_day_bankcard31" />
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="、"
+                                        />
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="@string/single_month"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        tools:text="10,000"
+                                        android:id="@+id/tv_single_month_bankcard31" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--<View
+                            style="@style/seperator"
+                            />-->
+                        <LinearLayout
+                            android:id="@+id/hint32"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/x35"
+                            android:paddingTop="10dp"
+                            android:orientation="vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/mer_limit_text_size"
+                                android:textColor="@color/gray_666666"
+                                android:text="@string/creditcard_limit" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical"
+                                android:layout_marginRight="@dimen/common_distance_level_2">
+                                >
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="@string/single_account"/>
+                                    <TextView
+                                        android:id="@+id/tv_single_account_32"
+                                        style="@style/merchant_daek"
+                                        tools:text="1,000"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="以上"
+                                        />
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="、"
+                                        />
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:id="@+id/tv_account_32"
+                                        tools:text="10,000"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="以下"
+                                        />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="@string/single_day"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:id="@+id/tv_single_day_creditcard32"
+                                        tools:text="10,000"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="、"
+                                        />
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        android:text="@string/single_month"/>
+                                    <TextView
+                                        style="@style/merchant_daek"
+                                        tools:text="10,000"
+                                        android:id="@+id/tv_single_month_creditcard32" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_marginBottom="10dp"
+                    style="@style/seperator"
+                    />
+            <!--    <RelativeLayout
+                    android:id="@+id/ll_lcType"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y40"
+                    android:background="@color/white">
+
+                    <TextView
+                        style="@style/style_tv_bottom_yhgl"
+                        android:layout_marginLeft="@dimen/common_size_15"
+                        android:text="理财业务" />
+
+                    <TextView
+                        android:id="@+id/iv_lcType"
+                        style="@style/style_tv_bottom_yhgl"
+                        android:layout_marginRight="@dimen/common_size_8"
+                        android:layout_toLeftOf="@+id/iv_arrow_go4"
+                        android:text="已开通"
+                        android:textColor="@color/gray_333333" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_arrow_go4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/common_size_15"
+                        android:src="@drawable/btn_arrow_go_gray" />
+
+                </RelativeLayout>-->
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.lakala.ui.component.OverScrollView>
+
+
+</LinearLayout>

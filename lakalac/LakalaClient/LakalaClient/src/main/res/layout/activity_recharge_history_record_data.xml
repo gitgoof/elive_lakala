@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/app_background_white">
+
+    <TextView
+        android:id="@+id/tips_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="@string/no_recharge_history"
+        android:textAppearance="@style/shoudan_text_white_large_bold"
+        android:textColor="@color/box"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/combination_little_title_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_margin_actionbar"
+            android:text="@string/select_recharge_phonenumber" />
+        <View
+            style="@style/seperator"/>
+
+        <ListView
+            style="@style/listview_style"
+            android:id="@+id/data_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/combination_text_edit_margin_left"
+            android:cacheColorHint="@color/transparence"
+            android:listSelector="@android:color/transparent"
+            android:dividerHeight="0.5dp"
+            android:divider="@color/hint_or_divider_color"
+            android:background="@color/white"
+            android:scrollbars="none" >
+        </ListView>
+        <View
+            style="@style/seperator"/>
+    </LinearLayout>
+
+</LinearLayout>

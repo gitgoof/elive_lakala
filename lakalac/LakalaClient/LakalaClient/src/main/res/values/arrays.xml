@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 特别注意，这个数据千万不能更改！！！！！！！！！！！！！！！！-->
+    <string-array name="jiaoyi_trans_type_array">
+        <item>全部|""</item>
+        <item>信用卡还款|01</item>
+        <item>转账|03</item>
+        <item>消费|04</item>
+        <item>缴费|02</item>
+        <item>其它|05</item>
+    </string-array>
+    <!-- 特别注意，这个数据千万不能更改 ！！！！！！！！！！！！！！！-->
+    <string-array name="jiaoyi_trans_terminal_array">
+      <!--  <item>全部|11</item>-->
+        <item>手机拉卡拉|01</item>
+    <!--    <item>超级盾|02</item>
+        <item>便民终端|03</item>
+        <item>迷你刷卡器|04</item>-->
+    </string-array>
+
+    <!-- 特别注意，这个数据千万不能更改 ！！！！！！！！！！！！！！！-->
+
+</resources>

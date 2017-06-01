@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#EAEAEA"
+              android:orientation="vertical">
+
+    <TextView
+        style="@style/text_style_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_40"
+        android:paddingLeft="@dimen/dimen_20"
+        android:paddingRight="@dimen/dimen_20"
+        android:text="@string/plat_password_security_prompt1"/>
+
+    <TextView
+        style="@style/text_style_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:paddingLeft="@dimen/dimen_20"
+        android:paddingRight="@dimen/dimen_20"
+        android:text="@string/plat_password_security_prompt2"
+        android:textColor="@color/color_gray_727485"/>
+
+    <com.lakala.ui.component.SingleLineTextView
+        android:id="@+id/pay_pwd_question"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_88"
+        android:layout_marginTop="@dimen/dimen_60"
+        android:background="@drawable/ui_common_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_20"
+        android:paddingRight="@dimen/dimen_20"
+        app:enableOnClickItemEvents="false"
+        app:leftIconVisibility="GONE"
+        app:leftText="@string/plat_password_security_prompt3"
+        app:leftTextColor="@color/color_gray_727485"
+        app:leftTextSize="@dimen/font_size_normal"
+        app:rightArrowVisibility="VISIBLE"
+        app:rightTextMarginRight="@dimen/dimen_20"/>
+
+
+    <LinearLayout
+        android:id="@+id/container_answer"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_88"
+        android:layout_marginTop="1dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimen_20"
+            android:text="@string/plat_password_security_label"
+            android:textSize="@dimen/font_size_normal"/>
+
+        <EditText
+            android:id="@+id/et_answer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="@string/plat_password_security_answer_hint"
+            android:inputType="text"
+            android:paddingRight="@dimen/dimen_20"
+            android:textSize="@dimen/font_size_normal"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/plat_common_button"/>
+
+</LinearLayout>

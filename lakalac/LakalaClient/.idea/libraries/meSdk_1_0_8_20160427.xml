@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="meSdk-1.0.8_20160427">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../android_core/libs/meSdk-1.0.8_20160427.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

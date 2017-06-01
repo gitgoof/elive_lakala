@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:layout_height="wrap_content">
+<TextView
+    android:id="@+id/mcc_item_tv"
+   android:text="家用电器"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:textSize="18sp"
+    android:layout_height="wrap_content" />
+<ImageView
+    android:visibility="gone"
+android:layout_gravity="right"
+    android:id="@+id/del"
+    android:src="@drawable/lakala_icon_multiply"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <ImageView
+        android:visibility="gone"
+        android:layout_gravity="right"
+        android:id="@+id/plus"
+        android:src="@drawable/lakala_icon_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="geocoder_location">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LakalaUI/libs/geocoder_location.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_88">
+
+        <TextView
+            android:id="@+id/plat_activity_input_verifycode_lable_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_small"
+            android:text="验证码"
+            android:textColor="@color/gray_666666"
+            android:visibility="visible"
+            android:background="@color/transparent"
+            />
+
+        <com.lakala.ui.component.ClearEditText
+            style="@style/edit_text_num_style"
+            android:background="@color/transparent"
+            android:id="@+id/plat_activity_input_verifycode_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:hint="@string/ui_SMS_verifyCode"
+            android:paddingLeft="@dimen/dimen_24"
+            android:textSize="@dimen/font_size_small"
+            android:singleLine="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:background="@color/gray_d7d7d7"
+            android:layout_width="0.5dp" android:layout_height="match_parent"/>
+
+        <Button
+            android:textSize="@dimen/font_size_small"
+            android:paddingRight="@dimen/dimen_30"
+            android:paddingLeft="@dimen/dimen_15"
+            android:id="@+id/plat_activity_input_get_verifycode_button"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:textColor="@color/ui_text_black_gray_color"
+            android:text="@string/ui_get_verifycode" />
+
+</LinearLayout>

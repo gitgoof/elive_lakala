@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/main_nav_blue"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/text_style_fourteen_white"
+                    tools:text="14.00"
+                    android:layout_marginTop="@dimen/ui_margin_30"
+                    />
+                <Button
+                    android:id="@+id/btn_charge"
+                    style="@style/btn_red"
+                    android:text="@string/recharge"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <ListView
+                android:id="@+id/lv_happy_bean_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+            </ListView>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

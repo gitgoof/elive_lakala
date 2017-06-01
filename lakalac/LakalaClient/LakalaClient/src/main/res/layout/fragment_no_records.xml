@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emptyView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main_gray_color_3.1">
+
+    <ImageView
+        android:id="@+id/img_no_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_no_records"/>
+
+    <TextView
+        android:id="@+id/tv_no_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="亲，还未产生收益哦"
+        android:textColor="@color/combination_title_text_color"
+        android:textSize="@dimen/big_text_size" />
+</LinearLayout>

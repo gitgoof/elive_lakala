@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayoutPopup"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/id_more_browse"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        android:text="手机浏览器打开"
+        android:textColor="@color/black"
+        android:textSize="16.0sp"/>
+
+    <include layout="@layout/ui_divider_line" >
+    </include>
+
+    <TextView
+        android:id="@+id/id_more_copy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        android:text="复制链接"
+        android:textColor="@color/black"
+        android:textSize="16.0sp" />
+
+    <include layout="@layout/ui_divider_line" >
+    </include>
+
+    <TextView
+        android:id="@+id/id_more_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        android:text="取消"
+        android:textColor="@color/black"
+        android:textSize="16.0sp"/>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+    <ImageView
+        android:id="@+id/iv_ad_image"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/add_button_selector"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_ad_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_ad_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_ad_image"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/has_input_edittext_color"
+            android:textSize="@dimen/xxbig_text_size"
+            android:textStyle="bold"
+            tools:text="title"/>
+
+        <TextView
+            android:id="@+id/tv_ad_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ad_title"
+            android:layout_marginTop="13dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/combination_textview_color"
+            android:textSize="@dimen/big_text_size"
+            tools:text="content"/>
+    </LinearLayout>
+</RelativeLayout>

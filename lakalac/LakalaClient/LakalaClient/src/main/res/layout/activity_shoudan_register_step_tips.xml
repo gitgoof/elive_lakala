@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <!-- 提示 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:text="简单三步，完成开通"
+            android:textColor="@color/blue_main_color"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue4"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <!-- 步骤提示 -->
+    <RadioGroup
+        android:id="@+id/rg_step"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rb_base_info"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radio_selector2"
+            android:button="@null"
+            android:checked="true"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="个人信息"
+            android:textColor="@color/text_blue_white_rg_selector"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/btn_arrow_go"/>
+
+        <RadioButton
+            android:id="@+id/rb_merchant_info"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radio_selector2"
+            android:button="@null"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="店铺信息"
+            android:textColor="@color/text_blue_white_rg_selector"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/btn_arrow_go"/>
+
+        <RadioButton
+            android:id="@+id/rb_bank_account_info"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radio_selector2"
+            android:button="@null"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="银行账号"
+            android:textColor="@color/text_blue_white_rg_selector"
+            android:textSize="14sp"/>
+    </RadioGroup>
+
+</LinearLayout>

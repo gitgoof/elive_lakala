@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LakalaClient.iml" filepath="$PROJECT_DIR$/LakalaClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LakalaClient/LakalaClient-LakalaClient.iml" filepath="$PROJECT_DIR$/LakalaClient/LakalaClient-LakalaClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../android_common/LakalaLibCommon.iml" filepath="$PROJECT_DIR$/../android_common/LakalaLibCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../android_core/LakalaLibCore.iml" filepath="$PROJECT_DIR$/../android_core/LakalaLibCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LakalaPlatform/LakalaPlatform.iml" filepath="$PROJECT_DIR$/LakalaPlatform/LakalaPlatform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LakalaUI/LakalaUI.iml" filepath="$PROJECT_DIR$/LakalaUI/LakalaUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PullToRefreshList/PullToRefreshList.iml" filepath="$PROJECT_DIR$/PullToRefreshList/PullToRefreshList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+    </modules>
+  </component>
+</project>

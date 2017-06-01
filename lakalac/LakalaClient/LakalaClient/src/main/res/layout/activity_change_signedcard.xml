@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/app_background_white"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TableLayout
+            android:id="@+id/layout_context"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    android:id="@+id/tv_card_number"
+                    android:padding="12dp"
+                    android:text="储蓄卡卡号"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/tv_card_number_value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparence"
+                    android:gravity="right|center"
+                    android:hint="输入签约银行卡卡号"
+                    android:inputType="numberSigned"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    />
+            </TableRow>
+
+            <View
+                style="@style/seperator"
+                />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    android:id="@+id/tv_bank"
+                    android:padding="12dp"
+                    android:text="开户行"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/tv_bank_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparence"
+                    android:editable="false"
+                    android:gravity="right|center"
+                    android:hint="请选择签约卡开户行"
+                    android:singleLine="true"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/img_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/btn_arrow_go"/>
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_context"
+            android:padding="10dp"
+            android:text="审核通过后，资金将实时转入您本人名下信用卡账户。到期还款日，系统将自动从您绑定的储蓄卡中自动收款。"
+            android:textColor="@color/gray_A4A4A4"
+            android:textSize="12sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/layout_check_pro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tips"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            >
+
+            <CheckBox
+                android:id="@+id/cb_agreen"
+                style="@style/mycheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:checked="true"
+                android:drawablePadding="5dp"
+                android:text="同意"
+                android:textColor="@color/gray_A4A4A4"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_pro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/cb_agreen"
+                android:text="《拉卡拉“替你还”还款委托服务协议》"
+                android:textColor="@color/common_blue_color"
+                android:textSize="14sp"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/btn_commit"
+                style="@style/btn_top_line"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

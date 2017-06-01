@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <net.simonvt.numberpicker.NumberPicker
+            style="@style/NPWidget.Holo.Light.NumberPicker"
+            android:id="@+id/pickerYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tagYear"
+            android:layout_toRightOf="@id/pickerYear"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年"/>
+
+        <net.simonvt.numberpicker.NumberPicker
+            style="@style/NPWidget.Holo.Light.NumberPicker"
+            android:id="@+id/pickerMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tagYear"/>
+
+        <TextView
+            android:id="@+id/tagMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pickerMonth"
+            android:layout_centerVertical="true"
+            android:text="月"/>
+
+        <net.simonvt.numberpicker.NumberPicker
+            style="@style/NPWidget.Holo.Light.NumberPicker"
+            android:id="@+id/pickerDay"
+            android:layout_toRightOf="@id/tagMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tagDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/pickerDay"
+            android:text="日"/>
+    </RelativeLayout>
+</RelativeLayout>

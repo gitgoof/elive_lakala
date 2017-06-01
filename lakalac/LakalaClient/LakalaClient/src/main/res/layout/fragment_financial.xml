@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/gray_eff3f6"
+    android:layout_height="match_parent">
+    <view
+        android:id="@+id/navigation_bar"
+        class="com.lakala.ui.component.NavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_100"
+        android:layout_gravity="center_horizontal"
+        app:textColor="@color/white"
+        app:navBg="@color/main_nav_blue"
+        app:titleMaxLength="12"
+        app:btnTextSize="14sp"
+        app:bottomBg="@color/gray_d7d7d7"
+        app:titleTextSize="17sp"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/common_distance_level_1"
+        android:orientation="vertical"
+        android:background="@color/bg_main_gray_color_3.1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View style="@style/seperator"/>
+      <com.lakala.shoudan.component.IconTextView
+          android:id="@+id/loan"
+          app:left_icon="@drawable/icon_dk"
+          app:name="贷款"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+        <View style="@style/seperator_marginlef_15"/>
+        <com.lakala.shoudan.component.IconTextView
+            android:id="@+id/finance"
+            app:left_icon="@drawable/icon_lc"
+            app:name="理财"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+        <View style="@style/seperator_marginlef_15"/>
+        <com.lakala.shoudan.component.IconTextView
+            android:id="@+id/lc_credit"
+            app:left_icon="@drawable/icon_klxy"
+            app:name="考拉信用"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+        <View style="@style/seperator"/>
+        <View android:layout_marginTop="@dimen/common_distance_level_1"
+            style="@style/seperator"/>
+        <com.lakala.shoudan.component.IconTextView
+            android:id="@+id/credit_card"
+            app:left_icon="@drawable/icon_sbxyk"
+            app:name="申办信用卡"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.lakala.shoudan.component.IconTextView>
+        <View style="@style/seperator"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    style="@style/app_background_white">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.lakala.shoudan.component.SignatureView
+            android:id="@+id/signature"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/gray_f7f7f7"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:id="@+id/top_title"
+            android:padding="3dp"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="@string/cardholder_signature"/>
+
+            <TextView
+                android:clickable="true"
+                style="@style/text_style_normal_blue"
+                android:text="@string/portrait"
+                android:paddingRight="5dp"
+                android:gravity="right"
+                android:layout_toRightOf="@id/tv"
+                android:id="@+id/go_portrait_signature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divide_line"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/top_title"
+            android:background="@color/l_gray_cccccc"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"/>
+
+        <LinearLayout
+            android:id="@+id/sign_layout_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingLeft="@dimen/dimen_10">
+
+            <Button
+                android:id="@+id/re_sign"
+                style="@style/btn_comment_with_stroke"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginLeft="@dimen/order_next_btn_margin_horizontal"
+                android:layout_marginBottom="0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="重新签名"
+                android:layout_weight="1"
+                />
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"/>
+            <Button
+                android:id="@+id/completed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="@dimen/order_next_btn_margin_horizontal"
+                android:layout_marginLeft="0dp"
+                style="@style/btn_top_line"
+                android:layout_marginBottom="0dp"
+                android:text="完成"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

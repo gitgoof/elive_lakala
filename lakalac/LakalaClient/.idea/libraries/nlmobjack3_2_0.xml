@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="nlmobjack3.2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../android_core/libs/nlmobjack3.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:text="12"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@mipmap/ic_launcher"
+    android:textStyle="bold"
+    android:textSize="26dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="15dp"
+    android:shadowColor="#ffffffff"
+    android:shadowDx="0"
+    android:layout_marginRight="50dp"
+    android:shadowDy="-1"
+    android:shadowRadius="-1"
+    android:layout_height="wrap_content"/>

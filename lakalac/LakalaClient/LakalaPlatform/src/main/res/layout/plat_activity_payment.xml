@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+    <!--顶部支付信息-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:background="#88d5ff"
+        android:id="@+id/layout_payment_info">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="拉卡拉 信用卡还款"
+            android:id="@+id/textView"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1000.00元"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#ff1523"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <!--中部余额支付和快捷支付容器-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_payment_info"
+        android:layout_marginTop="10dp"
+        android:id="@+id/payment_container"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/ui_margin_20">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/payment_type_image"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="钱包支付:"
+                android:id="@+id/payment_type_text"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/font_size_normal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更换"
+                android:id="@+id/payment_switch_text"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size_normal"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--底部确定按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ui_margin_20"
+        android:layout_below="@id/payment_container">
+
+        <include layout="@layout/plat_common_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

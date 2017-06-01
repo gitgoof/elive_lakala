@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <requestFocus/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 个人信息-->
+            <TextView
+                style="@style/finance_twelve_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/x12"
+                android:paddingBottom="@dimen/x10"
+                android:text="个人信息"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                android:textSize="@dimen/x12" />
+            <View
+                style="@style/seperator"
+                />
+            <TableLayout
+                android:id="@+id/layout_first"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+            <TableRow
+                android:minHeight="@dimen/order_item_height"
+                >
+
+                <TextView
+                    android:id="@+id/city_tag"
+                    android:layout_height="match_parent"
+                    android:text="@string/loan_city1"
+                    android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                    style="@style/combination_left_textview_style"/>
+
+                <EditText
+                    android:id="@+id/city"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="start"
+                    android:gravity="right|center"
+                    android:hint="@string/loan_city_input1"
+                    android:singleLine="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingRight="@dimen/combination_text_edit_margin_left"
+                    style="@style/combination_right_edittext_style" />
+
+                <ImageView
+                    android:id="@+id/city_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                    android:src="@drawable/btn_arrow_go" />
+            </TableRow>
+
+                <View android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                    style="@style/seperator"
+                    />
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        android:id="@+id/address_tag"
+                        android:layout_height="match_parent"
+                        android:text="@string/loan_address1"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_left_textview_style" />
+
+                    <EditText
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:hint="@string/loan_address_input1"
+                        android:singleLine="true"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_right_edittext_style" />
+                </TableRow>
+
+                <View android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                    style="@style/seperator"
+                    />
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:id="@+id/email_tag"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        android:text="@string/email1"
+                        style="@style/combination_left_textview_style" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:hint="@string/loan_email1"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_right_edittext_style" />
+                </TableRow>
+                <View style="@style/seperator" />
+            </TableLayout>
+
+            <!-- 工作单位信息-->
+            <TextView
+                style="@style/finance_twelve_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/x12"
+                android:paddingBottom="@dimen/x10"
+                android:text="工作单位信息"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                android:textSize="@dimen/x12" />
+            <View style="@style/seperator" />
+            <TableLayout
+                android:id="@+id/layout_second"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:id="@+id/unit_name_tag"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        android:text="@string/unit_name_tag"
+                        style="@style/combination_left_textview_style" />
+
+                    <EditText
+                        android:id="@+id/unit_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:hint="@string/unit_name"
+                        android:singleLine="true"
+                        style="@style/combination_right_edittext_style" />
+                </TableRow>
+                <View android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                    style="@style/seperator" />
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:id="@+id/place_tag"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        android:text="@string/place_tag"
+                        style="@style/combination_left_textview_style" />
+
+                    <EditText
+                        android:id="@+id/place"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:focusableInTouchMode="false"
+                        android:gravity="right|center"
+                        android:hint="@string/place_input"
+                        android:singleLine="true"
+                        style="@style/combination_right_edittext_style" />
+
+                    <ImageView
+                        android:id="@+id/place_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/btn_arrow_go" />
+                </TableRow>
+                <View android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                    style="@style/seperator" />
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        android:id="@+id/uint_address_tag"
+                        android:layout_height="match_parent"
+                        android:text="@string/uint_address_tag"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_left_textview_style" />
+
+                    <EditText
+                        android:id="@+id/uint_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:hint="@string/loan_address_input2"
+                        android:singleLine="true"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_right_edittext_style" />
+                </TableRow>
+                <View android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                    style="@style/seperator" />
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_left_textview_style"
+                        android:text="@string/unit_phone_tag" />
+                    <!-- <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        android:orientation="horizontal" >
+
+                        <include layout="@layout/tel_input"></include>
+                    </LinearLayout>-->
+
+                    <EditText
+                        android:id="@+id/unit_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:minWidth="200dp"
+                        android:gravity="right|center"
+                        android:hint="区号-固定电话-分机号"
+                        android:singleLine="true"
+                        style="@style/combination_right_edittext_style" />
+                </TableRow>
+                <View style="@style/seperator" />
+
+            </TableLayout>
+
+            <!-- 联系人信息-->
+            <TextView
+                style="@style/finance_twelve_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/x12"
+                android:paddingBottom="@dimen/x10"
+                android:text="联系人信息"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                android:textSize="@dimen/x12" />
+            <View style="@style/seperator" />
+            <TableLayout
+                android:id="@+id/layout_third"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        android:id="@+id/contact_name_tag"
+                        android:text="@string/contact_name1"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_left_textview_style" />
+                    <EditText
+                        android:id="@+id/contact_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:hint="@string/contact_name_input1"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        android:singleLine="true"
+                        style="@style/combination_right_edittext_style" />
+                </TableRow>
+                <View android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                    style="@style/seperator" />
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:id="@+id/relatives_tag"
+                        android:layout_height="match_parent"
+                        android:text="手机号码"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_left_textview_style"/>
+
+                    <EditText
+                        android:id="@+id/relatives_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:singleLine="true"
+                        android:inputType="phone"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_right_edittext_style" />
+
+                    <ImageView
+                        android:id="@+id/relatives_tel_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                        android:src="@drawable/icon_contact" />
+                </TableRow>
+                <View android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                    style="@style/seperator" />
+
+            </TableLayout>
+            <TableLayout
+                android:layout_below="@+id/layout_first"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:id="@+id/relatives_relation_tag"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        android:text="亲属关系"
+                        style="@style/combination_left_textview_style" />
+
+                    <EditText
+                        android:id="@+id/relatives_relation"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:hint=" 请选择亲属关系"
+                        android:singleLine="true"
+                        android:focusableInTouchMode="false"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_right_edittext_style" />
+
+                    <ImageView
+                        android:id="@+id/relatives_relation_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                        android:src="@drawable/btn_arrow_go" />
+                </TableRow>
+                <View  style="@style/seperator" />
+            </TableLayout>
+            <View  style="@style/seperator"
+                android:layout_marginTop="30dp"/>
+            <TableLayout
+                android:layout_below="@+id/layout_first"
+                android:id="@+id/layout_four"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+                    <TableRow
+                        android:minHeight="@dimen/order_item_height">
+                        <TextView
+                            android:id="@+id/linkmane_tag"
+                            android:text="紧急联系人姓名"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                            style="@style/combination_left_textview_style" />
+                        <EditText
+                            android:id="@+id/linkman_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:ellipsize="start"
+                            android:hint="请输入紧急联系人姓名"
+                            android:paddingRight="@dimen/combination_text_edit_margin_left"
+                            android:singleLine="true"
+                            style="@style/combination_right_edittext_style" />
+                    </TableRow>
+                    <View android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/seperator" />
+                <TableRow
+                        android:minHeight="@dimen/order_item_height">
+
+                        <TextView
+                            android:id="@+id/linkman_tag"
+                            android:layout_height="match_parent"
+                            android:text="手机号码"
+                            android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                            style="@style/combination_left_textview_style"/>
+
+                        <EditText
+                            android:id="@+id/linkman_tel"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:ellipsize="start"
+                            android:gravity="right|center"
+                            android:singleLine="true"
+                            android:inputType="phone"
+                            android:paddingRight="@dimen/combination_text_edit_margin_left"
+                            style="@style/combination_right_edittext_style" />
+
+                        <ImageView
+                            android:id="@+id/linkman_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                            android:src="@drawable/icon_contact" />
+                    </TableRow>
+                    <View android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/seperator" />
+
+                </TableLayout>
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:id="@+id/linkman_relation_tag"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        android:text="紧急联系人关系"
+                        style="@style/combination_left_textview_style" />
+
+                    <EditText
+                        android:id="@+id/linkman_relation"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:focusableInTouchMode="false"
+                        android:gravity="right|center"
+                        android:hint=" 请选择紧急联系人关系"
+                        android:singleLine="true"
+                        style="@style/combination_right_edittext_style"  />
+
+                    <ImageView
+                        android:id="@+id/linkman_relation_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/btn_arrow_go" />
+                </TableRow>
+                <View  style="@style/seperator" />
+            </TableLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_distance_level_1"
+                android:orientation="horizontal"
+                >
+                <CheckBox
+                    android:id="@+id/cbox_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/mycheckbox"
+                    android:textSize="@dimen/small_text_size"
+                    android:drawablePadding="1dp"
+                    android:checked="true"
+                    android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+                    android:textColor="@color/combination_title_text_color"
+                    android:text="确认以上信息真实有效"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottommenu"
+                android:layout_below="@id/layout_third"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/next"
+                    style="@style/btn_top_line"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next" />
+            </LinearLayout>
+         </LinearLayout>
+    </ScrollView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        style="@style/combination_item_style"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+        android:paddingRight="@dimen/combination_text_edit_margin_left"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/common_distance_level_1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            style="@style/combination_left_textview_style"
+            android:gravity="center"
+            android:text="充值金额(元)"/>
+
+        <TextView
+            android:id="@+id/recharge_amount"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/combination_right_edittext_style"
+            android:inputType="numberDecimal"
+            android:hint="请输入充值金额"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/common_distance_level_1"
+        android:layout_marginTop="@dimen/common_distance_level_3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="充值方式"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/gray_333333"
+            android:text="刷卡支付"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/change_pay_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确认付款"
+        style="@style/btn_top_line"/>
+</LinearLayout>

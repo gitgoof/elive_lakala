@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp">
+    <TextView android:id="@+id/swipe_name_txt"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_alignParentLeft="true"
+              android:textColor="#3a4777"
+              android:text="Q2(03)"
+              android:textSize="16sp"/>
+    <ImageView android:id="@+id/swipe_select_img"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:background="@drawable/ui_check_off"/>
+</RelativeLayout>

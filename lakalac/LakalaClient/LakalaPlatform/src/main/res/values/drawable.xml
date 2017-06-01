@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="white">@color/white</drawable><!--白色-->
+    <drawable name="gray_EFEFEF">@color/color_gray_EFEFEF</drawable>
+    <drawable name="gray_setting">@color/gray_main2</drawable>
+</resources>

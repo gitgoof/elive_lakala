@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="tdsdk-kpl">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LakalaPlatform/libs/tdsdk-kpl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

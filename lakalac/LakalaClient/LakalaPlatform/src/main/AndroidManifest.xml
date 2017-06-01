@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lakala.platform"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
+
+    <application android:allowBackup="false">
+        <activity android:name="com.lakala.platform.swiper.mts.SetSwipeTypeActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.SwipeChooseBlueToothActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.protocal.ProtocalActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.paypwd.PayPwdChangeActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.paypwd.PayPwdFindActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.paypwd.PayPwdForgetActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.paypwd.PayPwdMessageValidActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.paypwd.PayPwdQuestionListActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.paypwd.PayPwdSetActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.paypwd.PayPwdSetQuestionActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.payment.PasswordManageActivity"/>
+        <activity android:name="com.lakala.platform.swiper.mts.map.ZDGLBranchMapActivity"/>
+        <activity
+            android:name=".activity.DebugSettingsActivity"
+            android:label="DebugSettings"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.lakala.platform.activity.BaseCordovaWebActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.lakala.platform.activity.CommonWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customactivityoncrash.activity.DefaultErrorActivity"
+            android:process=":error_activity"
+            android:theme="@style/CustomActivityOnCrashTheme" />
+    </application>
+
+
+
+</manifest>

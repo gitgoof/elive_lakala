@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_add_new_bank_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:background="@drawable/bg_bankaddition"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/twentydp"
+        android:paddingRight="@dimen/common_distance_level_1"
+        android:src="@drawable/add_icon" />
+
+    <TextView
+        style="@style/text_style_twenty_gray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hundp"
+        android:gravity="center_vertical"
+        android:text="@string/add_bank_card" />
+</LinearLayout>

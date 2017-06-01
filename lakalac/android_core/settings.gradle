@@ -1,0 +1,3 @@
+include ':LakalaLibCommon', ':LakalaLibCore'
+
+project(':LakalaLibCommon').projectDir = new File('../LakalaCommonLibrary');

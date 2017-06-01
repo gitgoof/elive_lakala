@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="gfdAgent-release-">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/gfdAgent-release/res" />
+      <root url="jar://$PROJECT_DIR$/LakalaClient/build/intermediates/exploded-aar/gfdAgent-release/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="agin_exit">再次点击退出</string>
+
+    <string name="plat_login">登录</string>
+    <string name="plat_take_photo">拍照</string>
+    <string name="switch_phone_camera">翻转摄像头</string>
+    <string name="device_not_support_photo">该设备不支持摄像头功能</string>
+
+    <!-- 网络不给力 -->
+    <string name="network_fail">网络请求失败</string>
+    <string name="plat_network_unavailable">网络连接失败</string>
+    <string name="plat_http_error">当前网络不给力，请稍候再试</string>
+    <string name="plat_string_length_not_valid">输入长度不能少于%d个</string>
+    <string name="plat_string_cashier_title">拉卡拉支付</string>
+    <string name="plat_error_dialog_title">很抱歉</string>
+    <string name="plat_session_expired">登录已过期,请重新登录</string>
+    <string name="plat_visitor_pay_prompt_first">未注册用户请输入您支付所用银行卡号</string>
+    <string name="plat_visitor_pay_prompt_second">无需登录，有卡就能付</string>
+    <string name="plat_input_card_no">"请输入银行卡号"</string>
+    <string name="submit_audit">提交审核</string>
+
+    <string name="debug_key_used_server_address">debug_key_used_server_address</string>
+    <string name="debug_key_server_address">debug_key_server_address</string>
+    <string name="debug_key_used_remote_sencha">debug_key_used_remote_sencha</string>
+    <string name="debug_key_remote_sencha">debug_key_remote_sencha</string>
+
+    <string name="plat_http_001">服务器证书无效，请检查本地时间是否正确或是否使用了代理服务器</string>
+    <string name="plat_http_002">应答数据无效</string>
+    <string name="plat_http_003">服务器错误</string>
+    <string name="plat_http_004">未知异常</string>
+    <string name="plat_http_server_error">服务器异常,请重新登录</string>
+    <string name="plat_login_state_error">您的登录状态异常，请重新登录</string>
+    <string name="plat_retry">重试</string>
+    <string name="plat_download">正在下载</string>
+
+    <string name="restart_search">重新搜索</string>
+    <string name="reconnect">重新连接</string>
+    <string name="request_open_bluetooth">打开蓝牙</string>
+    <!-- 选择刷卡器 -->
+    <string name="plat_select_swipe">请选择刷卡器型号</string>
+    <string name="plat_select_swipe0">请将刷卡器插入手机的耳机孔</string>
+    <string name="plat_select_swipe1">其他设备</string>
+    <string name="plat_select_swipe2">请确认刷卡器型号，重新拔插刷卡器再试。</string>
+    <string name="plat_dialog_swipe">购买刷卡器</string>
+    <string name="plat_dialog_swipe1">帮助</string>
+    <string name="plat_select_swipe_toast">请选择刷卡器类型!</string>
+    <string name="plat_select_swipe_title">选择型号</string>
+    <string name="plat_select_swipe_btn">保存</string>
+    <string name="plat_select_swipe_getksn_title">刷卡器识别失败</string>
+    <string name="plat_prompt">提示</string>
+    <string name="plat_select_swipe_querylist_hint">刷卡器列表获取失败</string>
+    <string name="plat_swipe_cancel">取消</string>
+    <string name="plat_swipe_retry">重试</string>
+    <string name="plat_read_card_again">重新读卡</string>
+    <string name="plat_swipe_buy">获取刷卡器</string>
+    <string name="plat_swipe_insert_hint">请将刷卡器插入手机的耳机孔</string>
+    <string name="plat_swipe_help">使用说明</string>
+    <string name="plat_swipe_please_swipe">请刷卡或插入IC卡</string>
+    <string name="plat_swipe_citiaoka">请刷磁条卡</string>
+    <string name="plat_swipe_reading_card">正在读取卡数据...</string>
+    <string name="plat_swipe_starting_card">正在启动刷卡器...</string>
+    <string name="plat_swipe_error_hint">读卡失败,请重新刷卡</string>
+    <string name="plat_swipe_readIC_error">读IC卡失败，点击“重新刷卡”重试</string>
+    <string name="plat_read_card_error">刷卡（读卡）失败，点击“重新刷卡”重试</string>
+    <string name="plat_swipe_input_password">请输入密码</string>
+    <string name="plat_swipe_iccard_demotion_used">您使用的是银行IC卡，请插卡使用</string>
+    <string name="plat_iccard_demotion_used">不支持磁条卡刷卡查询，请插入芯片卡</string>
+    <string name="plat_swipe_input_password_hint">请在设备终端上输入银行卡密码，输入完成后按“确认”按钮完成支付</string>
+    <string name="plat_swipe_input_password_timeout_title">等待超时</string>
+    <string name="plat_swipe_input_password_timeout_hint">输入密码超时，请重新刷卡并在1分钟内输入密码</string>
+    <string name="plat_swipe_retry_swipe">重新刷卡</string>
+    <string name="plat_swipe_bind">开通刷卡器</string>
+    <string name="plat_swipe_bind_now">现在开通</string>
+    <string name="plat_swipe_bind_finish">开通完成</string>
+    <string name="plat_swipe_timeout_title">超时,请重新刷卡或插入IC卡</string>
+    <string name="plat_swipe_disabled">刷卡器无法使用</string>
+    <string name="plat_swipe_retry_select">重新选择</string>
+    <string name="plat_swipe_prompt_swipe_error_hint">刷卡器加载失败</string>
+    <string name="plat_swipe_prompt_communication_error_hint">网络通讯异常，请检查您的网络</string>
+    <string name="plat_swipe_prompt_bind_finish_hint">您已成功开通刷卡器，并与登录手机号码绑定，欢迎使用。</string>
+    <string name="plat_swipe_prompt_bind_swipe_error_hint">开通刷卡器异常</string>
+    <string name="plat_swipe_prompt_swipe_signin_error_hint">刷卡器认证失败</string>
+    <string name="plat_swipe_prompt_unbind">欢迎使用拉卡拉手机刷卡器，我们发现您的刷卡器没有开通。</string>
+    <string name="plat_swipe_prompt_disabled">您使用的刷卡器不可用，请检查您的刷卡器或更换其他刷卡器。</string>
+    <string name="plat_swipe_prompt_conflict0">此刷卡器已与</string>
+    <string name="plat_swipe_prompt_conflict1">的用户绑定，请使用该手机号重新登录或插上您的刷卡器。</string>
+    <string name="replacephonenumberprotocol">更换登录手机号说明</string>
+    <string name="plat_emv_finished_toast">交易成功，请拔出您的银行卡</string>
+    <string name="plat_credit">了解无卡还款</string>
+    <string name="plat_common_question">常见问题</string>
+    <string name="plat_credit_top_hint">使用无卡支付，不用刷卡器也能还款噢！</string>
+    <string name="plat_swipe_error_credit_content">请确认刷卡器型号，重新拔插刷卡器再试。使用无卡支付，不用刷卡器也能还款噢！</string>
+    <string name="plat_swipe_error_credit_left_button">如何解决</string>
+    <string name="plat_swipe_error_credit_right_button">无卡还款</string>
+    <string name="plat_set_swipe_close">关闭</string>
+
+
+    <!-- 密保问题 -->
+    <string name="plat_password_security_find_pay_pwd_title">找回支付密码</string>
+    <string name="plat_password_security_find_pay_pwd_message">找回支付密码需要先设置密保问题</string>
+    <string name="plat_password_security_title">设置密保问题</string>
+    <string name="plat_password_security_title1">密保问题</string>
+    <string name="plat_password_security_prompt0">请回答以下密保问题，以验证身份</string>
+    <string name="plat_password_security_prompt1">密保问题用于找回密码等操作，是验证身份、保护账户安全的重要手段</string>
+    <string name="plat_password_security_prompt2">为避免遗忘，请填写真实信息</string>
+    <string name="plat_password_security_prompt3">请选择密保问题</string>
+    <string name="plat_password_security_prompt4">请输入密保问题答案</string>
+    <string name="plat_password_security_prompt5">无密保问题</string>
+    <string name="plat_password_security_label">答案：</string>
+    <string name="plat_password_security_answer_hint">输入你的答案</string>
+    <string name="plat_password_security_miss_text">忘记答案</string>
+    <string name="plat_password_security_phone_text">客服电话</string>
+    <string name="plat_password_security_miss_text_prompt">非常抱歉，由于您没有设置密保问题，请与拉卡拉客服联系，客服人员会帮助您找回密码</string>
+    <string name="plat_password_security_miss_text_prompt1">非常抱歉，忘记密保答案，请与拉卡拉客服联系，客服人员会帮助您找回支付密码</string>
+    <string name="plat_password_change_password_prompt">您输入的支付密码与原有支付密码相同,请重新输入</string>
+    <string name="plat_input_pay_password_prompt">请输入6位数字作为拉卡拉支付密码</string>
+    <string name="plat_input_pay_password_prompt_again">请再输入一次</string>
+    <string name="plat_input_pay_password_null">请输入登录密码</string>
+    <string name="plat_input_pay_password_error">请输入正确的6位支付密码</string>
+    <string name="plat_set_gesture_password">设置手势密码</string>
+    <string name="plat_set_gesture_password_prompt">绘制解锁图案</string>
+    <string name="plat_set_success">设置成功</string>
+    <string name="plat_phone_no_get_sms_code">请输入手机尾号 %s 收到的短信验证码</string>
+    <string name="plat_send_message_verifycode">发送短信验证码中...</string>
+    <string name="plat_set_pay_password_notice_wallet">您的账户尚未设置支付密码，为了您的账户安全，请设置支付密码，完成支付密码设置后，方可使用钱包业务。</string>
+    <string name="plat_set_pay_password_notice_fund">您的账户尚未设置支付密码，为了您的账户安全，请设置支付密码，完成支付密码设置后，方可使用赚点钱业务。</string>
+    <string name="plat_pay_wallet_none_question_prompt">您的账户尚未设置支付密码保护问题，为了您的账户安全，请设置密保问题，完成密保问题设置后，方可使用钱包业务。</string>
+    <string name="plat_pay_fund_none_question_prompt">您的账户尚未设置支付密码保护问题，为了您的账户安全，请设置密保问题，完成密保问题设置后，方可使用赚点钱业务。</string>
+    <string name="plat_set_pay_input_password">请输入当前支付密码</string>
+    <string name="plat_to_set_pay_password">去设置</string>
+    <string name="plat_set_pay_password">设置拉卡拉支付密码</string>
+    <string name="plat_password_not_same">两次输入的密码不一致</string>
+    <string name="plat_plese_input_your_password_error">请输入正确的8~32位密码</string>
+    <string name="plat_forget_password_title">忘记密码?</string>
+    <string name="managepwd_set_paypwd">设置支付密码</string>
+    <string name="managepwd_change_paypwd">修改支付密码</string>
+    <string name="managepwd_find_paypwd">找回支付密码</string>
+    <string name="managepwd_set_paypwd_problem">设置密保问题</string>
+    <string name="managepwd_change_loginpwd">修改登录密码</string>
+    <string name="managepwd_change_gesturepwd">手势密码</string>
+    <string name="managepwd_modify_gesturepwd">修改手势密码</string>
+    <string name="managepwd_modify_gesturepwd_decription">进入拉卡拉客户端时使用，保护您的账户安全。</string>
+    <string name="managepwd_show_password">显示密码</string>
+    <string name="managepwd_new_password">新密码</string>
+    <string name="accountsafe_managepwd">密码管理</string>
+
+
+    <!--分享-->
+    <string name="share_success">分享成功</string>
+    <string name="share_failed">分享失败</string>
+    <string name="share_canceled">取消分享</string>
+    <string name="share_deny">发送被拒</string>
+    <string name="share_unknown">未知错误</string>
+    <string name="wechat_not_installed">未安装微信客户端</string>
+    <string name="moment_not_supported">当前微信版本过低不支持分享到朋友圈功能</string>
+
+
+</resources>

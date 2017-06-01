@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:paddingLeft="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="right"
+        android:minWidth="@dimen/dimen_90"
+        android:orientation="horizontal">
+
+        <com.lakala.shoudan.component.CustomTextView
+            android:id="@+id/tv_price_tag"
+            style="@style/text_style_fourteen_blue_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+            <com.lakala.shoudan.component.CustomTextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="10"
+                android:textColor="@color/blue_text"
+                android:textSize="40sp"/>
+
+            <TextView
+                android:id="@+id/tv_coupon_tag"
+                style="@style/text_style_ten_blue_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_amount"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="代金券"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_distance_level_1"
+        android:layout_marginRight="34dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_integral"
+            style="@style/text_style_fourteen_blue_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="需920积分"/>
+
+        <TextView
+            android:id="@+id/tv_note"
+            style="@style/text_style_eleven_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            tools:text="仅好邻居店使用"/>
+
+        <LinearLayout
+            android:id="@+id/ll_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_more"
+                style="@style/text_style_eleven_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"/>
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_arrow_down_blue"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_exchange"
+        android:layout_width="40dp"
+        android:layout_height="25sp"
+        android:layout_marginRight="@dimen/common_distance_level_1"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/bg13b3cd_corner_shape"
+        android:gravity="center"
+        android:text="兑换"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small_text_size"/>
+</TableRow>

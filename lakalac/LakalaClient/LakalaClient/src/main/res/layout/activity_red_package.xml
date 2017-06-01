@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/common_navigation_bar"/>-->
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/common_distance_level_1"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/rb_unuse"
+            style="@style/message_center_tab_style"
+            android:checked="true"
+            android:text="未使用"
+            android:background="@drawable/radio_left_tab_bg_selector"/>
+
+        <ImageView
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/message_center_blue"/>
+        <RadioButton
+            android:id="@+id/rb_using"
+            style="@style/message_center_tab_style"
+            android:text="已使用"
+            android:background="@drawable/radio_center_tab_bg_selector"/>
+
+        <ImageView
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/message_center_blue"/>
+        <RadioButton
+            android:id="@+id/rb_outdate"
+            style="@style/message_center_tab_style"
+            android:text="已过期"
+            android:background="@drawable/radio_right_tab_bg_selector"/>
+
+
+    </RadioGroup>
+    <View
+        style="@style/seperator"/>
+
+    <FrameLayout
+        android:id="@+id/red_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

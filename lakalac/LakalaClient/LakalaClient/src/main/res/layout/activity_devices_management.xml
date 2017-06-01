@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    style="@style/app_background_white">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/gray_666666"
+            android:padding="10dp"
+            android:src="@drawable/connect_set"
+            android:visibility="gone" />
+
+		<RelativeLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+
+		    <TextView
+		        android:id="@+id/connection_title"
+		        style="@style/shoudan_text_medium_black"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="10dp"
+		        android:gravity="center_horizontal"
+		        android:padding="5dp"
+		        android:text="当前设备" />
+
+		    <TextView
+		        android:visibility="gone"
+		        android:id="@+id/connection_device_type"
+		        style="@style/shoudan_text_medium_black"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:gravity="center_horizontal"
+		        android:layout_marginRight="10dp"
+		        android:text="已通过蓝牙/音频连接"
+		        android:padding="5dp"
+		        />
+		</RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_current_device"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <View style="@style/seperator" />
+            <RelativeLayout 
+                android:id="@+id/layout_tips_connect"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                >
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请在列表中选择设备或添加新设备进行连接"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_cennecting"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal" >
+                
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_sure"
+                    android:visibility="gone"
+                    android:src="@drawable/icon_slected"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_sure"
+                    android:id="@+id/connection_device_name"
+                    style="@style/shoudan_text_medium_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lakala_000000000001"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <View style="@style/seperator" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/shoudan_text_medium_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:text="选择其他连接设备" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_box_nomarl_black"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/deviceList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/u11_line"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+</LinearLayout>

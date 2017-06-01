@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              style="@style/app_background_white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/combination_textview_color"
+        android:textSize="@dimen/medium_text_size"
+        android:layout_marginTop="@dimen/content_margin_actionbar"
+        android:layout_marginLeft="@dimen/combination_text_edit_margin_left"
+        android:layout_marginRight="@dimen/combination_text_edit_margin_left"
+        android:text="非常抱歉，忘记密保答案请与拉卡拉客服联系，客服人员会帮助您找回支付密码。如需查询客服电话请参考：更多-使用帮助-关于售后"/>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/back"
+    android:layout_height="match_parent">
+    <TextView
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:textColor="@color/font_gray_two"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:background="#eff3f5"
+        android:text="银行卡连接刷卡器后，会自动获取您的银行卡号"
+        android:layout_height="40dp" />
+    <TextView
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:textColor="@color/font_gray_one"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:text="系统自动获取您的卡号为："
+        android:layout_height="40dp" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/tv_card_no"
+            android:textColor="@color/font_gray_one"
+            android:textSize="14sp"
+            android:text="622700**** ****8765"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:clickable="true"
+            android:background="@drawable/ll_swi"
+            android:id="@+id/tv_re_get"
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="重新获取"
+            android:gravity="center"
+            android:textColor="@color/text_blue"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pic_processnot"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/bt_ok"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_topline_selector"/>
+</LinearLayout>

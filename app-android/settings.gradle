@@ -1,2 +1,0 @@
-include ':app', ':android-volley-master', ':pickerview', ':lib', ':dropdownmenu', ':mygroupviewtest'
-include ':Android-PullToRefresh-master'

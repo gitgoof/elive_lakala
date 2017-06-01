@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/viewgroup"
+              style="@style/app_background_white"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+    <!-- 基本资料 -->
+
+    <ScrollView
+        android:id="@+id/scroll_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_margin_actionbar"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:id="@+id/credit_cardno_tag"
+                        style="@style/combination_left_textview_style"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        android:text="@string/credit_card_NO"
+                        />
+
+                    <EditText
+                        android:phoneNumber="true"
+                        android:id="@+id/credit_cardno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:hint="@string/input_credit_card_NO"
+                        android:singleLine="true"
+                        style="@style/combination_right_edittext_style" />
+                </TableRow>
+
+                <ImageView
+                    style="@style/combination_seperator_style"/>
+
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+                    <TextView
+                        android:id="@+id/openbank_tag"
+                        android:text="@string/receiver_phone_open_bank"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_left_textview_style" />
+
+                    <TextView
+                        android:id="@+id/openbank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:hint="@string/input_receiver_phone_open_bank"
+                        android:singleLine="true"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_right_edittext_style" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/support_bank_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/watch_support_bank"
+                android:textSize="@dimen/dimen_24"
+                android:textColor="@color/common_blue_color"
+                android:layout_marginRight="@dimen/common_distance_level_1"
+                android:layout_marginTop="@dimen/common_distance_level_1"/>
+
+            <TextView
+                style="@style/combination_little_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_distance_level_1"
+                android:text="@string/qyuebank_info"/>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:id="@+id/savingcard_tag"
+                        android:text="@string/depositCardNo"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_left_textview_style" />
+
+                    <EditText
+                        android:phoneNumber="true"
+                        android:id="@+id/savingcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        android:hint="@string/depositCardNo_input1"
+                        android:singleLine="true"
+                        style="@style/combination_right_edittext_style" />
+                </TableRow>
+
+                <ImageView
+                    style="@style/combination_seperator_style"/>
+
+                <TableRow
+                    android:minHeight="@dimen/order_item_height">
+
+                    <TextView
+                        android:id="@+id/savingcard_openbank_tag"
+                        android:text="@string/receiver_phone_open_bank"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/combination_text_edit_margin_left"
+                        style="@style/combination_left_textview_style" />
+
+                    <TextView
+                        android:id="@+id/savingcard_openbank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/combination_text_edit_margin_left"
+                        android:layout_weight="1"
+                        android:ellipsize="start"
+                        android:gravity="right|center"
+                        android:hint="@string/select_depositCard_bank"
+                        android:singleLine="true"
+                        style="@style/combination_right_edittext_style" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/saving_bank_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/watch_support_bank"
+                android:textSize="@dimen/dimen_24"
+                android:textColor="@color/common_blue_color"
+                android:layout_marginRight="@dimen/common_distance_level_1"
+                android:layout_marginTop="@dimen/common_distance_level_1"/>
+
+            <TextView
+                style="@style/combination_little_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="0dp"
+                android:text="@string/loan_bank_info"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="@dimen/combination_text_edit_margin_left">
+
+                <CheckBox
+                    android:id="@+id/protocol_lakala_payforyou"
+                    style="@style/mycheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accept_text"
+                    android:textColor="@color/black"
+                    android:checked="true"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/scanagreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/small_text_size"
+                    android:text="@string/lkl_protocol_foryou"
+                    android:textColor="@color/common_blue_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottommenu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/next"
+                    style="@style/btn_top_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true" >
+        <include layout="@layout/layout_keyboard" />
+    </RelativeLayout>
+</RelativeLayout>

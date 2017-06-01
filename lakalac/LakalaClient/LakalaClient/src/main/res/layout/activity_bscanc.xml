@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_storeCode"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x13">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/pic_lakala_logo" />
+
+        <TextView
+            android:id="@+id/tv_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x14"
+            android:text="帮助"
+            android:textColor="@color/main_nav_blue"
+            android:textSize="@dimen/x15" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_barcode_merchant"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x300"
+        android:layout_marginLeft="@dimen/x13"
+        android:layout_marginRight="@dimen/x13"
+        android:background="@drawable/square_barcode_linearound">
+
+        <TextView
+            android:id="@+id/merchant_shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x16"
+            android:text="我的商铺"
+            android:textColor="@color/has_input_edittext_color"
+            android:textSize="@dimen/x17" />
+
+        <View
+            android:id="@+id/divide_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/merchant_shopname"
+            android:layout_marginLeft="@dimen/x18"
+            android:layout_marginRight="@dimen/x18"
+            android:background="@color/hint_or_divider_color" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/divide_line"
+            android:layout_marginLeft="@dimen/x18"
+            android:layout_marginRight="@dimen/x18">
+
+            <RelativeLayout
+                android:id="@+id/rl_code_active_fail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_barcode_status"
+                    android:layout_width="@dimen/x222"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/x30"
+                    android:lineSpacingExtra="@dimen/x6"
+                    android:text="@string/barCodeInactive"
+                    android:textColor="@color/amount_color"
+                    android:textSize="@dimen/x14" />
+
+                <ImageView
+                    android:id="@+id/iv_nobarcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/x98"
+                    android:src="@drawable/pic_qrcode" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_code_active_success"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_barcode"
+                    android:layout_width="@dimen/x174"
+                    android:layout_height="@dimen/x174"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/x13"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pic_addwechat_qrcode" />
+
+                <ImageView
+                    android:id="@+id/iv_barcode_center"
+                    android:layout_width="@dimen/x195"
+                    android:layout_height="@dimen/x195"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pic_addwechat_qrcode"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_savebarcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/iv_barcode"
+                    android:layout_marginRight="@dimen/x23"
+                    android:layout_marginTop="@dimen/x13"
+                    android:text="保存图片"
+                    android:textColor="@color/main_nav_blue"
+                    android:textSize="@dimen/x14" />
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_size_15">
+
+        <TextView
+            android:id="@+id/tv_des_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x13"
+            android:text="@string/pay_style"
+            android:textColor="@color/light" />
+
+
+        <ImageView
+            android:id="@+id/pay_ali"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tv_des_pay"
+            android:layout_marginLeft="@dimen/x13"
+            android:src="@drawable/pic_zfb_logo"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/pay_baidu"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tv_des_pay"
+            android:layout_marginLeft="@dimen/ui_margin_30"
+            android:layout_toRightOf="@+id/pay_ali"
+            android:src="@drawable/pic_bdqb_logo"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/pay_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_des_pay"
+            android:layout_toRightOf="@+id/pay_baidu" />
+
+        <TextView
+            android:id="@+id/tv_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_des_pay"
+            android:layout_toRightOf="@+id/pay_baidu"
+            android:text="支持现在主流的扫码支付"
+            android:textColor="@color/font_gray_three3"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

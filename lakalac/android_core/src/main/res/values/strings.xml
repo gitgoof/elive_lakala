@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">拉卡拉收款宝</string>
+    <string name="core_upgrade_lakala">更新</string>
+    <string name="core_download_lakala">开始下载收款宝</string>
+    <string name="core_downloading_lakala">正在下载收款宝</string>
+    <string name="core_downloading_progress">正在下载收款宝%d</string>
+    <string name="core_download_lakala_complete">下载收款宝完成</string>
+    <string name="core_download_lakala_complete_prompt">下载收款宝完成,确定安装</string>
+    <string name="core_download_lakala_fail">下载拉卡拉失败</string>
+    <string name="core_install">安装</string>
+    <string name="core_tips">提示</string>
+
+
+    <string name="contents_contact">联系人信息</string>
+    <string name="contents_email">Email地址</string>
+    <string name="contents_location">地理坐标</string>
+    <string name="contents_phone">电话号码</string>
+    <string name="contents_sms">短信地址</string>
+    <string name="contents_text">纯文本</string>
+    <string name="button_ok">确定</string>
+    <string name="button_open_browser">打开浏览器</string>
+    <string name="button_product_search">打开产品搜索</string>
+    <string name="button_search_book_contents">搜索图书内容</string>
+    <string name="button_share_app">共享应用</string>
+    <string name="button_share_bookmark">分享书签</string>
+    <string name="button_share_by_email">通过email分享</string>
+    <string name="button_share_by_sms">通过短信分享</string>
+    <string name="button_share_clipboard">分享剪切板</string>
+    <string name="button_share_contact">分享联系人</string>
+    <string name="button_show_map">显示地图</string>
+    <string name="button_sms">发送短信</string>
+    <string name="button_exit_logout">退出登录</string>
+    <string name="button_web_search">网页搜索</string>
+    <string name="button_wifi">连接到网络</string>
+    <string name="bookmark_picker_name">书签</string>
+    <string name="button_add_calendar">添加事件至日历</string>
+    <string name="button_add_contact">添加联系人</string>
+    <string name="button_book_search">打开图书搜索</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_custom_product_search">自定义搜索</string>
+    <string name="now_fill">现在填写</string>
+    <string name="button_dial">拨号</string>
+    <string name="button_email">发送email</string>
+    <string name="button_get_directions">获取地址</string>
+    <string name="button_mms">发送彩信</string>
+    <string name="msg_default_mms_subject">Hi</string>
+    <string name="msg_bulk_mode_scanned">批量扫描：找到条码，已保存</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="msg_default_status">将二维码置于取景框内,即可自动扫描</string>
+    <string name="result_decode_fail">二维码解析失败</string>
+    <string name="msg_intent_failed">抱歉，无法打开所需软件。 条码内容可能无效。</string>
+    <string name="result_address_book">找到联系人信息</string>
+    <string name="result_calendar">找到日历事件</string>
+    <string name="result_email_address">找到email地址</string>
+    <string name="result_geo">找到地理坐标</string>
+    <string name="result_isbn">找到图书</string>
+    <string name="result_product">找到产品</string>
+    <string name="result_sms">找到短信地址</string>
+    <string name="result_tel">找到电话号码</string>
+    <string name="result_text">找到纯文本</string>
+    <string name="result_uri">找到URL</string>
+    <string name="result_wifi">发现网络配置</string>
+    <string name="wifi_changing_network">请求连接到网络\u2026</string>
+    <string name="wifi_ssid_label">网络SSID</string>
+    <string name="wifi_type_label">类型</string>
+    <string name="bankcard_default_status">请将银行卡正面置于取景框内并对齐边缘</string>
+
+
+<!--分享相关的 String -->
+    <string name="core_weibo_oauth_regiseter">应用授权</string>
+    <string name="core_website">http://www.shareSDK.cn</string>
+    <string name="core_weibo_upload_content">分享图片</string>
+    <string name="core_sinaweibo">新浪微博</string>
+    <string name="core_qzone">QQ空间</string>
+    <string name="core_wechat">微信好友</string>
+    <string name="core_wechatmoments">微信朋友圈</string>
+    <string name="core_wechatfavorite">微信收藏</string>
+    <string name="core_email">邮件</string>
+    <string name="core_qq">QQ</string>
+    <string name="core_share_to_qzone">分享到QQ空间</string>
+    <string name="core_more">更多</string>
+    <string name="core_sm_item_demo">接口</string>
+    <string name="core_sm_item_auth">授权</string>
+    <string name="core_sm_item_wechat">微信</string>
+    <string name="core_sm_item_fl_weibo">关注新浪微博</string>
+    <string name="core_sm_item_fl_tc">关注腾讯微博</string>
+    <string name="core_sm_item_visit_wechat">关注官方微信</string>
+    <string name="core_sm_item_visit_website">关注官方网站</string>
+    <string name="core_plz_choose_wechat">请选择微信客户端完成操作</string>
+    <string name="core_get_user_info_format">获取%s授权用户资料</string>
+    <string name="core_get_other_info_format">获取%s其他用户资料</string>
+    <string name="core_share_to_format">分享到%s</string>
+
+    <string name="core_demo_get_my_info">获取授权用户资料</string>
+    <string name="core_demo_get_other_info">获取其他用户资料</string>
+    <string name="core_not_yet_authorized">尚未授权</string>
+    <string name="core_share_content">ShareSDK for Android不仅集成简单、支持如QQ好友、微信、新浪微博、腾讯微博等所有社交平台，而且还有强大的统计分析管理后台，实时了解用户、信息流、回流率、传播效应等数据，详情见官网http://sharesdk.cn @ShareSDK</string>
+    <string name="core_share_content_short">ShareSDK不仅集成简单、支持如微信、新浪微博、腾讯微博等社交平台，而且还有强大的统计分析管理后台，实时了解用户、信息流、回流率、传播效应等数据，详情见官网http://sharesdk.cn @ShareSDK</string>
+    <string name="core_evenote_title">这是一个神奇的SDK</string>
+
+    <string name="core_file_upload">文件分享</string>
+    <string name="core_share_to_wechat">微信好友</string>
+    <string name="core_share_to_moment">微信朋友圈</string>
+    <string name="core_share_to_favorite">微信收藏</string>
+    <string name="core_wechat_demo_title">微信分享Demo标题</string>
+
+
+    <string name="login_pwd">登入密码</string>
+    <string name="input_login_pwd">请输入登入密码</string>
+
+<!--分享相关的 String 结束 -->
+
+<!--刷卡器-->
+    <string name="core_please_swipe_card">请刷卡</string>
+
+</resources>

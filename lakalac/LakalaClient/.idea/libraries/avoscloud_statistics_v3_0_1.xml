@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="avoscloud-statistics-v3.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LakalaPlatform/libs/avoscloud-statistics-v3.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

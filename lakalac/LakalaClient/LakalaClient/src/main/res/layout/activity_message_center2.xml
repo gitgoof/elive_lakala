@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/item_message_center" />
+
+    <RelativeLayout
+        android:id="@+id/rl_trade"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y37"
+        android:background="@drawable/whiteitem_longclick">
+
+        <TextView
+            android:id="@+id/tv_msgType_trade"
+            style="@style/style_tv_msg_center"
+            android:text="交易通知" />
+
+        <ImageView
+            android:id="@+id/iv_msgType_trade"
+            style="@style/style_iv_msg_center"
+            android:layout_toLeftOf="@+id/iv_arrow_go2"
+            android:src="@drawable/pic_jytzz" />
+
+        <ImageView
+            android:id="@+id/iv_unread_trade"
+            style="@style/style_unread_msg_center"
+            android:visibility="invisible"
+            android:layout_toLeftOf="@+id/iv_arrow_go2"
+            android:src="@drawable/pic_prompt" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_go2"
+            style="@style/style_arrow_go"
+            android:src="@drawable/btn_arrow_go_gray" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/seperator"
+        android:layout_marginLeft="@dimen/common_size_15" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bus"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y37"
+        android:background="@drawable/whiteitem_longclick">
+
+        <TextView
+            android:id="@+id/tv_msgType_bus"
+            style="@style/style_tv_msg_center"
+            android:text="业务通知" />
+
+        <ImageView
+            android:id="@+id/iv_msgType"
+            style="@style/style_iv_msg_center"
+            android:layout_toLeftOf="@+id/iv_arrow_go3"
+            android:src="@drawable/pic_ywtzz" />
+
+        <ImageView
+            android:id="@+id/iv_unread_bus"
+            style="@style/style_unread_msg_center"
+            android:visibility="invisible"
+            android:layout_toLeftOf="@+id/iv_arrow_go3"
+            android:src="@drawable/pic_prompt" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_go3"
+            style="@style/style_arrow_go"
+            android:src="@drawable/btn_arrow_go_gray" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line_trade"
+        style="@style/seperator" />
+
+</LinearLayout>

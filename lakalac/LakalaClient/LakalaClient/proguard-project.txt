@@ -1,0 +1,343 @@
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in /Applications/Android Studio.app/sdk/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+-dontwarn
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-allowaccessmodification
+-verbose
+-ignorewarnings
+-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*,!class/unboxing/enum
+
+-printmapping mapping.txt
+-useuniqueclassmembernames
+-keepattributes SourceFile,LineNumberTable
+-keepattributes InnerClasses
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
+-keep public class cn.com.fmsh.cube.driver.* { public *;protected *; }
+-keep public class com.lakala.android.swiper.adapter.* { public *; }
+-keep public class com.lakala.lphone.** {*;}
+-keep public class com.uart.jnilib.** {*;}
+-keep public class com.avos.** {*;}
+-keep public class com.newland.** {*;}
+-keep public class com.mechat.** {*;}
+-keep public class org.apache.** {*;}
+-keep public class com.loopj.android.** {*;}
+-keep public class com.alibaba.fastjson.** {*;}
+-keep public class com.lakala.platform.bean.** {*;}
+-keep class com.lakala.shoudan.activity.wallet.request.** {*;}
+
+-keep public class com.lakala.platform.swiper.** {*;}
+-keep class com.baidu.** {*;}
+-keep class * implements java.io.Serializable
+
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** v(...);
+    public static *** i(...);
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+#keep全部R文件
+-keep class **.R$* {
+    *;
+}
+
+#sqlcipher
+-keep class net.sqlcipher.** {
+    *;
+}
+
+-keep public class net.sqlcipher.database.** {
+    *;
+}
+
+# phonegap
+-keepattributes *Annotation*
+-keep class com.lakala.core.cordova.** { *; }
+-keep public class * extends com.lakala.core.cordova.cordova.CordovaPlugin
+
+#zxing
+-keep class com.google.zxing.** { *; }
+
+-keep class com.crashlytics.** { *; }
+-keep class android.support.v4.app.** { *; }
+-keep interface android.support.v4.app.** { *; }
+
+#taibao insurance
+-keep class cn.newtouch.cpic.policy.** {
+    *;
+}
+
+#butterknife
+-dontwarn butterknife.internal.**
+-keep class **$$ViewInjector { *; }
+-keepnames class * { @butterknife.InjectView *;}
+
+
+#keep butter knife
+-keep class butterknife.** { *; }
+-keepclasseswithmembernames class butterknife.** { *; }
+-dontwarn butterknife.internal.**
+-keep class **$$ViewBinder { *; }
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <fields>;
+}
+-keepclasseswithmembernames class * {
+    @butterknife.* <methods>;
+}
+
+#ignore warning
+-dontwarn com.squareup.picasso.**
+-dontwarn com.google.common.**
+
+#微客服appkefu
+-keep class com.appkefu.** {*;}
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+
+#收单
+#理财
+#-keep com.sa.** { *;}
+#-keep com.mapabc.** { *;}
+#-keep com.nineoldandroids.** { *;}
+#-keep com.baidu.** { *;}
+-keep class com.lakala.shoudan.activity.shoudan.finance.bean.** { *; }
+-keepclassmembers class com.lakala.shoudan.activity.shoudan.finance.bean.** { *; }
+-keep class * extends com.lakala.shoudan.common.net.volley.BaseRequest { *; }
+-keepclassmembers class * extends com.lakala.shoudan.common.net.volley.BaseRequest {*;}
+-keep class com.lakala.shoudan.common.net.volley.**{*;}
+-keepclassmembers class com.lakala.shoudan.common.net.volley.** {*;}
+
+#keep zbar decoder
+-keep class com.dtr.zbar.** {*;}
+#keep weixin
+-keep class com.tencent.mm.sdk.** {*;}
+#keep weibo
+-keep class com.sina.weibo.sdk.** {*;}
+# avos sdk # proguard.cfg
+-dontwarn com.jcraft.jzlib.**
+-keep class com.jcraft.jzlib.**  { *;}
+-dontwarn sun.misc.**
+-keep class sun.misc.** { *;}
+-dontwarn sun.security.**
+-keep class sun.security.** { *; }
+-dontwarn com.google.**
+-keep class com.google.** { *;}
+-dontwarn com.avos.**
+-keep class com.avos.** { *;}
+-dontwarn org.apache.**
+-keep class org.apache.** { *;}
+-dontwarn org.jivesoftware.smack.**
+-keep class org.jivesoftware.smack.** { *;}
+-dontwarn com.loopj.**
+-keep class com.loopj.** { *;}
+-dontwarn org.xbill.**
+-keep class org.xbill.** { *;}
+-keep class com.baidu.** { *; }
+-keep class com.nineoldandroids.** { *;}
+
+#keep 3.2.0新增
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+    public <fields>;
+}
+-keepclassmembers class * extends com.lakala.shoudan.activity.wallet.request.WalletBaseRequest{
+    private <fields>;
+}
+-keepclassmembers class * extends com.lakala.shoudan.common.net.volley.BaseRequest{
+    private <fields>;
+}
+-keepattributes Signature
+-keep class com.handmark.pulltorefresh.library.** {*;}
+-keep public class * extends java.lang.Exception
+-keep class io.fabric.sdk.android.** {*;}#听云混淆
+# ProGuard configurations for NetworkBench Lens
+-keep class com.networkbench.** { *; }
+-dontwarn com.networkbench.**
+-keepattributes Exceptions, Signature, InnerClasses
+# End NetworkBench Lens#必须混淆51贷人品贷
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+#去掉警告
+-dontwarn com.hxcr.chinapay.**
+-dontwarn com.zhangdan.app.**
+
+#功夫贷
+#dart
+-dontwarn com.f2prateek.dart.internal.**
+-keep class **$$ExtraInjector { *; }
+-keepnames class * { @com.f2prateek.dart.InjectExtra *;}
+
+#Annotation
+-keepattributes *Annotation*
+
+
+#icepick
+-dontwarn icepick.**
+-keep class **$$Icepick { *; }
+-keepnames class * { @icepick.State *; }
+-keepclasseswithmembernames class * {
+    @icepick.* <fields>;
+}
+
+#baidu
+-keep class com.baidu.** {*;}
+-keep class vi.com.** {*;}
+-dontwarn com.baidu.**
+
+
+#httpmine,httpcore
+-dontwarn org.apache.commons.**
+-keep class org.apache.http.** { *; }
+-dontwarn org.apache.http.**
+
+########--------Retrofit + RxJava + gson--------#########
+-dontwarn retrofit.**
+-keep class retrofit.** { *; }
+-dontwarn sun.misc.Unsafe
+-dontwarn com.octo.android.robospice.retrofit.RetrofitJackson**
+-dontwarn retrofit.appengine.UrlFetchClient
+-keepattributes Signature
+-keepattributes Exceptions
+-keepclasseswithmembers class * {
+    @retrofit.http.* <methods>;
+}
+-keep class com.google.gson.** { *; }
+-keep class com.google.inject.** { *; }
+-keep class org.apache.http.** { *; }
+-keep class org.apache.james.mime4j.** { *; }
+-keep class javax.inject.** { *; }
+-keep class retrofit2.** { *; }
+-dontwarn org.apache.http.**
+-dontwarn android.net.http.AndroidHttpClient
+-dontwarn retrofit2.**
+
+-dontwarn sun.misc.**
+
+
+
+#SweetAlert
+-keep class cn.pedant.SweetAlert.Rotate3dAnimation {
+    public <init>(...);
+}
+
+#同盾
+-keep class cn.fraudmetrix.android.** { *; }
+-dontwarn cn.fraudmetrix.android.**
+
+#other importent
+-dontwarn okio.**
+
+-dontwarn com.squareup.okhttp.**
+
+-keep class org.apache.cordova.dialogs.** { *; }
+-keep class org.apache.cordova.file.** { *; }
+-keep class org.apache.cordova.filetransfer.** { *; }
+-keep class org.apache.cordova.whitelist.** { *; }
+
+
+-keep class com.nineoldandroids.** { *; }
+-keep class com.alibaba.sdk.android.** { *; }
+
+-keep class org.apache.http.** { *; }
+-keep class com.google.com.** { *; }
+-keep class cn.com.bsfit.** { *; }
+
+-keep class com.treefinance.sdk.model.** { *; }
+-keep class cn.pedant.SweetAlert.** { *; }
+
+-keep class com.treefinance.** { *; }
+-keep class com.datatrees.gongfudai.** { *; }
+
+#活体检测
+-dontwarn com.sensetime.**
+-keep class com.sensetime.** { *; }
+
+#平安普惠
+-keep class com.paem.**{*;}
+-keep interface com.paem.**{*;}
+
+-keep class com.paem.iloanlib.**{*;}
+-keep interface com.paem.iloanlib.**{*;}
+
+-keep class com.paem.framework.pahybrid.**{*;}
+-keep interface com.paem.framework.pahybrid.**{*;}
+
+-keep class com.paem.framework.basiclibrary.**{*;}
+-keep interface com.paem.framework.basiclibrary.**{*;}
+
+-keep class cn.pinan.safe.**{*;}
+-keep interface cn.pinan.safe.**{*;}
+
+-keep class com.pingan.facepp.**{*;}
+-keep interface com.pingan.facepp.**{*;}
+
+-keep class cn.fraudmetrix.android.sdk.**{*;}
+-keep interface cn.fraudmetrix.android.sdk.**{*;}
+
+-keep class com.tendcloud.tenddata.kpl.**{*;}
+-keep interface com.tendcloud.tenddata.kpl.**{*;}

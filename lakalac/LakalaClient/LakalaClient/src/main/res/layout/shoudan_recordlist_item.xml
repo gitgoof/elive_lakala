@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/layout_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/shoudan_text_small_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2016-01-05 11:09:00"
+            android:textColor="@color/combination_textview_color"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/collection_state"
+            style="@style/shoudan_text_small_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/combination_textview_color"
+            tools:text="收款成功"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="true"
+        tools:text="+210.00"
+        android:textColor="@color/combination_textview_color"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/item_right"
+        android:layout_toRightOf="@id/layout_left"
+        android:gravity="right"
+        android:singleLine="true" />
+
+    <ImageView
+        android:id="@+id/item_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_distance_level_1"
+        android:src="@drawable/btn_arrow_go" />
+
+    <View
+        android:id="@+id/seperator"
+        style="@style/seperator"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>

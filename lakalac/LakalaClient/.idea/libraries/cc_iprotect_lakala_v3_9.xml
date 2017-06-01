@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cc-iprotect-lakala-v3.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LakalaUI/libs/cc-iprotect-lakala-v3.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

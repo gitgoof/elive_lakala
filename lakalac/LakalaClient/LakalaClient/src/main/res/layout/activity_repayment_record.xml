@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--替你还 还款记录 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/app_background_white"
+    android:orientation="vertical" >
+     <LinearLayout
+         android:id="@+id/layout_still_amount"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         >
+         <TextView 
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="待还金额"
+             android:textColor="@color/gray_A4A4A4"
+			 android:paddingLeft="10dp"
+			 android:paddingTop="10dp"
+			 android:paddingBottom="5dp"
+             />
+         <TextView 
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="0.00"
+             android:textColor="@color/gray_A4A4A4"
+             android:paddingLeft="10dp"
+             android:paddingTop="5dp"
+             android:paddingBottom="10dp"
+             android:id="@+id/tv_still_amount"
+             />
+     </LinearLayout>
+     <LinearLayout 
+         android:id="@+id/layout_record_list"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:layout_below="@+id/layout_still_amount"
+         android:layout_above="@+id/tv_tips"
+         >
+         <LinearLayout 
+             android:visibility="gone"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:id="@+id/layout_no_record_result"
+             android:gravity="center"
+             >
+             <ImageView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/no_record"
+                 />
+             <TextView 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="暂无记录"
+                 android:layout_marginTop="10dp"
+                 android:textColor="@color/gray_A4A4A4"
+                 />
+         </LinearLayout>
+         
+         <ListView 
+             android:scrollbars="none"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/lv_record"
+             android:visibility="gone"
+             ></ListView>
+         
+     </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_margin_actionbar"
+        android:orientation="vertical">
+
+        <View style="@style/seperator" />
+
+        <RelativeLayout
+            android:id="@+id/rl_shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:background="@color/white">
+
+            <TextView
+                style="@style/combination_left_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_distance_level_1"
+                android:text="店铺名称变更" />
+
+            <ImageView
+                android:id="@+id/right_arrow1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_distance_level_1"
+                android:background="@drawable/right_arrow_gray" />
+
+        </RelativeLayout>
+        <View
+            style="@style/seperator"
+            android:layout_below="@id/rl_shop_name"
+            />
+        <TextView
+            android:id="@+id/accName"
+            style="@style/combination_left_textview_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/x12"
+            android:layout_marginTop="@dimen/x8"
+            android:layout_marginLeft="@dimen/common_distance_level_1"
+            android:text="店铺名称" />
+
+
+        <!--  <RelativeLayout
+              android:id="@+id/rl_distct"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/order_item_height"
+              android:background="@color/white">
+
+              <TextView
+                  style="@style/combination_left_textview_style"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:text="地区"
+                  android:id="@+id/accDistct"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="@dimen/common_distance_level_1"/>
+              <View
+                  style="@style/seperator"
+                  android:layout_marginLeft="@dimen/common_distance_level_1"
+                  android:layout_below="@id/accDistct"/>
+
+              <ImageView
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentRight="true"
+                  android:background="@drawable/right_arrow_gray"
+                  android:layout_marginRight="@dimen/common_distance_level_1"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp" />
+
+              <TextView
+                  android:id="@+id/shop_distct"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_toLeftOf="@+id/right_arrow"
+                  android:layout_centerVertical="true"
+                  android:layout_marginRight="@dimen/common_distance_level_1"/>
+          </RelativeLayout>
+          <View
+              style="@style/seperator"
+              android:layout_marginLeft="@dimen/common_distance_level_1"
+              android:layout_below="@id/accName"/>
+
+          <RelativeLayout
+              android:id="@+id/rl_place"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/order_item_height"
+              android:background="@color/white">
+
+              <TextView
+                  style="@style/combination_left_textview_style"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:text="店铺地址"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="@dimen/common_distance_level_1"/>
+
+              <ImageView
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentRight="true"
+                  android:background="@drawable/right_arrow_gray"
+                  android:layout_marginRight="@dimen/common_distance_level_1"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp" />
+
+              <TextView
+                  android:id="@+id/shop_place"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_toLeftOf="@+id/right_arrow"
+                  android:layout_centerVertical="true"
+                  android:layout_marginRight="@dimen/common_distance_level_1"/>
+          </RelativeLayout>
+          <View
+              style="@style/seperator"
+              android:layout_marginLeft="@dimen/common_distance_level_1"
+              android:layout_below="@id/accName"/>-->
+
+        <RelativeLayout
+            android:id="@+id/rl_admin_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_item_height"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/x28">
+
+            <TextView
+                style="@style/combination_left_textview_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_distance_level_1"
+                android:text="结算账号变更" />
+
+            <ImageView
+                android:id="@+id/right_arrow2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_distance_level_1"
+                android:background="@drawable/right_arrow_gray" />
+
+            <TextView
+                android:id="@+id/admin_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_distance_level_1"
+                android:layout_toLeftOf="@+id/right_arrow2" />
+        </RelativeLayout>
+        <View
+            style="@style/seperator"
+            android:layout_below="@id/rl_admin_type"
+            />
+        <TextView
+            android:id="@+id/tv_acount_change"
+            style="@style/combination_left_textview_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/x12"
+            android:layout_marginTop="@dimen/x8"
+            android:layout_marginLeft="@dimen/common_distance_level_1"
+            android:text="店铺名称" />
+
+    </LinearLayout>
+
+</LinearLayout>
